@@ -15,7 +15,19 @@
  */
 package org.primefaces.component.api;
 
+import org.primefaces.cdk.annotations.PFProperty;
+import org.primefaces.cdk.annotations.PFPropertyKeys;
+import org.primefaces.cdk.annotations.PFRTL;
+
+@PFRTL
 public interface RTLAware {
+
+	@PFPropertyKeys
+	public enum RTLAwarePropertyKeys {
+
+		@PFProperty(description = "Defines text direction, valid values are \"ltr\" (default) and \"rtl\"", defaultValue = "ltr")
+		dir;
+	}
 
     public boolean isRTL();
 }

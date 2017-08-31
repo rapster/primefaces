@@ -15,7 +15,20 @@
  */
 package org.primefaces.component.api;
 
+import org.primefaces.cdk.annotations.PFProperty;
+import org.primefaces.cdk.annotations.PFPropertyKeys;
+import org.primefaces.cdk.annotations.PFWidget;
+
+@PFWidget
 public interface Widget {
+
+	@PFPropertyKeys
+	public enum PropertyKeys {
+
+		@PFProperty(description = "Name of the client side widget")
+		widgetVar;
+
+	}
 
     public String resolveWidgetVar();
 }
