@@ -9,10 +9,10 @@ public enum UIInputTextPropertyKeys {
     @PFProperty(description ="Access key to transfer focus to the input element", ignore = true)
     accesskey,
 
-    @PFProperty(description ="Alternate textual description of the input element", ignore = true)
+    @PFProperty(description ="Alternate textual description of the input element")
     alt,
 
-    @PFProperty(description ="Controls browser autocomplete behavior", ignore = true)
+    @PFProperty(description ="Controls browser autocomplete behavior")
     autocomplete,
 
     @PFProperty(description ="Direction indication for text that does not inherit directionality", ignore = true)
@@ -75,7 +75,7 @@ public enum UIInputTextPropertyKeys {
     @PFProperty(description ="Flag indicating that this input element will prevent changes by the user", type = Boolean.class, ignore = true)
     readonly,
 
-    @PFProperty(description ="Number of characters used to determine the width of the input element", type = Integer.class, ignore = true)
+    @PFProperty(description ="Number of characters used to determine the width of the input element", type = Integer.class)
     size,
 
     @PFProperty(description ="Inline style of the component", ignore = true)
@@ -90,7 +90,7 @@ public enum UIInputTextPropertyKeys {
     @PFProperty(description ="Advisory tooltip information", ignore = true)
     title,
 
-    @PFProperty(description ="The placeholder attribute specifies a short hint that describes the expected value of an input field", ignore = true)
+    @PFProperty(description ="The placeholder attribute specifies a short hint that describes the expected value of an input field")
     placeholder,
 
 }

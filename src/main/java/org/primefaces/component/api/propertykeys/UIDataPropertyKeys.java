@@ -6,7 +6,7 @@ import org.primefaces.cdk.annotations.PFPropertyKeys;
 @PFPropertyKeys(base = UIComponentPropertyKeys.class)
 public enum UIDataPropertyKeys {
 
-    @PFProperty(description = "Datasource of the component", ignore = true)
+    @PFProperty(description = "Datasource of the component", type = Object.class, ignore = true)
     value,
 
     @PFProperty(description = "Name of the iterator variable used to refer each data", ignore = true)
@@ -16,5 +16,8 @@ public enum UIDataPropertyKeys {
     rows,
 
     @PFProperty(description = "Index of the first data to display", type = Integer.class, ignore = true)
-    first
+    first,
+
+    @PFProperty(description = "The zero-relative index of the current row number, or -1 for no current row association", type = Integer.class, ignore = true)
+    rowIndex,
 }
