@@ -57,7 +57,7 @@ public abstract class BaseMenuRenderer extends OutcomeTargetRenderer {
 
     @Override
     public void decode(FacesContext context, UIComponent component) {
-        AbstractMenu menu = (AbstractMenu) component;
+        AbstractUIMenu menu = (AbstractUIMenu) component;
         String clientId = menu.getClientId(context);
         Map<String, String> params = context.getExternalContext().getRequestParameterMap();
 
@@ -108,7 +108,7 @@ public abstract class BaseMenuRenderer extends OutcomeTargetRenderer {
 
     @Override
     public void encodeEnd(FacesContext context, UIComponent component) throws IOException {
-        AbstractMenu menu = (AbstractMenu) component;
+        AbstractUIMenu menu = (AbstractUIMenu) component;
         MenuModel model = menu.getModel();
         if (model != null && menu.getElementsCount() > 0) {
             model.generateUniqueIds();
@@ -118,17 +118,17 @@ public abstract class BaseMenuRenderer extends OutcomeTargetRenderer {
         encodeScript(context, menu);
     }
 
-    protected abstract void encodeMarkup(FacesContext context, AbstractMenu abstractMenu) throws IOException;
+    protected abstract void encodeMarkup(FacesContext context, AbstractUIMenu abstractMenu) throws IOException;
 
-    protected abstract void encodeScript(FacesContext context, AbstractMenu abstractMenu) throws IOException;
+    protected abstract void encodeScript(FacesContext context, AbstractUIMenu abstractMenu) throws IOException;
 
     protected String getLinkStyleClass(MenuItem menuItem) {
         String styleClass = menuItem.getStyleClass();
 
-        return (styleClass == null) ? AbstractMenu.MENUITEM_LINK_CLASS : AbstractMenu.MENUITEM_LINK_CLASS + " " + styleClass;
+        return (styleClass == null) ? AbstractUIMenu.MENUITEM_LINK_CLASS : AbstractUIMenu.MENUITEM_LINK_CLASS + " " + styleClass;
     }
 
-    protected void encodeMenuItem(FacesContext context, AbstractMenu menu, MenuItem menuitem) throws IOException {
+    protected void encodeMenuItem(FacesContext context, AbstractUIMenu menu, MenuItem menuitem) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         String title = menuitem.getTitle();
         String style = menuitem.getStyle();
@@ -253,19 +253,19 @@ public abstract class BaseMenuRenderer extends OutcomeTargetRenderer {
         }
     }
 
-    protected void encodeMenuItemContent(FacesContext context, AbstractMenu menu, MenuItem menuitem) throws IOException {
+    protected void encodeMenuItemContent(FacesContext context, AbstractUIMenu menu, MenuItem menuitem) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         String icon = menuitem.getIcon();
         Object value = menuitem.getValue();
 
         if (icon != null) {
             writer.startElement("span", null);
-            writer.writeAttribute("class", AbstractMenu.MENUITEM_ICON_CLASS + " " + icon, null);
+            writer.writeAttribute("class", AbstractUIMenu.MENUITEM_ICON_CLASS + " " + icon, null);
             writer.endElement("span");
         }
 
         writer.startElement("span", null);
-        writer.writeAttribute("class", AbstractMenu.MENUITEM_TEXT_CLASS, null);
+        writer.writeAttribute("class", AbstractUIMenu.MENUITEM_TEXT_CLASS, null);
 
         if (value != null) {
             if (menuitem.isEscape()) {
@@ -320,7 +320,7 @@ public abstract class BaseMenuRenderer extends OutcomeTargetRenderer {
         return true;
     }
 
-    protected String buildAjaxRequest(FacesContext context, AbstractMenu menu, AjaxSource source, UIComponent form,
+    protected String buildAjaxRequest(FacesContext context, AbstractUIMenu menu, AjaxSource source, UIComponent form,
             Map<String, List<String>> params) {
         
         String clientId = menu.getClientId(context);
@@ -403,7 +403,7 @@ public abstract class BaseMenuRenderer extends OutcomeTargetRenderer {
         return request.toString();
     }
 
-    protected void encodeKeyboardTarget(FacesContext context, AbstractMenu menu) throws IOException {
+    protected void encodeKeyboardTarget(FacesContext context, AbstractUIMenu menu) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
 
         writer.startElement("div", null);

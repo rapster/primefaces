@@ -30,7 +30,7 @@ import javax.faces.event.ActionEvent;
 import org.primefaces.behavior.confirm.ConfirmBehavior;
 import org.primefaces.component.api.AjaxSource;
 import org.primefaces.component.api.UIOutcomeTarget;
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 import org.primefaces.component.menu.Menu;
 import org.primefaces.component.menubutton.MenuButton;
 import org.primefaces.component.menuitem.UIMenuItem;
@@ -258,7 +258,7 @@ public class SplitButtonRenderer extends OutcomeTargetRenderer {
             }
 
             String styleClass = menuitem.getStyleClass();
-            styleClass = styleClass == null ? AbstractMenu.MENUITEM_LINK_CLASS : AbstractMenu.MENUITEM_LINK_CLASS + " " + styleClass;
+            styleClass = styleClass == null ? AbstractUIMenu.MENUITEM_LINK_CLASS : AbstractUIMenu.MENUITEM_LINK_CLASS + " " + styleClass;
             styleClass = disabled ? styleClass + " ui-state-disabled" : styleClass;
 
             writer.writeAttribute("class", styleClass, null);
@@ -313,13 +313,13 @@ public class SplitButtonRenderer extends OutcomeTargetRenderer {
 
             if (icon != null) {
                 writer.startElement("span", null);
-                writer.writeAttribute("class", AbstractMenu.MENUITEM_ICON_CLASS + " " + icon, null);
+                writer.writeAttribute("class", AbstractUIMenu.MENUITEM_ICON_CLASS + " " + icon, null);
                 writer.endElement("span");
             }
 
             if (menuitem.getValue() != null) {
                 writer.startElement("span", null);
-                writer.writeAttribute("class", AbstractMenu.MENUITEM_TEXT_CLASS, null);
+                writer.writeAttribute("class", AbstractUIMenu.MENUITEM_TEXT_CLASS, null);
                 writer.writeText((String) menuitem.getValue(), "value");
                 writer.endElement("span");
             }

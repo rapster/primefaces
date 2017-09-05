@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 import org.primefaces.component.menu.BaseMenuRenderer;
 import org.primefaces.component.menu.Menu;
 import org.primefaces.model.menu.MenuElement;
@@ -30,7 +30,7 @@ import org.primefaces.util.WidgetBuilder;
 public class PanelMenuRenderer extends BaseMenuRenderer {
 
     @Override
-    protected void encodeScript(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeScript(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         PanelMenu menu = (PanelMenu) abstractMenu;
         String clientId = menu.getClientId(context);
         WidgetBuilder wb = getWidgetBuilder(context);
@@ -40,7 +40,7 @@ public class PanelMenuRenderer extends BaseMenuRenderer {
     }
 
     @Override
-    protected void encodeMarkup(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeMarkup(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         PanelMenu menu = (PanelMenu) abstractMenu;
         String clientId = menu.getClientId(context);

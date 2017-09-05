@@ -30,7 +30,7 @@ import org.primefaces.util.WidgetBuilder;
 
 public class MenuRenderer extends BaseMenuRenderer {
 
-    protected void encodeScript(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeScript(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         Menu menu = (Menu) abstractMenu;
         String clientId = menu.getClientId(context);
 
@@ -45,7 +45,7 @@ public class MenuRenderer extends BaseMenuRenderer {
         wb.finish();
     }
 
-    protected void encodeMarkup(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeMarkup(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         Menu menu = (Menu) abstractMenu;
         String clientId = menu.getClientId(context);

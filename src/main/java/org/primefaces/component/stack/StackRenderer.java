@@ -21,7 +21,7 @@ import java.util.List;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 import org.primefaces.component.menu.BaseMenuRenderer;
 import org.primefaces.model.menu.MenuElement;
 import org.primefaces.model.menu.MenuItem;
@@ -30,7 +30,7 @@ import org.primefaces.util.WidgetBuilder;
 public class StackRenderer extends BaseMenuRenderer {
 
     @Override
-    protected void encodeScript(FacesContext context, AbstractMenu menu) throws IOException {
+    protected void encodeScript(FacesContext context, AbstractUIMenu menu) throws IOException {
         Stack stack = (Stack) menu;
         String clientId = stack.getClientId(context);
         WidgetBuilder wb = getWidgetBuilder(context);
@@ -42,7 +42,7 @@ public class StackRenderer extends BaseMenuRenderer {
         wb.finish();
     }
 
-    protected void encodeMarkup(FacesContext context, AbstractMenu menu) throws IOException {
+    protected void encodeMarkup(FacesContext context, AbstractUIMenu menu) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         Stack stack = (Stack) menu;
         String clientId = stack.getClientId(context);
@@ -83,7 +83,7 @@ public class StackRenderer extends BaseMenuRenderer {
     }
 
     @Override
-    protected void encodeMenuItemContent(FacesContext context, AbstractMenu menu, MenuItem menuitem) throws IOException {
+    protected void encodeMenuItemContent(FacesContext context, AbstractUIMenu menu, MenuItem menuitem) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
 
         writer.startElement("span", null);

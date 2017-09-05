@@ -20,7 +20,7 @@ import java.util.List;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 import org.primefaces.component.menu.BaseMenuRenderer;
 import org.primefaces.component.menu.Menu;
 import org.primefaces.component.separator.UISeparator;
@@ -33,7 +33,7 @@ import org.primefaces.util.WidgetBuilder;
 
 public class MegaMenuRenderer extends BaseMenuRenderer {
 
-    protected void encodeScript(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeScript(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         MegaMenu menu = (MegaMenu) abstractMenu;
         String clientId = menu.getClientId(context);
 
@@ -45,7 +45,7 @@ public class MegaMenuRenderer extends BaseMenuRenderer {
         wb.finish();
     }
 
-    protected void encodeMarkup(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeMarkup(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         MegaMenu menu = (MegaMenu) abstractMenu;
         boolean vertical = menu.getOrientation().equals("vertical");

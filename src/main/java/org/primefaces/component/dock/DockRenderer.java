@@ -21,7 +21,7 @@ import java.util.List;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 import org.primefaces.component.menu.BaseMenuRenderer;
 import org.primefaces.model.menu.MenuElement;
 import org.primefaces.model.menu.MenuItem;
@@ -31,7 +31,7 @@ import org.primefaces.util.WidgetBuilder;
 public class DockRenderer extends BaseMenuRenderer {
 
     @Override
-    protected void encodeScript(FacesContext context, AbstractMenu menu) throws IOException {
+    protected void encodeScript(FacesContext context, AbstractUIMenu menu) throws IOException {
         Dock dock = (Dock) menu;
         String clientId = dock.getClientId(context);
 
@@ -47,7 +47,7 @@ public class DockRenderer extends BaseMenuRenderer {
     }
 
     @Override
-    protected void encodeMarkup(FacesContext context, AbstractMenu menu) throws IOException {
+    protected void encodeMarkup(FacesContext context, AbstractUIMenu menu) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         Dock dock = (Dock) menu;
         String clientId = dock.getClientId(context);
@@ -80,7 +80,7 @@ public class DockRenderer extends BaseMenuRenderer {
     }
 
     @Override
-    protected void encodeMenuItemContent(FacesContext context, AbstractMenu menu, MenuItem menuitem) throws IOException {
+    protected void encodeMenuItemContent(FacesContext context, AbstractUIMenu menu, MenuItem menuitem) throws IOException {
         String position = ((Dock) menu).getPosition();
 
         if (position.equalsIgnoreCase("top")) {

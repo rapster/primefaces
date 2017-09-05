@@ -22,7 +22,7 @@ import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
 
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 import org.primefaces.component.menu.BaseMenuRenderer;
 import org.primefaces.model.menu.MenuElement;
 import org.primefaces.model.menu.MenuItem;
@@ -31,7 +31,7 @@ import org.primefaces.util.WidgetBuilder;
 public class TabMenuRenderer extends BaseMenuRenderer {
 
     @Override
-    protected void encodeScript(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeScript(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         TabMenu menu = (TabMenu) abstractMenu;
         String clientId = menu.getClientId(context);
         WidgetBuilder wb = getWidgetBuilder(context);
@@ -40,7 +40,7 @@ public class TabMenuRenderer extends BaseMenuRenderer {
     }
 
     @Override
-    protected void encodeMarkup(FacesContext context, AbstractMenu component) throws IOException {
+    protected void encodeMarkup(FacesContext context, AbstractUIMenu component) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         TabMenu menu = (TabMenu) component;
         String clientId = menu.getClientId(context);

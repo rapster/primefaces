@@ -26,7 +26,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
 import org.primefaces.component.api.AjaxSource;
 import org.primefaces.component.api.UIOutcomeTarget;
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 import org.primefaces.mobile.util.MobileUtils;
 import org.primefaces.model.menu.MenuItem;
 import org.primefaces.util.ComponentTraversalUtils;
@@ -34,7 +34,7 @@ import org.primefaces.util.ComponentTraversalUtils;
 public abstract class BaseMenuRenderer extends org.primefaces.component.menu.BaseMenuRenderer {
 
     @Override
-    protected void encodeMenuItem(FacesContext context, AbstractMenu menu, MenuItem menuitem) throws IOException {
+    protected void encodeMenuItem(FacesContext context, AbstractUIMenu menu, MenuItem menuitem) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         String title = menuitem.getTitle();
         boolean disabled = menuitem.isDisabled();

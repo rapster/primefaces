@@ -20,7 +20,7 @@ import java.io.IOException;
 import javax.faces.component.UIComponent;
 import javax.faces.context.FacesContext;
 import org.primefaces.component.api.Widget;
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 
 import org.primefaces.component.tieredmenu.TieredMenuRenderer;
 import org.primefaces.expression.SearchExpressionFacade;
@@ -29,7 +29,7 @@ import org.primefaces.util.WidgetBuilder;
 public class ContextMenuRenderer extends TieredMenuRenderer {
 
     @Override
-    protected void encodeScript(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeScript(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         ContextMenu menu = (ContextMenu) abstractMenu;
         String clientId = menu.getClientId(context);
 
@@ -57,7 +57,7 @@ public class ContextMenuRenderer extends TieredMenuRenderer {
     }
 
     @Override
-    protected void encodeMarkup(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeMarkup(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         ContextMenu menu = (ContextMenu) abstractMenu;
         String style = menu.getStyle();
         String styleClass = menu.getStyleClass();

@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 import org.primefaces.component.menu.Menu;
 import org.primefaces.model.menu.MenuElement;
 import org.primefaces.model.menu.MenuItem;
@@ -30,7 +30,7 @@ import org.primefaces.util.WidgetBuilder;
 public class MenuRenderer extends BaseMenuRenderer {
 
     @Override
-    protected void encodeMarkup(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeMarkup(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         Menu menu = (Menu) abstractMenu;
         String clientId = menu.getClientId(context);
@@ -116,7 +116,7 @@ public class MenuRenderer extends BaseMenuRenderer {
         }
     }
 
-    protected void encodeScript(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeScript(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         Menu menu = (Menu) abstractMenu;
         String clientId = menu.getClientId(context);
 
@@ -133,7 +133,7 @@ public class MenuRenderer extends BaseMenuRenderer {
         }
         String iconPos = menuitem.getIconPos();
         iconPos = (iconPos == null) ? "ui-btn-icon-right" : "ui-btn-icon-" + iconPos;
-        String styleClass = AbstractMenu.MOBILE_MENUITEM_LINK_CLASS + " " + icon + " " + iconPos;
+        String styleClass = AbstractUIMenu.MOBILE_MENUITEM_LINK_CLASS + " " + icon + " " + iconPos;
         String userStyleClass = menuitem.getStyleClass();
         if (userStyleClass != null) {
             styleClass = styleClass + " " + userStyleClass;

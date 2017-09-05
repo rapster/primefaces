@@ -19,7 +19,7 @@ import java.io.IOException;
 
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 import org.primefaces.component.menu.Menu;
 import org.primefaces.component.tieredmenu.TieredMenuRenderer;
 import org.primefaces.util.WidgetBuilder;
@@ -27,7 +27,7 @@ import org.primefaces.util.WidgetBuilder;
 public class SlideMenuRenderer extends TieredMenuRenderer {
 
     @Override
-    protected void encodeScript(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeScript(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         SlideMenu menu = (SlideMenu) abstractMenu;
         String clientId = menu.getClientId(context);
 
@@ -42,7 +42,7 @@ public class SlideMenuRenderer extends TieredMenuRenderer {
     }
 
     @Override
-    protected void encodeMarkup(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeMarkup(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         SlideMenu menu = (SlideMenu) abstractMenu;
 

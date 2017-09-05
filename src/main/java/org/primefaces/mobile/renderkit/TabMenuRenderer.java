@@ -19,7 +19,7 @@ import java.io.IOException;
 import java.util.List;
 import javax.faces.context.FacesContext;
 import javax.faces.context.ResponseWriter;
-import org.primefaces.component.menu.AbstractMenu;
+import org.primefaces.component.menu.AbstractUIMenu;
 import org.primefaces.component.tabmenu.TabMenu;
 import org.primefaces.model.menu.MenuElement;
 import org.primefaces.model.menu.MenuItem;
@@ -28,7 +28,7 @@ import org.primefaces.util.WidgetBuilder;
 public class TabMenuRenderer extends BaseMenuRenderer {
 
     @Override
-    protected void encodeMarkup(FacesContext context, AbstractMenu component) throws IOException {
+    protected void encodeMarkup(FacesContext context, AbstractUIMenu component) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
         TabMenu tabMenu = (TabMenu) component;
         List<MenuElement> elements = tabMenu.getElements();
@@ -62,7 +62,7 @@ public class TabMenuRenderer extends BaseMenuRenderer {
     }
 
     @Override
-    protected void encodeScript(FacesContext context, AbstractMenu abstractMenu) throws IOException {
+    protected void encodeScript(FacesContext context, AbstractUIMenu abstractMenu) throws IOException {
         TabMenu menu = (TabMenu) abstractMenu;
         String clientId = menu.getClientId(context);
         WidgetBuilder wb = getWidgetBuilder(context);
@@ -75,7 +75,7 @@ public class TabMenuRenderer extends BaseMenuRenderer {
         String icon = menuitem.getIcon();
         String iconPos = menuitem.getIconPos();
         iconPos = (iconPos == null) ? "ui-btn-icon-top" : "ui-btn-icon-" + iconPos;
-        String styleClass = (icon == null) ? AbstractMenu.MOBILE_MENUITEM_LINK_CLASS : AbstractMenu.MOBILE_MENUITEM_LINK_CLASS + " " + icon + " " + iconPos;
+        String styleClass = (icon == null) ? AbstractUIMenu.MOBILE_MENUITEM_LINK_CLASS : AbstractUIMenu.MOBILE_MENUITEM_LINK_CLASS + " " + icon + " " + iconPos;
         String userStyleClass = menuitem.getStyleClass();
         if (userStyleClass != null) {
             styleClass = styleClass + " " + userStyleClass;
