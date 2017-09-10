@@ -51,11 +51,11 @@ public class Signature extends AbstractSignature {
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Background color,")
+		@PFProperty(description = "Background color")
 		backgroundColor,
-		@PFProperty(description = "Foreground color,")
+		@PFProperty(description = "Foreground color")
 		color,
-		@PFProperty(description = "Thickness of lines,", defaultValue = "2", type = Integer.class)
+		@PFProperty(description = "Thickness of lines", defaultValue = "2", type = Integer.class)
 		thickness,
 		@PFProperty(description = "Inline style of the component")
 		style,
@@ -63,9 +63,9 @@ public class Signature extends AbstractSignature {
 		styleClass,
 		@PFProperty(description = "When enabled, signature is used for display purposes only", defaultValue = "false", type = Boolean.class)
 		readonly,
-		@PFProperty(description = "Adds a guideline when enabled,", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Adds a guideline when enabled", defaultValue = "false", type = Boolean.class)
 		guideline,
-		@PFProperty(description = "Color of the guideline,")
+		@PFProperty(description = "Color of the guideline")
 		guidelineColor,
 		@PFProperty(description = "Offset of guideline from bottom", defaultValue = "25", type = Integer.class)
 		guidelineOffset,

@@ -90,7 +90,7 @@ public class AccordionPanel extends AbstractAccordionPanel implements javax.face
 		onTabClose,
 		@PFProperty(description = "Defines if activating a dynamic tab should load the contents from server again", defaultValue = "true", type = Boolean.class)
 		cache,
-		@PFProperty(description = "Enables activating multiple tabs,", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Enables activating multiple tabs", defaultValue = "false", type = Boolean.class)
 		multiple,
 		@PFProperty(description = "Position of the headers in the tabbing order", defaultValue = "0")
 		tabindex,

@@ -197,13 +197,13 @@ public class DataTable extends AbstractDataTable implements javax.faces.componen
 		dataLocale,
 		@PFProperty(description = "In native mode, datatable uses native radio-checkbox elements for row selection instead of extended ones", defaultValue = "false", type = Boolean.class)
 		nativeElements,
-		@PFProperty(description = "Number of columns to freeze,", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Number of columns to freeze", defaultValue = "0", type = Integer.class)
 		frozenColumns,
 		@PFProperty(description = "When enabled, rows can be reordered using dragdrop", defaultValue = "false", type = Boolean.class)
 		draggableRows,
 		@PFProperty(description = "Case sensitivity for sorting, insensitive by default", defaultValue = "false", type = Boolean.class)
 		caseSensitiveSort,
-		@PFProperty(description = "Ignores processing of children during lifecycle, improves performance if table only has output components,", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Ignores processing of children during lifecycle, improves performance if table only has output components", defaultValue = "false", type = Boolean.class)
 		skipChildren,
 		@PFProperty(description = "Disables text selection on row click", defaultValue = "true", type = Boolean.class)
 		disabledTextSelection,
@@ -219,7 +219,7 @@ public class DataTable extends AbstractDataTable implements javax.faces.componen
 		reflow,
 		@PFProperty(description = "Percentage height of the buffer between the bottom of the page and the scroll position to initiate\n the load for the new chunk. Value is defined in integer and", defaultValue = "0", type = Integer.class)
 		liveScrollBuffer,
-		@PFProperty(description = "Adds hover effect to rows,", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Adds hover effect to rows", defaultValue = "false", type = Boolean.class)
 		rowHover,
 		@PFProperty(description = "Defines the resize behavior, valid values are \"fit\" (default) and expand", defaultValue = "fit")
 		resizeMode,
@@ -227,7 +227,7 @@ public class DataTable extends AbstractDataTable implements javax.faces.componen
 		ariaRowLabel,
 		@PFProperty(description = "Saves the changes in cell editing on blur, when set to false changes are discarded", defaultValue = "true", type = Boolean.class)
 		saveOnCellBlur,
-		@PFProperty(description = "Caches the next page asynchronously,", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Caches the next page asynchronously", defaultValue = "false", type = Boolean.class)
 		clientCache,
 		@PFProperty(description = "Whether to keep table state across views, defaults to false", defaultValue = "false", type = Boolean.class)
 		multiViewState,
@@ -237,7 +237,7 @@ public class DataTable extends AbstractDataTable implements javax.faces.componen
 		globalFilter,
 		@PFProperty(description = "Defines the cell edit behavior, valid values are \"eager\" (default) and \"lazy\"", defaultValue = "eager")
 		cellEditMode,
-		@PFProperty(description = "Makes row groups toggleable,", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Makes row groups toggleable", defaultValue = "false", type = Boolean.class)
 		expandableRowGroups,
 		@PFProperty(description = "Loads data on demand as the scrollbar gets close to the bottom", defaultValue = "false", type = Boolean.class)
 		virtualScroll,

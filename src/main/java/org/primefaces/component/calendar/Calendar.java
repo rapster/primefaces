@@ -107,15 +107,15 @@ public class Calendar extends AbstractCalendar implements org.primefaces.compone
 		showOtherMonths,
 		@PFProperty(description = "Enables selection of days belonging to other months", defaultValue = "false", type = Boolean.class)
 		selectOtherMonths,
-		@PFProperty(description = "Year range for the navigator,")
+		@PFProperty(description = "Year range for the navigator")
 		yearRange,
 		@PFProperty(description = "Shows only time picker without date", defaultValue = "false", type = Boolean.class)
 		timeOnly,
-		@PFProperty(description = "Hour steps,", defaultValue = "1", type = Integer.class)
+		@PFProperty(description = "Hour steps", defaultValue = "1", type = Integer.class)
 		stepHour,
-		@PFProperty(description = "Minute steps,", defaultValue = "1", type = Integer.class)
+		@PFProperty(description = "Minute steps", defaultValue = "1", type = Integer.class)
 		stepMinute,
-		@PFProperty(description = "Second steps,", defaultValue = "1", type = Integer.class)
+		@PFProperty(description = "Second steps", defaultValue = "1", type = Integer.class)
 		stepSecond,
 		@PFProperty(description = "Minimum boundary for hour selection", defaultValue = "0", type = Integer.class)
 		minHour,

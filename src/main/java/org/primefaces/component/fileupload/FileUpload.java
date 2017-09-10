@@ -65,7 +65,7 @@ public class FileUpload extends AbstractFileUpload {
 		multiple,
 		@PFProperty(description = "When set to true, selecting a file starts the upload process implicitly", defaultValue = "false", type = Boolean.class)
 		auto,
-		@PFProperty(description = "Label of the browse button,", defaultValue = "Choose")
+		@PFProperty(description = "Label of the browse button", defaultValue = "Choose")
 		label,
 		@PFProperty(description = "Regular expression for accepted file types, e.g. /(\\.|\\/)(gif|jpe?g|png)$/")
 		allowTypes,
@@ -75,9 +75,9 @@ public class FileUpload extends AbstractFileUpload {
 		sizeLimit,
 		@PFProperty(description = "Mode of the uploader, valid values are \"simple\" and \"advanced\"", defaultValue = "advanced")
 		mode,
-		@PFProperty(description = "Label of the upload button,", defaultValue = "Upload")
+		@PFProperty(description = "Label of the upload button", defaultValue = "Upload")
 		uploadLabel,
-		@PFProperty(description = "Label of the cancel button,", defaultValue = "Cancel")
+		@PFProperty(description = "Label of the cancel button", defaultValue = "Cancel")
 		cancelLabel,
 		@PFProperty(description = "Message to display when file size validation fails")
 		invalidSizeMessage,
@@ -85,7 +85,7 @@ public class FileUpload extends AbstractFileUpload {
 		invalidFileMessage,
 		@PFProperty(description = "Message to display when file count validation fails")
 		fileLimitMessage,
-		@PFProperty(description = "Specifies dragdrop based file selection from filesystem,", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies dragdrop based file selection from filesystem", defaultValue = "true", type = Boolean.class)
 		dragDropSupport,
 		@PFProperty(description = "Callback to execute at the beginning of fileupload")
 		onstart,
@@ -99,7 +99,7 @@ public class FileUpload extends AbstractFileUpload {
 		messageTemplate,
 		@PFProperty(description = "Width for image previews in pixels. Default value is 80", defaultValue = "80", type = Integer.class)
 		previewWidth,
-		@PFProperty(description = "Applies theming to simple uploader,", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Applies theming to simple uploader", defaultValue = "false", type = Boolean.class)
 		skinSimple,
 		@PFProperty(description = "To filter files in native file browser dialog")
 		accept,

@@ -65,7 +65,7 @@ public class TieredMenu extends AbstractTieredMenu implements org.primefaces.com
 		overlay,
 		@PFProperty(description = "Event name of component that will show the dynamic positioned menu", defaultValue = "click")
 		triggerEvent,
-		@PFProperty(description = "Event to toggle the submenus,")
+		@PFProperty(description = "Event to toggle the submenus")
 		toggleEvent,;
 	}
 

@@ -48,7 +48,7 @@ public class Sticky extends AbstractSticky {
 
 		@PFProperty(description = "Identifier of the component(s) to make sticky", required = true)
 		target,
-		@PFProperty(description = "Margin to the top of the page during fixed scrolling,", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Margin to the top of the page during fixed scrolling", defaultValue = "0", type = Integer.class)
 		margin,;
 	}
 

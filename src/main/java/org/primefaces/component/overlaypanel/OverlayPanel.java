@@ -54,9 +54,9 @@ public class OverlayPanel extends AbstractOverlayPanel {
 		styleClass,
 		@PFProperty(description = "Identifier of the target component to show the panel")
 		forValue("for"),
-		@PFProperty(description = "Event to show the overlay panel,")
+		@PFProperty(description = "Event to show the overlay panel")
 		showEvent,
-		@PFProperty(description = "Event to hide the overlay panel,")
+		@PFProperty(description = "Event to hide the overlay panel")
 		hideEvent,
 		@PFProperty(description = "Effect to display when showing the panel")
 		showEffect,
@@ -76,7 +76,7 @@ public class OverlayPanel extends AbstractOverlayPanel {
 		dynamic,
 		@PFProperty(description = "When set true, clicking outside of the panel hides the overlay", defaultValue = "true", type = Boolean.class)
 		dismissable,
-		@PFProperty(description = "Displays a close icon to hide the overlay,", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Displays a close icon to hide the overlay", defaultValue = "false", type = Boolean.class)
 		showCloseIcon,
 		@PFProperty(description = "Boolean value that specifies whether the document should be shielded with a partially transparent mask to require the user to close the Panel before being able to activate any elements in the document", defaultValue = "false", type = Boolean.class)
 		modal,

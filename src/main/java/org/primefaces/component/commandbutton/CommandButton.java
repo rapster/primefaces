@@ -100,7 +100,7 @@ public class CommandButton extends AbstractCommandButton implements org.primefac
 		escape,
 		@PFProperty(description = "When set to true client side validation is enabled, global setting is required to be enabled as a prerequisite", defaultValue = "false", type = Boolean.class)
 		validateClient,
-		@PFProperty(description = "Selector to use when partial submit is on,")
+		@PFProperty(description = "Selector to use when partial submit is on")
 		partialSubmitFilter,
 		@PFProperty(description = "Form to serialize for an ajax request")
 		form,

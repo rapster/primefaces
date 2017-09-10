@@ -65,11 +65,11 @@ public class Tooltip extends AbstractTooltip {
 		style,
 		@PFProperty(description = "Style class of the tooltip")
 		styleClass,
-		@PFProperty(description = "jquery selector for global tooltip,")
+		@PFProperty(description = "jquery selector for global tooltip")
 		globalSelector,
 		@PFProperty(description = "Defines whether html would be escaped or not, defaults to true", defaultValue = "true", type = Boolean.class)
 		escape,
-		@PFProperty(description = "Tooltip position follows pointer on mousemove,", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Tooltip position follows pointer on mousemove", defaultValue = "false", type = Boolean.class)
 		trackMouse,
 		@PFProperty(description = "Client side callback to execute before tooltip is shown. Returning false will prevent display")
 		beforeShow,

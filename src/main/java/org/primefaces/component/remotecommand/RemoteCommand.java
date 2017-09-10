@@ -74,7 +74,7 @@ public class RemoteCommand extends AbstractRemoteCommand implements org.primefac
 		resetValues,
 		@PFProperty(description = "If true, components which autoUpdate=\"true\" will not be updated for this request. If not specified, or the value is false, no such indication is made", defaultValue = "false", type = Boolean.class)
 		ignoreAutoUpdate,
-		@PFProperty(description = "Selector to use when partial submit is on,")
+		@PFProperty(description = "Selector to use when partial submit is on")
 		partialSubmitFilter,
 		@PFProperty(description = "Form to serialize for an ajax request")
 		form,;

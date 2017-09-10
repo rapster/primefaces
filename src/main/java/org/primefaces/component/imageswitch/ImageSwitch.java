@@ -58,7 +58,7 @@ public class ImageSwitch extends AbstractImageSwitch {
 		slideshowSpeed,
 		@PFProperty(description = "Starts slideshow automatically on page load", defaultValue = "true", type = Boolean.class)
 		slideshowAuto,
-		@PFProperty(description = "Index of the first image,", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Index of the first image", defaultValue = "0", type = Integer.class)
 		activeIndex,;
 	}
 

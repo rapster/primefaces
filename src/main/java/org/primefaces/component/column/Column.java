@@ -100,9 +100,9 @@ public class Column extends AbstractColumn implements org.primefaces.component.a
 		sortable,
 		@PFProperty(description = "Boolean value to mark column as filterable", defaultValue = "true", type = Boolean.class)
 		filterable,
-		@PFProperty(description = "Controls the visibilty of the column,", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Controls the visibilty of the column", defaultValue = "true", type = Boolean.class)
 		visible,
-		@PFProperty(description = "Whether clicking the column selects the row when datatable has row selection enabled,", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Whether clicking the column selects the row when datatable has row selection enabled", defaultValue = "true", type = Boolean.class)
 		selectRow,
 		@PFProperty(description = "Label to read by screen readers, when not specified headerText is used")
 		ariaHeaderText,

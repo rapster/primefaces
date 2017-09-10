@@ -109,7 +109,7 @@ public class UIMenuItem extends AbstractUIMenuItem implements org.primefaces.com
 		containerStyle,
 		@PFProperty(description = "StyleClass of the menuitem container")
 		containerStyleClass,
-		@PFProperty(description = "Selector to use when partial submit is on,")
+		@PFProperty(description = "Selector to use when partial submit is on")
 		partialSubmitFilter,
 		@PFProperty(description = "Form to serialize for an ajax request")
 		form,

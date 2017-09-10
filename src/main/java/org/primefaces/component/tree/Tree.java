@@ -102,9 +102,9 @@ public class Tree extends AbstractTree implements javax.faces.component.behavior
 		animate,
 		@PFProperty(description = "Defines the orientation of the tree, valid values are, \"vertical\" (default) and horizontal", defaultValue = "vertical")
 		orientation,
-		@PFProperty(description = "Defines upwards selection propagation for checkbox mode,", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines upwards selection propagation for checkbox mode", defaultValue = "true", type = Boolean.class)
 		propagateSelectionUp,
-		@PFProperty(description = "Defines upwards selection propagation for checkbox mode,", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines upwards selection propagation for checkbox mode", defaultValue = "true", type = Boolean.class)
 		propagateSelectionDown,
 		@PFProperty(description = "Controls dragging of tree nodes", defaultValue = "false", type = Boolean.class)
 		draggable,

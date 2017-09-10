@@ -84,7 +84,7 @@ public class SplitButton extends AbstractSplitButton implements org.primefaces.c
 		ignoreAutoUpdate,
 		@PFProperty(description = "Appends the overlay to the element defined by search expression. Defaults to document body")
 		appendTo,
-		@PFProperty(description = "Selector to use when partial submit is on,")
+		@PFProperty(description = "Selector to use when partial submit is on")
 		partialSubmitFilter,
 		@PFProperty(description = "Style class of the overlay menu element")
 		menuStyleClass,

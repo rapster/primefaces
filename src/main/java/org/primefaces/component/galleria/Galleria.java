@@ -67,7 +67,7 @@ public class Galleria extends AbstractGalleria {
 		frameHeight,
 		@PFProperty(description = "Defines visibility of filmstrip", defaultValue = "true", type = Boolean.class)
 		showFilmstrip,
-		@PFProperty(description = "Images are displayed with a slideshow in autoPlay mode,", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Images are displayed with a slideshow in autoPlay mode", defaultValue = "true", type = Boolean.class)
 		autoPlay,
 		@PFProperty(description = "Time in milliseconds between each slide in autoPlay mode", defaultValue = "4000", type = Integer.class)
 		transitionInterval,
