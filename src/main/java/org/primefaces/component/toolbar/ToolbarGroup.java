@@ -39,7 +39,7 @@ public class ToolbarGroup extends AbstractToolbarGroup {
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Defines the alignment within toolbar, valid values are left and right. Default is left", defaultValue = "left")
+		@PFProperty(description = "Defines the alignment within toolbar, valid values are left and right", defaultValue = "left")
 		align,
 		@PFProperty(description = "Inline style of the container element")
 		style,

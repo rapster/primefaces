@@ -58,20 +58,19 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "dataGrid",
              description = "DataGrid displays a collection of data in grid layout. Ajax Pagination is a built-in feature and paginator UI is fully customizable via various options like paginatorTemplate, rowPerPageOptions, pageLinks and more.",
              widget = true,
-             rtl = true,
              parent = UIData.class)
 public class DataGrid extends AbstractDataGrid implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder, org.primefaces.component.api.Pageable {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIDataPropertyKeys.class})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Number of columns of grid. Default is 3", defaultValue = "3", type = Integer.class)
+		@PFProperty(description = "Number of columns of grid", defaultValue = "3", type = Integer.class)
 		columns,
 		@PFProperty(description = "Inline style of the main container")
 		style,
 		@PFProperty(description = "Style class of the main container")
 		styleClass,
-		@PFProperty(description = "Text to display when there is no data to display. Default is \"No records found.\"", defaultValue = "No records found.")
+		@PFProperty(description = "Text to display when there is no data to display", defaultValue = "No records found.")
 		emptyMessage,
 		@PFProperty(description = "Layout approach to use, valid values are \"tabular\" (default) and \"grid\" for responsive grid", defaultValue = "tabular")
 		layout,;

@@ -87,7 +87,6 @@ import org.primefaces.util.ComponentTraversalUtils;
 @PFComponent(tagName = "timeline",
              description = "Timeline is an interactive visualization chart to visualize events in time.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Timeline extends AbstractTimeline implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -110,85 +109,85 @@ public class Timeline extends AbstractTimeline implements javax.faces.component.
 		timeZone,
 		@PFProperty(description = "Time zone the user's browser / PC is running in. This time zone allows to correct the conversion of start / end dates to the target timeZone for displaying.\n The attribute can be either a String or TimeZone object or null. Note: browserTimeZone should be provided if the target timeZone is provided. If null, browserTimeZone defaults to the server's timeZone", type = Object.class)
 		browserTimeZone,
-		@PFProperty(description = "The height of the timeline in pixels, as a percentage, or \"auto\". When the height is set to \"auto\", the height of the timeline is automatically adjusted to fit the contents.\n If not, it is possible that events get stacked so high, that they are not visible in the timeline. When height is set to \"auto\", a minimum height can be specified with the option minHeight. Default is \"auto\"", defaultValue = "auto")
+		@PFProperty(description = "The height of the timeline in pixels, as a percentage, or \"auto\". When the height is set to \"auto\", the height of the timeline is automatically adjusted to fit the contents.\n If not, it is possible that events get stacked so high, that they are not visible in the timeline. When height is set to \"auto\", a minimum height can be specified with the option minHeight", defaultValue = "auto")
 		height,
-		@PFProperty(description = "Specifies a minimum height for the Timeline in pixels. Useful when height is set to \"auto\". Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Specifies a minimum height for the Timeline in pixels. Useful when height is set to \"auto\"", defaultValue = "0", type = Integer.class)
 		minHeight,
-		@PFProperty(description = "The width of the timeline in pixels or as a percentage. Default is \"100%\"", defaultValue = "100%")
+		@PFProperty(description = "The width of the timeline in pixels or as a percentage", defaultValue = "100%")
 		width,
-		@PFProperty(description = "Check if the timeline container is resized, and if so, resize the timeline.\n Useful when the webpage (browser window) or a layout pane / unit containing the timeline component is resized. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Check if the timeline container is resized, and if so, resize the timeline.\n Useful when the webpage (browser window) or a layout pane / unit containing the timeline component is resized", defaultValue = "true", type = Boolean.class)
 		responsive,
-		@PFProperty(description = "If false, the horizontal axis is drawn at the bottom. If true, the axis is drawn on top. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "If false, the horizontal axis is drawn at the bottom. If true, the axis is drawn on top", defaultValue = "false", type = Boolean.class)
 		axisOnTop,
-		@PFProperty(description = "The width of the drag areas in pixels. When an event with date range is selected, it has a drag area on the left and right side, with which the start or end dates of the event can be manipulated.\n Default is 10", defaultValue = "10", type = Integer.class)
+		@PFProperty(description = "The width of the drag areas in pixels. When an event with date range is selected, it has a drag area on the left and right side, with which the start or end dates of the event can be manipulated.\n", defaultValue = "10", type = Integer.class)
 		dragAreaWidth,
-		@PFProperty(description = "If true, the events can be edited, changed, created and deleted. Events can only be editable when the option selectable is true (default). When editable is true, the timeline can fire AJAX events \"change\", \"edit\", \"add\", \"delete\", \"drop\".\n This global setting \"editable\" can be overwritten for individual events by setting a value in field \"editable\". Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "If true, the events can be edited, changed, created and deleted. Events can only be editable when the option selectable is true (default). When editable is true, the timeline can fire AJAX events \"change\", \"edit\", \"add\", \"delete\", \"drop\".\n This global setting \"editable\" can be overwritten for individual events by setting a value in field \"editable\"", defaultValue = "false", type = Boolean.class)
 		editable,
-		@PFProperty(description = "If true, events on the timeline are selectable. Selectable events can fire AJAX \"select\" events. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "If true, events on the timeline are selectable. Selectable events can fire AJAX \"select\" events", defaultValue = "true", type = Boolean.class)
 		selectable,
-		@PFProperty(description = "If true, you can unselect an item by clicking in the empty space of the timeline. If false, you cannot unselect an item, there will be always one item selected. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "If true, you can unselect an item by clicking in the empty space of the timeline. If false, you cannot unselect an item, there will be always one item selected", defaultValue = "true", type = Boolean.class)
 		unselectable,
-		@PFProperty(description = "If true, the timeline is zoomable. When the timeline is zoomed, AJAX \"rangechange\" events are fired. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "If true, the timeline is zoomable. When the timeline is zoomed, AJAX \"rangechange\" events are fired", defaultValue = "true", type = Boolean.class)
 		zoomable,
-		@PFProperty(description = "If true, the timeline is movable. When the timeline is moved, AJAX \"rangechange\" events are fired. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "If true, the timeline is movable. When the timeline is moved, AJAX \"rangechange\" events are fired", defaultValue = "true", type = Boolean.class)
 		moveable,
-		@PFProperty(description = "The initial start date for the axis of the timeline. If not provided, the earliest date present in the events is taken as start date. Default is null", type = java.util.Date.class)
+		@PFProperty(description = "The initial start date for the axis of the timeline. If not provided, the earliest date present in the events is taken as start date", type = java.util.Date.class)
 		start,
-		@PFProperty(description = "The initial end date for the axis of the timeline. If not provided, the latest date present in the events is taken as end date. Default is null", type = java.util.Date.class)
+		@PFProperty(description = "The initial end date for the axis of the timeline. If not provided, the latest date present in the events is taken as end date", type = java.util.Date.class)
 		end,
-		@PFProperty(description = "Set a minimum Date for the visible range. It will not be possible to move beyond this minimum. Default is null", type = java.util.Date.class)
+		@PFProperty(description = "Set a minimum Date for the visible range. It will not be possible to move beyond this minimum", type = java.util.Date.class)
 		min,
-		@PFProperty(description = "Set a maximum Date for the visible range. It will not be possible to move beyond this maximum. Default is null", type = java.util.Date.class)
+		@PFProperty(description = "Set a maximum Date for the visible range. It will not be possible to move beyond this maximum", type = java.util.Date.class)
 		max,
-		@PFProperty(description = "Set a minimum zoom interval for the visible range in milliseconds. It will not be possible to zoom in further than this minimum. Default is 10", defaultValue = "10L", type = Long.class)
+		@PFProperty(description = "Set a minimum zoom interval for the visible range in milliseconds. It will not be possible to zoom in further than this minimum", defaultValue = "10L", type = Long.class)
 		zoomMin,
 		@PFProperty(description = "Set a maximum zoom interval for the visible range in milliseconds. It will not be possible to zoom out further than this maximum. Default value equals 315360000000000 ms (about 10000 years)", defaultValue = "315360000000000L", type = Long.class)
 		zoomMax,
 		@PFProperty(description = "Preload factor is a positive float value or 0 which can be used for lazy loading of events. When the lazy loading feature is active, the calculated time range for preloading will be multiplicated by the preload factor. The result of this multiplication specifies the additional time range which will be considered for the preloading during moving / zooming too. For example, if the calculated time range for preloading is 5 days and the preload factor is 0.2, the result is 5 * 0.2 = 1 day. That means, 1 day backwards and / or 1 day onwards will be added to the original calculated time range. The event's area to be preloaded is wider then. This helps to avoid frequently, time-consuming fetching of events. Default value is 0", defaultValue = "0.0f", type = Float.class)
 		preloadFactor,
-		@PFProperty(description = "The minimal margin in pixels between events. Default is 10", defaultValue = "10", type = Integer.class)
+		@PFProperty(description = "The minimal margin in pixels between events", defaultValue = "10", type = Integer.class)
 		eventMargin,
-		@PFProperty(description = "The minimal margin in pixels between events and the horizontal axis. Default is 10", defaultValue = "10", type = Integer.class)
+		@PFProperty(description = "The minimal margin in pixels between events and the horizontal axis", defaultValue = "10", type = Integer.class)
 		eventMarginAxis,
-		@PFProperty(description = "Specifies the style for the timeline events. Choose from \"dot\" or \"box\". Default is \"box\"", defaultValue = "box")
+		@PFProperty(description = "Specifies the style for the timeline events. Choose from \"dot\" or \"box\"", defaultValue = "box")
 		eventStyle,
-		@PFProperty(description = "If true, items can be moved from one group to another. Only applicable when groups are used. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "If true, items can be moved from one group to another. Only applicable when groups are used", defaultValue = "true", type = Boolean.class)
 		groupsChangeable,
-		@PFProperty(description = "If false, the groups legend is drawn at the left side of the timeline. If true, the groups legend is drawn on the right side. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "If false, the groups legend is drawn at the left side of the timeline. If true, the groups legend is drawn on the right side", defaultValue = "false", type = Boolean.class)
 		groupsOnRight,
 		@PFProperty(description = "Allows to customize the way groups are ordered. When true (default), groups will be ordered by content alphabetically (when the list of groups is missing) or by native ordering of TimelineGroup object in the list of groups (when the list of groups is available). When false, groups will not be ordered at all", defaultValue = "true", type = Boolean.class)
 		groupsOrder,
-		@PFProperty(description = "By default, the width of the groups legend is adjusted to the group names. A fixed width can be set for the groups legend by specifying the \"groupsWidth\" as a string, for example \"200px\". Default is null")
+		@PFProperty(description = "By default, the width of the groups legend is adjusted to the group names. A fixed width can be set for the groups legend by specifying the \"groupsWidth\" as a string, for example \"200px\"")
 		groupsWidth,
-		@PFProperty(description = "The minimum height of each individual group even if they have no items. The group height is set as the greatest value between items height and the groupMinHeight. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "The minimum height of each individual group even if they have no items. The group height is set as the greatest value between items height and the groupMinHeight", defaultValue = "0", type = Integer.class)
 		groupMinHeight,
-		@PFProperty(description = "If true, the start and end of an event will be snapped nice integer values when moving or resizing the event. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "If true, the start and end of an event will be snapped nice integer values when moving or resizing the event", defaultValue = "true", type = Boolean.class)
 		snapEvents,
-		@PFProperty(description = "If true, the events are stacked above each other to prevent overlapping events. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "If true, the events are stacked above each other to prevent overlapping events", defaultValue = "true", type = Boolean.class)
 		stackEvents,
-		@PFProperty(description = "If true, the timeline shows a red, vertical line displaying the current time. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "If true, the timeline shows a red, vertical line displaying the current time", defaultValue = "true", type = Boolean.class)
 		showCurrentTime,
-		@PFProperty(description = "By default, the timeline shows both minor and major date labels on the horizontal axis.\n For example the minor labels show minutes and the major labels show hours. When \"showMajorLabels\" is false, no major labels are shown.\n Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "By default, the timeline shows both minor and major date labels on the horizontal axis.\n For example the minor labels show minutes and the major labels show hours. When \"showMajorLabels\" is false, no major labels are shown.\n", defaultValue = "true", type = Boolean.class)
 		showMajorLabels,
-		@PFProperty(description = "By default, the timeline shows both minor and major date labels on the horizontal axis.\n For example the minor labels show minutes and the major labels show hours. When \"showMinorLabels\" is false, no minor labels are shown.\n When both \"showMajorLabels\" and \"showMinorLabels\" are false, no horizontal axis will be visible. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "By default, the timeline shows both minor and major date labels on the horizontal axis.\n For example the minor labels show minutes and the major labels show hours. When \"showMinorLabels\" is false, no minor labels are shown.\n When both \"showMajorLabels\" and \"showMinorLabels\" are false, no horizontal axis will be visible", defaultValue = "true", type = Boolean.class)
 		showMinorLabels,
-		@PFProperty(description = "Show the button \"Create new event\" in the a navigation menu. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Show the button \"Create new event\" in the a navigation menu", defaultValue = "false", type = Boolean.class)
 		showButtonNew,
-		@PFProperty(description = "Show a navigation menu with buttons to move and zoom the timeline. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Show a navigation menu with buttons to move and zoom the timeline", defaultValue = "false", type = Boolean.class)
 		showNavigation,
-		@PFProperty(description = "If false, items can not be moved or dragged horizontally (neither start time nor end time is changable).\n This is useful when items should be editable but can only be changed regarding group or content (typical use case: scheduling events).\n Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "If false, items can not be moved or dragged horizontally (neither start time nor end time is changable).\n This is useful when items should be editable but can only be changed regarding group or content (typical use case: scheduling events).\n", defaultValue = "true", type = Boolean.class)
 		timeChangeable,
-		@PFProperty(description = "Style class to apply when an acceptable draggable is dragged over. Default is null")
+		@PFProperty(description = "Style class to apply when an acceptable draggable is dragged over")
 		dropHoverStyleClass,
-		@PFProperty(description = "Style class to apply when an acceptable draggable is being dragged over. Default is null")
+		@PFProperty(description = "Style class to apply when an acceptable draggable is being dragged over")
 		dropActiveStyleClass,
-		@PFProperty(description = "Selector to define the accepted draggables. Default is null")
+		@PFProperty(description = "Selector to define the accepted draggables")
 		dropAccept,
-		@PFProperty(description = "Scope key to match draggables and droppables. Default is null")
+		@PFProperty(description = "Scope key to match draggables and droppables")
 		dropScope,
-		@PFProperty(description = "When true, events are moved animated when resizing or moving them. This is very pleasing for the eye, but does require more computational power. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "When true, events are moved animated when resizing or moving them. This is very pleasing for the eye, but does require more computational power", defaultValue = "true", type = Boolean.class)
 		animate,
-		@PFProperty(description = "When true, events are moved animated when zooming the Timeline. This looks cool, but does require more computational power. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "When true, events are moved animated when zooming the Timeline. This looks cool, but does require more computational power", defaultValue = "true", type = Boolean.class)
 		animateZoom,;
 	}
 

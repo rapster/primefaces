@@ -57,7 +57,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "diagram",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIOutput.class)
 public class Diagram extends AbstractDiagram implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

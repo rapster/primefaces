@@ -41,7 +41,6 @@ import javax.faces.component.UINamingContainer;
 @PFComponent(tagName = "selectManyMenu",
              description = "",
              widget = true,
-             rtl = true,
              parent = HtmlSelectManyMenu.class)
 public class SelectManyMenu extends AbstractSelectManyMenu implements org.primefaces.component.api.InputHolder {
 
@@ -58,7 +57,7 @@ public class SelectManyMenu extends AbstractSelectManyMenu implements org.primef
 		filterMatchMode,
 		@PFProperty(description = "Client side function to use in custom filterMatchMode")
 		filterFunction,
-		@PFProperty(description = "Defines if filtering would be case sensitive. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines if filtering would be case sensitive", defaultValue = "false", type = Boolean.class)
 		caseSensitive,
 		@PFProperty(description = "Defines the height of the scrollable area", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
 		scrollHeight,;

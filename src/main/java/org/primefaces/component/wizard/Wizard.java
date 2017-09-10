@@ -16,6 +16,7 @@
 package org.primefaces.component.wizard;
 
 import javax.faces.component.UIComponentBase;
+import org.primefaces.component.wizard.WizardHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -47,8 +48,8 @@ import javax.faces.event.FacesEvent;
 @PFComponent(tagName = "wizard",
              description = "Wizard provides an ajax enhanced UI to implement a workflow easily in a single page. \n      Wizard consists of several child tab components where each tab represents a step in the process.",
              widget = true,
-             rtl = true,
-             parent = UIComponentBase.class)
+             parent = UIComponentBase.class,
+             handlerClass = WizardHandler.class)
 public class Wizard extends AbstractWizard {
 
 	@PFPropertyKeys(base = {})
@@ -62,17 +63,17 @@ public class Wizard extends AbstractWizard {
 		styleClass,
 		@PFProperty(description = "Server side listener to invoke when wizard attempts to go forward or back", type = javax.el.MethodExpression.class)
 		flowListener,
-		@PFProperty(description = "Specifies visibility of default navigator arrows. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies visibility of default navigator arrows", defaultValue = "true", type = Boolean.class)
 		showNavBar,
-		@PFProperty(description = "Specifies visibility of default step title bar. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies visibility of default step title bar", defaultValue = "true", type = Boolean.class)
 		showStepStatus,
 		@PFProperty(description = "Javascript event handler to be invoked when flow goes back")
 		onback,
 		@PFProperty(description = "Javascript event handler to be invoked when flow goes forward")
 		onnext,
-		@PFProperty(description = "Label of next navigation button. Default is \"Next\"", defaultValue = "Next")
+		@PFProperty(description = "Label of next navigation button", defaultValue = "Next")
 		nextLabel,
-		@PFProperty(description = "Label of back navigation button. Default is \"Back\"", defaultValue = "Back")
+		@PFProperty(description = "Label of back navigation button", defaultValue = "Back")
 		backLabel,;
 	}
 

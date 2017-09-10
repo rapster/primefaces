@@ -62,7 +62,6 @@ import javax.faces.render.Renderer;
 @PFComponent(tagName = "selectOneMenu",
              description = "",
              widget = true,
-             rtl = true,
              parent = HtmlSelectOneMenu.class)
 public class SelectOneMenu extends AbstractSelectOneMenu implements org.primefaces.component.api.InputHolder {
 
@@ -89,7 +88,7 @@ public class SelectOneMenu extends AbstractSelectOneMenu implements org.primefac
 		filterMatchMode,
 		@PFProperty(description = "Client side function to use in custom filterMatchMode")
 		filterFunction,
-		@PFProperty(description = "Defines if filtering would be case sensitive. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines if filtering would be case sensitive", defaultValue = "false", type = Boolean.class)
 		caseSensitive,
 		@PFProperty(description = "Maximum number of characters that may be entered in this field", defaultValue = "Integer.MAX_VALUE", type = Integer.class)
 		maxlength,

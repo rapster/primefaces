@@ -34,22 +34,21 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "inputSlider",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class InputSlider extends AbstractInputSlider {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Minimum value of the slider. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Minimum value of the slider", defaultValue = "0", type = Integer.class)
 		minValue,
-		@PFProperty(description = "Maximum value of the slider. Default is 100", defaultValue = "100", type = Integer.class)
+		@PFProperty(description = "Maximum value of the slider", defaultValue = "100", type = Integer.class)
 		maxValue,
 		@PFProperty(description = "Inline style of the container element")
 		style,
 		@PFProperty(description = "Style class of the container element")
 		styleClass,
-		@PFProperty(description = "Fixed pixel increments that the slider move in. Default is 1", defaultValue = "1", type = Integer.class)
+		@PFProperty(description = "Fixed pixel increments that the slider move in", defaultValue = "1", type = Integer.class)
 		step,
 		@PFProperty(description = "Disables or enables the slider", defaultValue = "false", type = Boolean.class)
 		disabled,

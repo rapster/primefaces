@@ -42,7 +42,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "contentFlow",
              description = "ContentFlow is used to display a collection of items.",
              widget = true,
-             rtl = true,
              parent = UIPanel.class)
 public class ContentFlow extends AbstractContentFlow {
 

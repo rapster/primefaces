@@ -47,14 +47,13 @@ import javax.faces.event.AjaxBehaviorEvent;
 @PFComponent(tagName = "textEditor",
              description = "Editor is an input component with rich text editing capabilities.",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class TextEditor extends AbstractTextEditor implements javax.faces.component.behavior.ClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Height of the editor. Default is min integer value", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
+		@PFProperty(description = "Height of the editor", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
 		height,
 		@PFProperty(description = "Whether to instantiate the editor to read-only mode", defaultValue = "false", type = Boolean.class)
 		readonly,

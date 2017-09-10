@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "slideMenu",
              description = "SlideMenu displays submenus with a slide animation.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class SlideMenu extends AbstractSlideMenu implements org.primefaces.component.menu.OverlayMenu {
 
@@ -54,7 +53,7 @@ public class SlideMenu extends AbstractSlideMenu implements org.primefaces.compo
 		style,
 		@PFProperty(description = "Style class of the main container element")
 		styleClass,
-		@PFProperty(description = "Text for back link, only applies to sliding menus. Default is \"Back\"", defaultValue = "Back")
+		@PFProperty(description = "Text for back link, only applies to sliding menus", defaultValue = "Back")
 		backLabel,
 		@PFProperty(description = "Id of component whose click event will show the dynamic positioned menu")
 		trigger,
@@ -62,9 +61,9 @@ public class SlideMenu extends AbstractSlideMenu implements org.primefaces.compo
 		my,
 		@PFProperty(description = "Corner of trigger to align with menu element")
 		at,
-		@PFProperty(description = "Defines positioning, when enabled menu is displayed with absolute positioning relative to the trigger. \n Default is false, meaning static positioning", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines positioning, when enabled menu is displayed with absolute positioning relative to the trigger. \n", defaultValue = "false", type = Boolean.class)
 		overlay,
-		@PFProperty(description = "Event name of component that will show the dynamic positioned menu. Default is click", defaultValue = "click")
+		@PFProperty(description = "Event name of component that will show the dynamic positioned menu", defaultValue = "click")
 		triggerEvent,;
 	}
 

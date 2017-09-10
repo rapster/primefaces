@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "breadCrumb",
              description = "Breadcrumb is a navigation component that provides contextual information about page hierarchy in the workflow.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class BreadCrumb extends AbstractBreadCrumb {
 

@@ -16,6 +16,7 @@
 package org.primefaces.component.accordionpanel;
 
 import org.primefaces.component.api.UITabPanel;
+import org.primefaces.component.accordionpanel.AccordionPanelComponentHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -68,13 +69,14 @@ import javax.faces.event.BehaviorEvent;
              description = "AccordionPanel is a container component that displays content in stacked format.",
              widget = true,
              rtl = true,
-             parent = UITabPanel.class)
+             parent = UITabPanel.class,
+             handlerClass = AccordionPanelComponentHandler.class)
 public class AccordionPanel extends AbstractAccordionPanel implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIComponentPropertyKeys.class})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Index of the active tab or a comma separated string of indexes when multiple mode is on. Default is zero", defaultValue = "0")
+		@PFProperty(description = "Index of the active tab or a comma separated string of indexes when multiple mode is on", defaultValue = "0")
 		activeIndex,
 		@PFProperty(description = "Inline style of the container element")
 		style,
@@ -88,9 +90,9 @@ public class AccordionPanel extends AbstractAccordionPanel implements javax.face
 		onTabClose,
 		@PFProperty(description = "Defines if activating a dynamic tab should load the contents from server again", defaultValue = "true", type = Boolean.class)
 		cache,
-		@PFProperty(description = "Enables activating multiple tabs, default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Enables activating multiple tabs,", defaultValue = "false", type = Boolean.class)
 		multiple,
-		@PFProperty(description = "Position of the headers in the tabbing order. Default is 0", defaultValue = "0")
+		@PFProperty(description = "Position of the headers in the tabbing order", defaultValue = "0")
 		tabindex,
 		@PFProperty(description = "Method providing suggestions", type = javax.el.MethodExpression.class)
 		tabController,;

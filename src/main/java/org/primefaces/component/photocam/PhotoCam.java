@@ -16,6 +16,7 @@
 package org.primefaces.component.photocam;
 
 import javax.faces.component.UIInput;
+import org.primefaces.component.photocam.PhotoCamHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -41,8 +42,8 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "photoCam",
              description = ".",
              widget = true,
-             rtl = true,
-             parent = UIInput.class)
+             parent = UIInput.class,
+             handlerClass = PhotoCamHandler.class)
 public class PhotoCam extends AbstractPhotoCam {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})

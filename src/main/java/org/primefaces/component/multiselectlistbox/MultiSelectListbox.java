@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "multiSelectListbox",
              description = "MultiSelectListbox is used to select an item from a collection of listboxes that are in parent-child relationship.",
              widget = true,
-             rtl = true,
              parent = UISelectOne.class)
 public class MultiSelectListbox extends AbstractMultiSelectListbox implements javax.faces.component.behavior.ClientBehaviorHolder {
 

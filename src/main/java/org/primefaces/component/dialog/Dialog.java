@@ -63,21 +63,21 @@ public class Dialog extends AbstractDialog implements javax.faces.component.beha
 
 		@PFProperty(description = "Text of the header")
 		header,
-		@PFProperty(description = "Specifies draggability. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies draggability", defaultValue = "true", type = Boolean.class)
 		draggable,
-		@PFProperty(description = "Specifies resizability. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies resizability", defaultValue = "true", type = Boolean.class)
 		resizable,
-		@PFProperty(description = "Boolean value that specifies whether the document should be shielded with a partially transparent mask to require the user to close the Panel before being able to activate any elements in the document. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Boolean value that specifies whether the document should be shielded with a partially transparent mask to require the user to close the Panel before being able to activate any elements in the document", defaultValue = "false", type = Boolean.class)
 		modal,
-		@PFProperty(description = "Sets dialogs visibility. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Sets dialogs visibility", defaultValue = "false", type = Boolean.class)
 		visible,
-		@PFProperty(description = "Width of the dialog in pixels. Default is auto")
+		@PFProperty(description = "Width of the dialog in pixels")
 		width,
 		@PFProperty(description = "Height of the dialog")
 		height,
-		@PFProperty(description = "Minimum width of a resizable dialog. Default is unl", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
+		@PFProperty(description = "Minimum width of a resizable dialog", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
 		minWidth,
-		@PFProperty(description = "Minimum height of a resizable dialog. Default is height of titlebar", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
+		@PFProperty(description = "Minimum height of a resizable dialog", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
 		minHeight,
 		@PFProperty(description = "Inline style of the dialog container")
 		style,
@@ -101,19 +101,19 @@ public class Dialog extends AbstractDialog implements javax.faces.component.beha
 		showHeader,
 		@PFProperty(description = "Text of the footer")
 		footer,
-		@PFProperty(description = "Dynamic mode allows dialog to fetch it's contents before it's shown rather than on page load\n which is useful to reduce initial page load times. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Dynamic mode allows dialog to fetch it's contents before it's shown rather than on page load\n which is useful to reduce initial page load times", defaultValue = "false", type = Boolean.class)
 		dynamic,
 		@PFProperty(description = "Specifies if dialog is minimizable or not. Default false", defaultValue = "false", type = Boolean.class)
 		minimizable,
 		@PFProperty(description = "Specifies if dialog is maximizable or not. Default false", defaultValue = "false", type = Boolean.class)
 		maximizable,
-		@PFProperty(description = "Defines if dialog should close when escape key is pressed. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines if dialog should close when escape key is pressed", defaultValue = "false", type = Boolean.class)
 		closeOnEscape,
 		@PFProperty(description = "Defines which component to focus")
 		focus,
 		@PFProperty(description = "Dialog size might exceeed viewport if content is bigger than viewport in terms of height. fitViewport option automatically\n adjusts height to fit dialog within the viewport", defaultValue = "false", type = Boolean.class)
 		fitViewport,
-		@PFProperty(description = "Defines whether dialog will be kept in viewport on scroll (fixed) or keep its position (absolute). Default is fixed", defaultValue = "fixed")
+		@PFProperty(description = "Defines whether dialog will be kept in viewport on scroll (fixed) or keep its position (absolute)", defaultValue = "fixed")
 		positionType,
 		@PFProperty(description = "In responsive mode, dialog adjusts itself based on screen width", defaultValue = "false", type = Boolean.class)
 		responsive,;

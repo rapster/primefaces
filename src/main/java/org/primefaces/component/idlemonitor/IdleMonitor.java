@@ -49,14 +49,13 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "idleMonitor",
              description = "IdleMonitor watches user actions on a page and notify several callbacks in case they go idle or active again.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class IdleMonitor extends AbstractIdleMonitor implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Time to wait in milliseconds until deciding if the user is idle. Default is 5 minutes", defaultValue = "300000", type = Integer.class)
+		@PFProperty(description = "Time to wait in milliseconds until deciding if the user is idle", defaultValue = "300000", type = Integer.class)
 		timeout,
 		@PFProperty(description = "Client side callback to execute when user goes idle")
 		onidle,

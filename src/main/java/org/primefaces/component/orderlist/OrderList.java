@@ -56,7 +56,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "orderList",
              description = "OrderList is used to sort a collection.",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class OrderList extends AbstractOrderList implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -75,15 +74,15 @@ public class OrderList extends AbstractOrderList implements javax.faces.componen
 		styleClass,
 		@PFProperty(description = "Disables the component", defaultValue = "false", type = Boolean.class)
 		disabled,
-		@PFProperty(description = "Name of the animation to display. Default is fade")
+		@PFProperty(description = "Name of the animation to display")
 		effect,
-		@PFProperty(description = "Text of move up button. Default is \"Move Up\"", defaultValue = "Move Up")
+		@PFProperty(description = "Text of move up button", defaultValue = "Move Up")
 		moveUpLabel,
-		@PFProperty(description = "Text of move top button. Default is \"Move Top\"", defaultValue = "Move Top")
+		@PFProperty(description = "Text of move top button", defaultValue = "Move Top")
 		moveTopLabel,
-		@PFProperty(description = "Text of move down button. Default is \"Move Down\"", defaultValue = "Move Down")
+		@PFProperty(description = "Text of move down button", defaultValue = "Move Down")
 		moveDownLabel,
-		@PFProperty(description = "Text of move bottom button. Default is \"Move Bottom\"", defaultValue = "Move Bottom")
+		@PFProperty(description = "Text of move bottom button", defaultValue = "Move Bottom")
 		moveBottomLabel,
 		@PFProperty(description = "Location of the order controls, valid values are \"left\" (default), \"right\" and none", defaultValue = "left")
 		controlsLocation,

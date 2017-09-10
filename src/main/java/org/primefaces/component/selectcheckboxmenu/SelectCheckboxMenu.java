@@ -51,7 +51,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "selectCheckboxMenu",
              description = "",
              widget = true,
-             rtl = true,
              parent = HtmlSelectManyCheckbox.class)
 public class SelectCheckboxMenu extends AbstractSelectCheckboxMenu implements org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -70,7 +69,7 @@ public class SelectCheckboxMenu extends AbstractSelectCheckboxMenu implements or
 		filterMatchMode,
 		@PFProperty(description = "Client side function to use in custom filterMatchMode")
 		filterFunction,
-		@PFProperty(description = "Defines if filtering would be case sensitive. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines if filtering would be case sensitive", defaultValue = "false", type = Boolean.class)
 		caseSensitive,
 		@PFProperty(description = "")
 		panelStyle,
@@ -82,9 +81,9 @@ public class SelectCheckboxMenu extends AbstractSelectCheckboxMenu implements or
 		tabindex,
 		@PFProperty(description = "Advisory tooltip information")
 		title,
-		@PFProperty(description = "When enabled, the header of panel is displayed. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "When enabled, the header of panel is displayed", defaultValue = "true", type = Boolean.class)
 		showHeader,
-		@PFProperty(description = "When enabled, the selected items are displayed on label. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "When enabled, the selected items are displayed on label", defaultValue = "false", type = Boolean.class)
 		updateLabel,
 		@PFProperty(description = "", defaultValue = "false", type = Boolean.class)
 		multiple,;

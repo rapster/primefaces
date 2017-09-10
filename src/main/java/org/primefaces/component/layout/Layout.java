@@ -58,7 +58,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "layout",
              description = "Layout component features a highly customizable borderLayout model making it very easy to create complex layouts even if you're not familar with web design.",
              widget = true,
-             rtl = true,
              parent = UIPanel.class)
 public class Layout extends AbstractLayout implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -79,11 +78,11 @@ public class Layout extends AbstractLayout implements javax.faces.component.beha
 		onToggle,
 		@PFProperty(description = "Title label for the resizer element")
 		resizeTitle,
-		@PFProperty(description = "Title label for the collapse button of collapsible units. Default is \"Collapse\"", defaultValue = "Collapse")
+		@PFProperty(description = "Title label for the collapse button of collapsible units", defaultValue = "Collapse")
 		collapseTitle,
 		@PFProperty(description = "Title label for the expand button of closable units")
 		expandTitle,
-		@PFProperty(description = "Title label for the close button of closable units. Default is \"Close\"", defaultValue = "Close")
+		@PFProperty(description = "Title label for the close button of closable units", defaultValue = "Close")
 		closeTitle,
 		@PFProperty(description = "When enabled, layout state is saved in a cookie for the session", defaultValue = "false", type = Boolean.class)
 		stateful,;

@@ -53,7 +53,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "columnToggler",
              description = "ColumnToggler is a helper component for datatable to toggle visibility of columns.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class ColumnToggler extends AbstractColumnToggler implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

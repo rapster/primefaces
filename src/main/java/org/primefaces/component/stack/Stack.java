@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "stack",
              description = "Stack is a navigation component that mimics the stacks feature in Mac OS X.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class Stack extends AbstractStack {
 
@@ -52,9 +51,9 @@ public class Stack extends AbstractStack {
 		model,
 		@PFProperty(description = "An optional image to contain stacked items")
 		icon,
-		@PFProperty(description = "Speed of the animation in milliseconds when opening the stack. Default is 300", defaultValue = "300", type = Integer.class)
+		@PFProperty(description = "Speed of the animation in milliseconds when opening the stack", defaultValue = "300", type = Integer.class)
 		openSpeed,
-		@PFProperty(description = "Speed of the animation in milliseconds when opening the stack. Default is 300", defaultValue = "300", type = Integer.class)
+		@PFProperty(description = "Speed of the animation in milliseconds when opening the stack", defaultValue = "300", type = Integer.class)
 		closeSpeed,
 		@PFProperty(description = "", defaultValue = "false", type = Boolean.class)
 		expanded,;

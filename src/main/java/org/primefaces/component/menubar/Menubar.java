@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "menubar",
              description = "Menubar is a horizontal navigation component.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class Menubar extends AbstractMenubar {
 
@@ -56,7 +55,7 @@ public class Menubar extends AbstractMenubar {
 		styleClass,
 		@PFProperty(description = "Defines whether the first level of submenus will be displayed on mouseover or not. When\n set to false, click event is required to display", defaultValue = "true", type = Boolean.class)
 		autoDisplay,
-		@PFProperty(description = "Event to toggle the submenus, default is hover. Valid values are \"hover\" and \"click\"")
+		@PFProperty(description = "Event to toggle the submenus,")
 		toggleEvent,;
 	}
 

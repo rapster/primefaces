@@ -41,16 +41,15 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "growl",
              description = "Growl is based on the Mac's growl notification widget and used to display FacesMessages similar to h:messages.",
              widget = true,
-             rtl = true,
              parent = UIMessages.class)
 public class Growl extends AbstractGrowl implements org.primefaces.component.api.AutoUpdatable, org.primefaces.component.api.UINotification {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Specifies if the message should stay instead of hidden automatically. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Specifies if the message should stay instead of hidden automatically", defaultValue = "false", type = Boolean.class)
 		sticky,
-		@PFProperty(description = "Duration in milliseconds to display non-sticky messages. Default is 800", defaultValue = "6000", type = Integer.class)
+		@PFProperty(description = "Duration in milliseconds to display non-sticky messages", defaultValue = "6000", type = Integer.class)
 		life,
 		@PFProperty(description = "When enabled, growl is updated for each ajax request implicitly", defaultValue = "false", type = Boolean.class)
 		autoUpdate,

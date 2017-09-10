@@ -16,6 +16,7 @@
 package org.primefaces.component.columns;
 
 import org.primefaces.component.api.UIData;
+import org.primefaces.component.columns.ColumnsHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -41,7 +42,8 @@ import org.primefaces.component.celleditor.CellEditor;
 
 @PFComponent(tagName = "columns",
              description = "",
-             parent = UIData.class)
+             parent = UIData.class,
+             handlerClass = ColumnsHandler.class)
 public class Columns extends AbstractColumns implements org.primefaces.component.api.UIColumn {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIDataPropertyKeys.class})
@@ -97,9 +99,9 @@ public class Columns extends AbstractColumns implements org.primefaces.component
 		sortable,
 		@PFProperty(description = "Boolean value to mark column as filterable", defaultValue = "true", type = Boolean.class)
 		filterable,
-		@PFProperty(description = "Controls the visibilty of the column, default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Controls the visibilty of the column,", defaultValue = "true", type = Boolean.class)
 		visible,
-		@PFProperty(description = "Whether clicking the column selects the row when datatable has row selection enabled, default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Whether clicking the column selects the row when datatable has row selection enabled,", defaultValue = "true", type = Boolean.class)
 		selectRow,
 		@PFProperty(description = "Label to read by screen readers, when not specified headerText is used")
 		ariaHeaderText,

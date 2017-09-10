@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "selectBooleanCheckbox",
              description = "",
              widget = true,
-             rtl = true,
              parent = HtmlSelectBooleanCheckbox.class)
 public class SelectBooleanCheckbox extends AbstractSelectBooleanCheckbox implements org.primefaces.component.api.InputHolder {
 

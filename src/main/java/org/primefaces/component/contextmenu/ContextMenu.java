@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "contextMenu",
              description = "ContextMenu provides an overlay menu displayed on mouse right-click event.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class ContextMenu extends AbstractContextMenu {
 
@@ -58,13 +57,13 @@ public class ContextMenu extends AbstractContextMenu {
 		model,
 		@PFProperty(description = "Type of tree nodes to get attached")
 		nodeType,
-		@PFProperty(description = "Event to bind the contextmenu default is right click")
+		@PFProperty(description = "Event to bind the contextmenu")
 		event,
 		@PFProperty(description = "Client side callback to execute before context menu is shown")
 		beforeShow,
 		@PFProperty(description = "Defines the selection behavior. Valid values are \"single\" and \"multiple\" (default)", defaultValue = "multiple")
 		selectionMode,
-		@PFProperty(description = "Selector to filter the elements to attach the menu. Default is null")
+		@PFProperty(description = "Selector to filter the elements to attach the menu")
 		targetFilter,;
 
 		String toString;

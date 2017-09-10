@@ -63,7 +63,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "pickList",
              description = "PickList is used for transferring data between two different collections.",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class PickList extends AbstractPickList implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -82,29 +81,29 @@ public class PickList extends AbstractPickList implements javax.faces.component.
 		styleClass,
 		@PFProperty(description = "Disables the component", defaultValue = "false", type = Boolean.class)
 		disabled,
-		@PFProperty(description = "Name of the animation to display. Default is fade", defaultValue = "fade")
+		@PFProperty(description = "Name of the animation to display", defaultValue = "fade")
 		effect,
-		@PFProperty(description = "Speed of the animation. Default is fast", defaultValue = "fast")
+		@PFProperty(description = "Speed of the animation", defaultValue = "fast")
 		effectSpeed,
-		@PFProperty(description = "Text of add button. Default is \"Add\"", defaultValue = "Add")
+		@PFProperty(description = "Text of add button", defaultValue = "Add")
 		addLabel,
-		@PFProperty(description = "Text of add all button. Default is \"Add All\"", defaultValue = "Add All")
+		@PFProperty(description = "Text of add all button", defaultValue = "Add All")
 		addAllLabel,
-		@PFProperty(description = "Text of remove button. Default is \"Remove\"", defaultValue = "Remove")
+		@PFProperty(description = "Text of remove button", defaultValue = "Remove")
 		removeLabel,
-		@PFProperty(description = "Text of remove all button. Default is \"Remove All\"", defaultValue = "Remove All")
+		@PFProperty(description = "Text of remove all button", defaultValue = "Remove All")
 		removeAllLabel,
-		@PFProperty(description = "Text of move up button. Default is \"Move Up\"", defaultValue = "Move Up")
+		@PFProperty(description = "Text of move up button", defaultValue = "Move Up")
 		moveUpLabel,
-		@PFProperty(description = "Text of move top button. Default is \"Move Top\"", defaultValue = "Move Top")
+		@PFProperty(description = "Text of move top button", defaultValue = "Move Top")
 		moveTopLabel,
-		@PFProperty(description = "Text of move down button. Default is \"Move Down\"", defaultValue = "Move Down")
+		@PFProperty(description = "Text of move down button", defaultValue = "Move Down")
 		moveDownLabel,
-		@PFProperty(description = "Text of move bottom button. Default is \"Move Down\"", defaultValue = "Move Bottom")
+		@PFProperty(description = "Text of move bottom button", defaultValue = "Move Bottom")
 		moveBottomLabel,
-		@PFProperty(description = "Specifies visibility of reorder buttons of sourcelist. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Specifies visibility of reorder buttons of sourcelist", defaultValue = "false", type = Boolean.class)
 		showSourceControls,
-		@PFProperty(description = "Specifies visibility of reorder buttons of target list. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Specifies visibility of reorder buttons of target list", defaultValue = "false", type = Boolean.class)
 		showTargetControls,
 		@PFProperty(description = "Client side callback to execute when an item is transferred from one list to another")
 		onTransfer,

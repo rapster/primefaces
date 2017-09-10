@@ -34,7 +34,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "switch",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class UISwitch extends AbstractUISwitch {
 

@@ -40,14 +40,13 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "draggable",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Draggable extends AbstractDraggable {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Displays proxy element instead of actual element. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Displays proxy element instead of actual element", defaultValue = "false", type = Boolean.class)
 		proxy,
 		@PFProperty(description = "", defaultValue = "false", type = Boolean.class)
 		dragOnly,
@@ -61,19 +60,19 @@ public class Draggable extends AbstractDraggable {
 		containment,
 		@PFProperty(description = "Helper element to display when dragging")
 		helper,
-		@PFProperty(description = "Reverts draggable to it's original position when not dropped onto a valid droppable. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Reverts draggable to it's original position when not dropped onto a valid droppable", defaultValue = "false", type = Boolean.class)
 		revert,
-		@PFProperty(description = "Draggable will snap to edge of near elements. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Draggable will snap to edge of near elements", defaultValue = "false", type = Boolean.class)
 		snap,
 		@PFProperty(description = "Specifies the snap mode. Valid values are 'both', 'inner' and 'outer'")
 		snapMode,
-		@PFProperty(description = "Distance from the snap element in pixels to trigger snap. Default is 20", defaultValue = "20", type = Integer.class)
+		@PFProperty(description = "Distance from the snap element in pixels to trigger snap", defaultValue = "20", type = Integer.class)
 		snapTolerance,
-		@PFProperty(description = "ZIndex to apply during dragging. Default is -1", defaultValue = "-1", type = Integer.class)
+		@PFProperty(description = "ZIndex to apply during dragging", defaultValue = "-1", type = Integer.class)
 		zindex,
 		@PFProperty(description = "Specifies a handle for dragging")
 		handle,
-		@PFProperty(description = "Defines the opacity of the helper during dragging. Default is 1.0", defaultValue = "1.0", type = Double.class)
+		@PFProperty(description = "Defines the opacity of the helper during dragging", defaultValue = "1.0", type = Double.class)
 		opacity,
 		@PFProperty(description = "In stack mode, draggable overlap is controlled automatically using the provided selector, dragged item always overlays other draggables")
 		stack,
@@ -81,7 +80,7 @@ public class Draggable extends AbstractDraggable {
 		grid,
 		@PFProperty(description = "Scope key to match draggables and droppables")
 		scope,
-		@PFProperty(description = "CSS cursor to display in dragging. Default is crosshair", defaultValue = "crosshair")
+		@PFProperty(description = "CSS cursor to display in dragging", defaultValue = "crosshair")
 		cursor,
 		@PFProperty(description = "Id of the dashboard to connect with")
 		dashboard,

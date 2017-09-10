@@ -48,7 +48,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "inputSwitch",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class InputSwitch extends AbstractInputSwitch implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

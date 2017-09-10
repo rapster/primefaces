@@ -43,7 +43,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "dock",
              description = "Dock component mimics the well known dock interface of Mac OS X.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class Dock extends AbstractDock {
 
@@ -52,15 +51,15 @@ public class Dock extends AbstractDock {
 
 		@PFProperty(description = "MenuModel instance to create menus programmatically", type = org.primefaces.model.menu.MenuModel.class)
 		model,
-		@PFProperty(description = "Position of the dock, bottom or top. Default is bottom", defaultValue = "bottom")
+		@PFProperty(description = "Position of the dock, bottom or top", defaultValue = "bottom")
 		position,
-		@PFProperty(description = "Initial width of items. Default is 40", defaultValue = "40", type = Integer.class)
+		@PFProperty(description = "Initial width of items", defaultValue = "40", type = Integer.class)
 		itemWidth,
-		@PFProperty(description = "Maximum width of items. Default is 50", defaultValue = "50", type = Integer.class)
+		@PFProperty(description = "Maximum width of items", defaultValue = "50", type = Integer.class)
 		maxWidth,
-		@PFProperty(description = "Distance to enlarge. Default is 90", defaultValue = "90", type = Integer.class)
+		@PFProperty(description = "Distance to enlarge", defaultValue = "90", type = Integer.class)
 		proximity,
-		@PFProperty(description = "Horizontal alignment. Default is center", defaultValue = "center")
+		@PFProperty(description = "Horizontal alignment", defaultValue = "center")
 		halign,;
 	}
 

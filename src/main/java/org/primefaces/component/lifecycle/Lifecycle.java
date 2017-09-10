@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "lifecycle",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Lifecycle extends AbstractLifecycle {
 

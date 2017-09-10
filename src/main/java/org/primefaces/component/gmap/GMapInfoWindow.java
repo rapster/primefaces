@@ -39,7 +39,7 @@ public class GMapInfoWindow extends AbstractGMapInfoWindow {
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Maximum width of the info window. Default is min integer value", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
+		@PFProperty(description = "Maximum width of the info window", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
 		maxWidth,;
 	}
 

@@ -41,24 +41,23 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "tooltip",
              description = "Tooltip goes beyond the legacy html title attribute by providing custom effects, events, html content and advance theme support.",
              widget = true,
-             rtl = true,
              parent = UIOutput.class)
 public class Tooltip extends AbstractTooltip {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Event displaying the tooltip. Default is mouseover")
+		@PFProperty(description = "Event displaying the tooltip")
 		showEvent,
-		@PFProperty(description = "Effect to be used for displaying. Default is fade", defaultValue = "fade")
+		@PFProperty(description = "Effect to be used for displaying", defaultValue = "fade")
 		showEffect,
-		@PFProperty(description = "Delay time to show tooltip in milliseconds. Default is 150", defaultValue = "150", type = Integer.class)
+		@PFProperty(description = "Delay time to show tooltip in milliseconds", defaultValue = "150", type = Integer.class)
 		showDelay,
-		@PFProperty(description = "Event hiding the tooltip. Default is mouseout")
+		@PFProperty(description = "Event hiding the tooltip")
 		hideEvent,
-		@PFProperty(description = "Effect to be used for hiding. Default is fade", defaultValue = "fade")
+		@PFProperty(description = "Effect to be used for hiding", defaultValue = "fade")
 		hideEffect,
-		@PFProperty(description = "Delay time to hide tooltip in milliseconds. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Delay time to hide tooltip in milliseconds", defaultValue = "0", type = Integer.class)
 		hideDelay,
 		@PFProperty(description = "Id of the component to attach the tooltip")
 		forValue("for"),
@@ -66,11 +65,11 @@ public class Tooltip extends AbstractTooltip {
 		style,
 		@PFProperty(description = "Style class of the tooltip")
 		styleClass,
-		@PFProperty(description = "jquery selector for global tooltip, default is \"a,:input,:button\"")
+		@PFProperty(description = "jquery selector for global tooltip,")
 		globalSelector,
 		@PFProperty(description = "Defines whether html would be escaped or not, defaults to true", defaultValue = "true", type = Boolean.class)
 		escape,
-		@PFProperty(description = "Tooltip position follows pointer on mousemove, default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Tooltip position follows pointer on mousemove,", defaultValue = "false", type = Boolean.class)
 		trackMouse,
 		@PFProperty(description = "Client side callback to execute before tooltip is shown. Returning false will prevent display")
 		beforeShow,

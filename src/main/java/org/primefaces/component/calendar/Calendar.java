@@ -65,7 +65,6 @@ import org.primefaces.convert.DateTimeConverter;
 @PFComponent(tagName = "calendar",
              description = "Calendar is an input component used to provide a date. Other than basic features calendar supports paging, localization, ajax selection and more.",
              widget = true,
-             rtl = true,
              parent = HtmlInputText.class)
 public class Calendar extends AbstractCalendar implements org.primefaces.component.api.InputHolder, org.primefaces.component.api.MixedClientBehaviorHolder {
 
@@ -80,55 +79,55 @@ public class Calendar extends AbstractCalendar implements org.primefaces.compone
 		maxdate,
 		@PFProperty(description = "Enables multiple page rendering", defaultValue = "1", type = Integer.class)
 		pages,
-		@PFProperty(description = "Defines how the calendar will be displayed. Default is popup", defaultValue = "popup")
+		@PFProperty(description = "Defines how the calendar will be displayed", defaultValue = "popup")
 		mode,
 		@PFProperty(description = "DateFormat pattern for localization")
 		pattern,
 		@PFProperty(description = "Locale to be used for labels and conversion", type = Object.class)
 		locale,
-		@PFProperty(description = "Enables month/year navigator. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Enables month/year navigator", defaultValue = "false", type = Boolean.class)
 		navigator,
 		@PFProperty(description = "String or a java.util.TimeZone instance to specify the timezone used for date conversion, defaults to TimeZone.getDefault()", type = Object.class)
 		timeZone,
-		@PFProperty(description = "Makes input text of a popup calendar readonly. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Makes input text of a popup calendar readonly", defaultValue = "false", type = Boolean.class)
 		readonlyInput,
-		@PFProperty(description = "Visibility of button panel containing today and done buttons. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Visibility of button panel containing today and done buttons", defaultValue = "false", type = Boolean.class)
 		showButtonPanel,
 		@PFProperty(description = "Effect to use when displaying and showing the popup calendar")
 		effect,
-		@PFProperty(description = "Duration of the effect. Default is normal", defaultValue = "normal")
+		@PFProperty(description = "Duration of the effect", defaultValue = "normal")
 		effectDuration,
 		@PFProperty(description = "Client side event that displays the popup calendar", defaultValue = "focus")
 		showOn,
-		@PFProperty(description = "Displays the week number next to each week. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Displays the week number next to each week", defaultValue = "false", type = Boolean.class)
 		showWeek,
-		@PFProperty(description = "Disables weekend columns. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Disables weekend columns", defaultValue = "false", type = Boolean.class)
 		disabledWeekends,
-		@PFProperty(description = "Displays days belonging to other months. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Displays days belonging to other months", defaultValue = "false", type = Boolean.class)
 		showOtherMonths,
-		@PFProperty(description = "Enables selection of days belonging to other months. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Enables selection of days belonging to other months", defaultValue = "false", type = Boolean.class)
 		selectOtherMonths,
-		@PFProperty(description = "Year range for the navigator, default is \"c-10:c+10\"")
+		@PFProperty(description = "Year range for the navigator,")
 		yearRange,
 		@PFProperty(description = "Shows only time picker without date", defaultValue = "false", type = Boolean.class)
 		timeOnly,
-		@PFProperty(description = "Hour steps, default is 1", defaultValue = "1", type = Integer.class)
+		@PFProperty(description = "Hour steps,", defaultValue = "1", type = Integer.class)
 		stepHour,
-		@PFProperty(description = "Minute steps, default is 1", defaultValue = "1", type = Integer.class)
+		@PFProperty(description = "Minute steps,", defaultValue = "1", type = Integer.class)
 		stepMinute,
-		@PFProperty(description = "Second steps, default is 1", defaultValue = "1", type = Integer.class)
+		@PFProperty(description = "Second steps,", defaultValue = "1", type = Integer.class)
 		stepSecond,
-		@PFProperty(description = "Minimum boundary for hour selection. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Minimum boundary for hour selection", defaultValue = "0", type = Integer.class)
 		minHour,
-		@PFProperty(description = "Maximum boundary for hour selection. Default is 23", defaultValue = "23", type = Integer.class)
+		@PFProperty(description = "Maximum boundary for hour selection", defaultValue = "23", type = Integer.class)
 		maxHour,
-		@PFProperty(description = "Minimum boundary for minute selection. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Minimum boundary for minute selection", defaultValue = "0", type = Integer.class)
 		minMinute,
-		@PFProperty(description = "Maximum boundary for minute selection. Default is 59", defaultValue = "59", type = Integer.class)
+		@PFProperty(description = "Maximum boundary for minute selection", defaultValue = "59", type = Integer.class)
 		maxMinute,
-		@PFProperty(description = "Minimum boundary for second selection. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Minimum boundary for second selection", defaultValue = "0", type = Integer.class)
 		minSecond,
-		@PFProperty(description = "Maximum boundary for second selection. Default is 59", defaultValue = "59", type = Integer.class)
+		@PFProperty(description = "Maximum boundary for second selection", defaultValue = "59", type = Integer.class)
 		maxSecond,
 		@PFProperty(description = "Sets the initial date when value is not populated", type = Object.class)
 		pagedate,
@@ -146,7 +145,7 @@ public class Calendar extends AbstractCalendar implements org.primefaces.compone
 		maskAutoClear,
 		@PFProperty(description = "Client side object to use in custom timeControlType")
 		timeControlObject,
-		@PFProperty(description = "Allows direct input in time field. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Allows direct input in time field", defaultValue = "false", type = Boolean.class)
 		timeInput,
 		@PFProperty(description = "Whether to show the hour control, valid values are \"true\" and \"false\"")
 		showHour,
@@ -156,7 +155,7 @@ public class Calendar extends AbstractCalendar implements org.primefaces.compone
 		showSecond,
 		@PFProperty(description = "Whether to show the millisecond control, valid values are \"true\" and \"false\"")
 		showMillisec,
-		@PFProperty(description = "Whether to show the \"Current Date\" button if showButtonPanel is rendered. Default is \"true\"", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Whether to show the \"Current Date\" button if showButtonPanel is rendered", defaultValue = "true", type = Boolean.class)
 		showTodayButton,
 		@PFProperty(description = "Position of the button in the tabbing order")
 		buttonTabindex,
@@ -164,9 +163,9 @@ public class Calendar extends AbstractCalendar implements org.primefaces.compone
 		inputStyle,
 		@PFProperty(description = "Style class of the input element. Used when mode is popup")
 		inputStyleClass,
-		@PFProperty(description = "Input field type. Default is text", defaultValue = "text")
+		@PFProperty(description = "Input field type", defaultValue = "text")
 		type,
-		@PFProperty(description = "If enabled, the input is focused again after selecting a date. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "If enabled, the input is focused again after selecting a date", defaultValue = "false", type = Boolean.class)
 		focusOnSelect,;
 	}
 

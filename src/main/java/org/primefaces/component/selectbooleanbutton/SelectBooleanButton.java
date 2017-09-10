@@ -41,7 +41,6 @@ import org.primefaces.util.HTML;
 @PFComponent(tagName = "selectBooleanButton",
              description = "",
              widget = true,
-             rtl = true,
              parent = HtmlSelectBooleanCheckbox.class)
 public class SelectBooleanButton extends AbstractSelectBooleanButton {
 

@@ -53,7 +53,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "slider",
              description = "Slider is used to provide input with various customization options like orientation, display modes and skinning.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Slider extends AbstractSlider implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -64,19 +63,19 @@ public class Slider extends AbstractSlider implements javax.faces.component.beha
 		forValue("for"),
 		@PFProperty(description = "Id of the component to display the slider value")
 		display,
-		@PFProperty(description = "Minimum value of the slider. Default is 0.0", defaultValue = "0.0", type = Double.class)
+		@PFProperty(description = "Minimum value of the slider", defaultValue = "0.0", type = Double.class)
 		minValue,
-		@PFProperty(description = "Maximum value of the slider. Default is 100.0", defaultValue = "100.0", type = Double.class)
+		@PFProperty(description = "Maximum value of the slider", defaultValue = "100.0", type = Double.class)
 		maxValue,
 		@PFProperty(description = "Inline style of the container element")
 		style,
 		@PFProperty(description = "Style class of the container element")
 		styleClass,
-		@PFProperty(description = "Boolean value to enable/disable the animated move when background of slider is clicked. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Boolean value to enable/disable the animated move when background of slider is clicked", defaultValue = "true", type = Boolean.class)
 		animate,
-		@PFProperty(description = "Sets the type of the slider, \"horizontal\" or \"vertical\". Default is horizontal", defaultValue = "horizontal")
+		@PFProperty(description = "Sets the type of the slider, \"horizontal\" or \"vertical\"", defaultValue = "horizontal")
 		type,
-		@PFProperty(description = "Fixed pixel increments that the slider move in. Default is 1.0", defaultValue = "1.0", type = Double.class)
+		@PFProperty(description = "Fixed pixel increments that the slider move in", defaultValue = "1.0", type = Double.class)
 		step,
 		@PFProperty(description = "Disables or enables the slider", defaultValue = "false", type = Boolean.class)
 		disabled,

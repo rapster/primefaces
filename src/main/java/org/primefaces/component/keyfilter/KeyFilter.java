@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "keyFilter",
              description = "KeyFilter filters keyboard input for a given input field.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class KeyFilter extends AbstractKeyFilter {
 

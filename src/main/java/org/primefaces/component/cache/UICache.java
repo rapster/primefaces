@@ -46,7 +46,7 @@ public class UICache extends AbstractUICache {
 		region,
 		@PFProperty(description = "Unique id of the cache entry in region, defaults to client id of component")
 		key,
-		@PFProperty(description = "When enabled, lifecycle events such as button actions are executed. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "When enabled, lifecycle events such as button actions are executed", defaultValue = "false", type = Boolean.class)
 		processEvents,;
 	}
 

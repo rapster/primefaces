@@ -44,7 +44,6 @@ import java.util.logging.Logger;
 @PFComponent(tagName = "carousel",
              description = "Carousel is a multi purpose component to display a set of data or general content with slide effects.",
              widget = true,
-             rtl = true,
              parent = UIData.class)
 public class Carousel extends AbstractCarousel {
 
@@ -53,23 +52,23 @@ public class Carousel extends AbstractCarousel {
 
 		@PFProperty(description = "Index of the first visible item", defaultValue = "0", type = Integer.class)
 		firstVisible,
-		@PFProperty(description = "Number of visible items per page. Default is 3", defaultValue = "3", type = Integer.class)
+		@PFProperty(description = "Number of visible items per page", defaultValue = "3", type = Integer.class)
 		numVisible,
-		@PFProperty(description = "Sets continuous scrolling. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Sets continuous scrolling", defaultValue = "false", type = Boolean.class)
 		circular,
-		@PFProperty(description = "Sets vertical scrolling. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Sets vertical scrolling", defaultValue = "false", type = Boolean.class)
 		vertical,
-		@PFProperty(description = "Sets the time in milliseconds to have Carousel start scrolling automatically after being initialized. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Sets the time in milliseconds to have Carousel start scrolling automatically after being initialized", defaultValue = "0", type = Integer.class)
 		autoPlayInterval,
 		@PFProperty(description = "Defines number of pageLinks of paginator", defaultValue = "3", type = Integer.class)
 		pageLinks,
-		@PFProperty(description = "Name of the animation effect slide or fade. Default is slide")
+		@PFProperty(description = "Name of the animation effect slide or fade")
 		effect,
-		@PFProperty(description = "Name of the animation effect. Default is easeInOutCirc")
+		@PFProperty(description = "Name of the animation effect")
 		easing,
-		@PFProperty(description = "Sets the speed of the scrolling animation in milliseconds. Default is 500", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
+		@PFProperty(description = "Sets the speed of the scrolling animation in milliseconds", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
 		effectDuration,
-		@PFProperty(description = "Text format of the pager dropdown elements. Default is \"{page}\"", defaultValue = "{page}")
+		@PFProperty(description = "Text format of the pager dropdown elements", defaultValue = "{page}")
 		dropdownTemplate,
 		@PFProperty(description = "Inline style of the main container")
 		style,
@@ -85,15 +84,15 @@ public class Carousel extends AbstractCarousel {
 		footerText,
 		@PFProperty(description = "In responsive mode, carousel adjusts its content based on screen size", defaultValue = "false", type = Boolean.class)
 		responsive,
-		@PFProperty(description = "Breakpoint value in pixels to switch between small and large viewport. Default is 640", defaultValue = "640", type = Integer.class)
+		@PFProperty(description = "Breakpoint value in pixels to switch between small and large viewport", defaultValue = "640", type = Integer.class)
 		breakpoint,
-		@PFProperty(description = "Makes panel toggleable. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Makes panel toggleable", defaultValue = "false", type = Boolean.class)
 		toggleable,
-		@PFProperty(description = "Speed of toggling in milliseconds. Default is 500", defaultValue = "500", type = Integer.class)
+		@PFProperty(description = "Speed of toggling in milliseconds", defaultValue = "500", type = Integer.class)
 		toggleSpeed,
-		@PFProperty(description = "Renders a toggleable panel as collapsed. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Renders a toggleable panel as collapsed", defaultValue = "false", type = Boolean.class)
 		collapsed,
-		@PFProperty(description = "When enabled, carousel state is saved in a cookie for the session. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "When enabled, carousel state is saved in a cookie for the session", defaultValue = "false", type = Boolean.class)
 		stateful,;
 	}
 

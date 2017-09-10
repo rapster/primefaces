@@ -45,7 +45,6 @@ import org.primefaces.util.ComponentUtils;
 @PFComponent(tagName = "button",
              description = "Button is an extension to the standard h:button component with skinning capabilities.",
              widget = true,
-             rtl = true,
              parent = HtmlOutcomeTargetButton.class)
 public class Button extends AbstractButton implements org.primefaces.component.api.UIOutcomeTarget {
 

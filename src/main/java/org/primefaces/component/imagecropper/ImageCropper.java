@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "imageCropper",
              description = "ImageCropper allows cropping a certain region of an image. A new image is created containing the cropped area and assigned to a CroppedImage instanced on the server side.",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class ImageCropper extends AbstractImageCropper {
 
@@ -60,7 +59,7 @@ public class ImageCropper extends AbstractImageCropper {
 		maxSize,
 		@PFProperty(description = "Background color of the container")
 		backgroundColor,
-		@PFProperty(description = "Background opacity of the container. Default is 0.6", defaultValue = "0.6", type = Double.class)
+		@PFProperty(description = "Background opacity of the container", defaultValue = "0.6", type = Double.class)
 		backgroundOpacity,
 		@PFProperty(description = "Initial coordinates of the cropper area")
 		initialCoords,

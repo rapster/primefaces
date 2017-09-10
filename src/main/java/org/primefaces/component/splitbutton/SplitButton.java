@@ -42,7 +42,6 @@ import org.primefaces.util.HTML;
 @PFComponent(tagName = "splitButton",
              description = "SplitButton displays a default command and additional ones in an overlay.",
              widget = true,
-             rtl = true,
              parent = HtmlCommandButton.class)
 public class SplitButton extends AbstractSplitButton implements org.primefaces.component.api.AjaxSource {
 
@@ -85,11 +84,11 @@ public class SplitButton extends AbstractSplitButton implements org.primefaces.c
 		ignoreAutoUpdate,
 		@PFProperty(description = "Appends the overlay to the element defined by search expression. Defaults to document body")
 		appendTo,
-		@PFProperty(description = "Selector to use when partial submit is on, default is \":input\" to select all descendant inputs of a partially processed components")
+		@PFProperty(description = "Selector to use when partial submit is on,")
 		partialSubmitFilter,
 		@PFProperty(description = "Style class of the overlay menu element")
 		menuStyleClass,
-		@PFProperty(description = "Form to serialize for an ajax request. Default is the enclosing form")
+		@PFProperty(description = "Form to serialize for an ajax request")
 		form,;
 	}
 

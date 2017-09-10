@@ -52,9 +52,9 @@ public class ConfirmDialog extends AbstractConfirmDialog {
 		message,
 		@PFProperty(description = "Text for the header")
 		header,
-		@PFProperty(description = "Message severity for the dislayed icon. Default is alert", defaultValue = "alert")
+		@PFProperty(description = "Message severity for the dislayed icon", defaultValue = "alert")
 		severity,
-		@PFProperty(description = "Width of the dialog in pixels. Default is auto")
+		@PFProperty(description = "Width of the dialog in pixels")
 		width,
 		@PFProperty(description = "Height of the dialog")
 		height,
@@ -62,17 +62,17 @@ public class ConfirmDialog extends AbstractConfirmDialog {
 		style,
 		@PFProperty(description = "Style class of the dialog container")
 		styleClass,
-		@PFProperty(description = "Defines if close icon should be displayed or not. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines if close icon should be displayed or not", defaultValue = "true", type = Boolean.class)
 		closable,
 		@PFProperty(description = "Alternative to appendToBody. Appends the dialog to the given search expression")
 		appendTo,
-		@PFProperty(description = "Sets dialogs visibility. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Sets dialogs visibility", defaultValue = "false", type = Boolean.class)
 		visible,
 		@PFProperty(description = "Effect to use when showing the dialog")
 		showEffect,
 		@PFProperty(description = "Effect to use when hiding the dialog")
 		hideEffect,
-		@PFProperty(description = "Defines if dialog should close when escape key is pressed. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines if dialog should close when escape key is pressed", defaultValue = "false", type = Boolean.class)
 		closeOnEscape,
 		@PFProperty(description = "When enabled, confirmDialog becomes a shared for other components that require confirmation", defaultValue = "false", type = Boolean.class)
 		global,

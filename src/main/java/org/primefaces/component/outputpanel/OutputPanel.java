@@ -41,7 +41,6 @@ import javax.faces.context.FacesContext;
 @PFComponent(tagName = "outputPanel",
              description = "OutputPanel is used to group content on a page.",
              widget = true,
-             rtl = true,
              parent = UIPanel.class)
 public class OutputPanel extends AbstractOutputPanel implements org.primefaces.component.api.AutoUpdatable {
 
@@ -58,7 +57,7 @@ public class OutputPanel extends AbstractOutputPanel implements org.primefaces.c
 		deferred,
 		@PFProperty(description = "Defines deferred loading mode, valid values are \"load\" (after page load) and \"visible\" (once the panel is visible on scroll). Default value is \"load\"", defaultValue = "load")
 		deferredMode,
-		@PFProperty(description = "Global ajax requests are listened by ajaxStatus component, setting global to false will not trigger ajaxStatus on deferred loading. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Global ajax requests are listened by ajaxStatus component, setting global to false will not trigger ajaxStatus on deferred loading", defaultValue = "false", type = Boolean.class)
 		global,
 		@PFProperty(description = "Shortcut for the css display property, valid values are block (default) and inline", defaultValue = "block")
 		layout,

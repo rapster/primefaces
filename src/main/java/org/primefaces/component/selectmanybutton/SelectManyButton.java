@@ -46,7 +46,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "selectManyButton",
              description = "",
              widget = true,
-             rtl = true,
              parent = UISelectMany.class)
 public class SelectManyButton extends AbstractSelectManyButton implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

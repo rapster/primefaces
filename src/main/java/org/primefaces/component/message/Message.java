@@ -37,7 +37,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "message",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIMessage.class)
 public class Message extends AbstractMessage implements org.primefaces.component.api.UINotification {
 

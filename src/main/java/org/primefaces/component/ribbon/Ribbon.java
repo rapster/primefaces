@@ -52,7 +52,7 @@ public class Ribbon extends AbstractRibbon {
 		style,
 		@PFProperty(description = "Style class of the container element")
 		styleClass,
-		@PFProperty(description = "Index of the active tab. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Index of the active tab", defaultValue = "0", type = Integer.class)
 		activeIndex,;
 	}
 

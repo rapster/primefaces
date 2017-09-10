@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "imageSwitch",
              description = "Imageswitch component is used to enable switching between a set of images with nice effects. ImageSwitch also provides a simple client side api for flexibility.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class ImageSwitch extends AbstractImageSwitch {
 
@@ -53,13 +52,13 @@ public class ImageSwitch extends AbstractImageSwitch {
 		styleClass,
 		@PFProperty(description = "Name of the effect for transition. Required", required = true)
 		effect,
-		@PFProperty(description = "Speed of the effect in milliseconds. Default is 500", defaultValue = "500", type = Integer.class)
+		@PFProperty(description = "Speed of the effect in milliseconds", defaultValue = "500", type = Integer.class)
 		speed,
-		@PFProperty(description = "Slideshow speed in milliseconds. Default is 3000", defaultValue = "3000", type = Integer.class)
+		@PFProperty(description = "Slideshow speed in milliseconds", defaultValue = "3000", type = Integer.class)
 		slideshowSpeed,
-		@PFProperty(description = "Starts slideshow automatically on page load. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Starts slideshow automatically on page load", defaultValue = "true", type = Boolean.class)
 		slideshowAuto,
-		@PFProperty(description = "Index of the first image, default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Index of the first image,", defaultValue = "0", type = Integer.class)
 		activeIndex,;
 	}
 

@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "blockUI",
              description = "BlockUI blocks JSF components during ajax processing.",
              widget = true,
-             rtl = true,
              parent = UIPanel.class)
 public class BlockUI extends AbstractBlockUI {
 

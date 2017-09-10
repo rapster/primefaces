@@ -16,6 +16,7 @@
 package org.primefaces.component.autocomplete;
 
 import javax.faces.component.html.HtmlInputText;
+import org.primefaces.component.autocomplete.AutoCompleteHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -64,8 +65,8 @@ import javax.faces.component.behavior.Behavior;
 @PFComponent(tagName = "autoComplete",
              description = "AutoComplete provides live suggestions while an input is being typed.",
              widget = true,
-             rtl = true,
-             parent = HtmlInputText.class)
+             parent = HtmlInputText.class,
+             handlerClass = AutoCompleteHandler.class)
 public class AutoComplete extends AbstractAutoComplete implements org.primefaces.component.api.InputHolder, org.primefaces.component.api.MixedClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputTextPropertyKeys.class})
@@ -83,13 +84,13 @@ public class AutoComplete extends AbstractAutoComplete implements org.primefaces
 		itemValue,
 		@PFProperty(description = "A string to be rendered onto the class tag of the selected items (tokens rendered inside the input container)")
 		itemStyleClass,
-		@PFProperty(description = "Maximum number of results to be displayed. Default is unlimited", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
+		@PFProperty(description = "Maximum number of results to be displayed", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
 		maxResults,
-		@PFProperty(description = "Number of characters to be typed before starting to query. Default is 1", defaultValue = "1", type = Integer.class)
+		@PFProperty(description = "Number of characters to be typed before starting to query", defaultValue = "1", type = Integer.class)
 		minQueryLength,
-		@PFProperty(description = "Delay to wait in milliseconds before sending each query to the server. Default is 300", defaultValue = "300", type = Integer.class)
+		@PFProperty(description = "Delay to wait in milliseconds before sending each query to the server", defaultValue = "300", type = Integer.class)
 		queryDelay,
-		@PFProperty(description = "When enabled, autoComplete only accepts input from the selection list. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "When enabled, autoComplete only accepts input from the selection list", defaultValue = "false", type = Boolean.class)
 		forceSelection,
 		@PFProperty(description = "Defines the height of the viewport for autocomplete suggestions", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
 		scrollHeight,
@@ -105,9 +106,9 @@ public class AutoComplete extends AbstractAutoComplete implements org.primefaces
 		panelStyleClass,
 		@PFProperty(description = "", defaultValue = "false", type = Boolean.class)
 		multiple,
-		@PFProperty(description = "Position of itemtip with respect to item. Default is \"left top\"")
+		@PFProperty(description = "Position of itemtip with respect to item")
 		itemtipMyPosition,
-		@PFProperty(description = "Position of item with respect to item. Default is \"right bottom\"")
+		@PFProperty(description = "Position of item with respect to item")
 		itemtipAtPosition,
 		@PFProperty(description = "When enabled autocomplete caches the searched result list", defaultValue = "false", type = Boolean.class)
 		cache,
@@ -117,7 +118,7 @@ public class AutoComplete extends AbstractAutoComplete implements org.primefaces
 		emptyMessage,
 		@PFProperty(description = "Appends the overlay to the element defined by search expression. Defaults to document body")
 		appendTo,
-		@PFProperty(description = "Hint text for screen readers to provide information about the search results. Default is \"{0} results found, use arrow keys to navigate\"")
+		@PFProperty(description = "Hint text for screen readers to provide information about the search results")
 		resultsMessage,
 		@PFProperty(description = "Value to group items in categories", type = Object.class)
 		groupBy,
@@ -125,9 +126,9 @@ public class AutoComplete extends AbstractAutoComplete implements org.primefaces
 		queryEvent,
 		@PFProperty(description = "Specifies the behavior dropdown button. Default \"blank\" mode\n sends an empty string and \"current\" mode sends the input value")
 		dropdownMode,
-		@PFProperty(description = "Highlights the first suggested item automatically. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Highlights the first suggested item automatically", defaultValue = "true", type = Boolean.class)
 		autoHighlight,
-		@PFProperty(description = "Limits the selection. Default is unlimited", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
+		@PFProperty(description = "Limits the selection", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
 		selectLimit,
 		@PFProperty(description = "Inline style of the input element")
 		inputStyle,
@@ -135,13 +136,13 @@ public class AutoComplete extends AbstractAutoComplete implements org.primefaces
 		inputStyleClass,
 		@PFProperty(description = "Tooltip to display on group headers")
 		groupByTooltip,
-		@PFProperty(description = "Position of panel with respect to input Default is \"left top\"")
+		@PFProperty(description = "Position of panel with respect to input")
 		my,
-		@PFProperty(description = "Position of input with respect to panel Default is \"left bottom\"")
+		@PFProperty(description = "Position of input with respect to panel")
 		at,
-		@PFProperty(description = "Defines if autocomplete functionality is enabled. Default is true and a false value simply turns the component into a simple inputtext", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines if autocomplete functionality is enabled", defaultValue = "true", type = Boolean.class)
 		active,
-		@PFProperty(description = "Input field type. Default is text", defaultValue = "text")
+		@PFProperty(description = "Input field type", defaultValue = "text")
 		type,
 		@PFProperty(description = "The text shown in panel when the suggested list is greater than maxResults", defaultValue = "...")
 		moreText,

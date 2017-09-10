@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "lightBox",
              description = "Lightbox features a powerful overlay that can display images, multimedia content, other JSF components and external urls.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class LightBox extends AbstractLightBox {
 
@@ -56,11 +55,11 @@ public class LightBox extends AbstractLightBox {
 		width,
 		@PFProperty(description = "Height of the iframe")
 		height,
-		@PFProperty(description = "Specifies an iframe to display an external url in overlay. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Specifies an iframe to display an external url in overlay", defaultValue = "false", type = Boolean.class)
 		iframe,
 		@PFProperty(description = "Title of the iframe element")
 		iframeTitle,
-		@PFProperty(description = "Displays lightbox without requiring any user interaction by default. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Displays lightbox without requiring any user interaction by default", defaultValue = "false", type = Boolean.class)
 		visible,
 		@PFProperty(description = "Client side callback to execute when lightbox is displayed")
 		onShow,

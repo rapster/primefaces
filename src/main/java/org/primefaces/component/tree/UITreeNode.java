@@ -39,7 +39,7 @@ public class UITreeNode extends AbstractUITreeNode {
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Type of the tree node. Default is \"default\"", defaultValue = "default")
+		@PFProperty(description = "Type of the tree node", defaultValue = "default")
 		type,
 		@PFProperty(description = "Style class to apply a particular tree node type")
 		styleClass,

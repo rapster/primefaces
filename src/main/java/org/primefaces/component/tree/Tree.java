@@ -84,9 +84,9 @@ public class Tree extends AbstractTree implements javax.faces.component.behavior
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Specifies the ajax/client toggleMode. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Specifies the ajax/client toggleMode", defaultValue = "false", type = Boolean.class)
 		dynamic,
-		@PFProperty(description = "Specifies caching on dynamically loaded nodes. When set to true expanded nodes will be kept in memory. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies caching on dynamically loaded nodes. When set to true expanded nodes will be kept in memory", defaultValue = "true", type = Boolean.class)
 		cache,
 		@PFProperty(description = "Javascript event to process when a tree node is clicked")
 		onNodeClick,
@@ -102,13 +102,13 @@ public class Tree extends AbstractTree implements javax.faces.component.behavior
 		animate,
 		@PFProperty(description = "Defines the orientation of the tree, valid values are, \"vertical\" (default) and horizontal", defaultValue = "vertical")
 		orientation,
-		@PFProperty(description = "Defines upwards selection propagation for checkbox mode, default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines upwards selection propagation for checkbox mode,", defaultValue = "true", type = Boolean.class)
 		propagateSelectionUp,
-		@PFProperty(description = "Defines upwards selection propagation for checkbox mode, default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines upwards selection propagation for checkbox mode,", defaultValue = "true", type = Boolean.class)
 		propagateSelectionDown,
-		@PFProperty(description = "Controls dragging of tree nodes. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Controls dragging of tree nodes", defaultValue = "false", type = Boolean.class)
 		draggable,
-		@PFProperty(description = "Controls dropping of tree nodes. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Controls dropping of tree nodes", defaultValue = "false", type = Boolean.class)
 		droppable,
 		@PFProperty(description = "Scope key to group a set of tree components for transferring nodes using drag and drop")
 		dragdropScope,
@@ -116,7 +116,7 @@ public class Tree extends AbstractTree implements javax.faces.component.behavior
 		dragMode,
 		@PFProperty(description = "Defines parent-child restrictions when a node is dropped valid values are none (default) and sibling", defaultValue = "none")
 		dropRestrict,
-		@PFProperty(description = "Position of the element in the tabbing order. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Position of the element in the tabbing order", defaultValue = "0", type = Integer.class)
 		tabindex,
 		@PFProperty(description = "Property to be used for filtering", type = Object.class)
 		filterBy,

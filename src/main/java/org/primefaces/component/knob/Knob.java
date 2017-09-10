@@ -48,7 +48,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "knob",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class Knob extends AbstractKnob implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -73,11 +72,11 @@ public class Knob extends AbstractKnob implements javax.faces.component.behavior
 		backgroundColor,
 		@PFProperty(description = "Theme of the knob")
 		colorTheme,
-		@PFProperty(description = "Disables the input element, default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Disables the input element,", defaultValue = "false", type = Boolean.class)
 		disabled,
-		@PFProperty(description = "Set false to hide the label, default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Set false to hide the label,", defaultValue = "true", type = Boolean.class)
 		showLabel,
-		@PFProperty(description = "Set true to show only a cursor instead of the full bar, default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Set true to show only a cursor instead of the full bar,", defaultValue = "false", type = Boolean.class)
 		cursor,
 		@PFProperty(description = "Template of the progress value e.g. \"{value}%\"", defaultValue = "{value}")
 		labelTemplate,

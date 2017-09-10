@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "themeSwitcher",
              description = "ThemeSwitcher enables switching PrimeFaces themes on the fly with no page refresh.",
              widget = true,
-             rtl = true,
              parent = SelectOneMenu.class)
 public class ThemeSwitcher extends AbstractThemeSwitcher {
 

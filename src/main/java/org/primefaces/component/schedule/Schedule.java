@@ -63,7 +63,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "schedule",
              description = "Schedule provides an Outlook Calendar, iCal like JSF component to manage events.\n      Schedule is highly customizable featuring various views (month, day, week), built-in I18N, drag-drop, resize, customizable event dialog and skinning.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Schedule extends AbstractSchedule implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -76,41 +75,41 @@ public class Schedule extends AbstractSchedule implements javax.faces.component.
 		locale,
 		@PFProperty(description = "Ratio of calendar width to height, higher the value shorter the height is", defaultValue = "java.lang.Double.MIN_VALUE", type = Double.class)
 		aspectRatio,
-		@PFProperty(description = "The view type to use, possible values are 'month', 'agendaDay', 'agendaWeek', 'basicWeek', 'basicDay'. Default is month", defaultValue = "month")
+		@PFProperty(description = "The view type to use, possible values are 'month', 'agendaDay', 'agendaWeek', 'basicWeek', 'basicDay'", defaultValue = "month")
 		view,
 		@PFProperty(description = "The initial date that is used when schedule loads. If ommitted, the schedule starts on the current date", type = Object.class)
 		initialDate,
-		@PFProperty(description = "Specifies inclusion Saturday/Sunday columns in any of the views. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies inclusion Saturday/Sunday columns in any of the views", defaultValue = "true", type = Boolean.class)
 		showWeekends,
 		@PFProperty(description = "Style of the main container element of schedule")
 		style,
 		@PFProperty(description = "Style class of the main container element of schedule")
 		styleClass,
-		@PFProperty(description = "When true, events are draggable. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "When true, events are draggable", defaultValue = "true", type = Boolean.class)
 		draggable,
-		@PFProperty(description = "When true, events are resizable. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "When true, events are resizable", defaultValue = "true", type = Boolean.class)
 		resizable,
-		@PFProperty(description = "Specifies visibility of header content. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies visibility of header content", defaultValue = "true", type = Boolean.class)
 		showHeader,
-		@PFProperty(description = "Content of left side of header. Default is \"prev, next today\"", defaultValue = "prev,next today")
+		@PFProperty(description = "Content of left side of header", defaultValue = "prev,next today")
 		leftHeaderTemplate,
-		@PFProperty(description = "Content of center of header. Default is title", defaultValue = "title")
+		@PFProperty(description = "Content of center of header", defaultValue = "title")
 		centerHeaderTemplate,
-		@PFProperty(description = "Content of right side of header. Default is \"month, agendaWeek, agendaDay\"", defaultValue = "month,agendaWeek,agendaDay")
+		@PFProperty(description = "Content of right side of header", defaultValue = "month,agendaWeek,agendaDay")
 		rightHeaderTemplate,
-		@PFProperty(description = "Determines if all-day slot will be displayed in agendaWeek or agendaDay views. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Determines if all-day slot will be displayed in agendaWeek or agendaDay views", defaultValue = "true", type = Boolean.class)
 		allDaySlot,
-		@PFProperty(description = "The frequency for displaying time slots. Default is 00:30:00", defaultValue = "00:30:00")
+		@PFProperty(description = "The frequency for displaying time slots", defaultValue = "00:30:00")
 		slotDuration,
-		@PFProperty(description = "Interval in minutes in an hour to create a slot. Default is 30", defaultValue = "30", type = Integer.class)
+		@PFProperty(description = "Interval in minutes in an hour to create a slot", defaultValue = "30", type = Integer.class)
 		slotMinutes,
-		@PFProperty(description = "Determines how far down the scroll pane is initially scrolled down. Default is 06:00:00", defaultValue = "06:00:00")
+		@PFProperty(description = "Determines how far down the scroll pane is initially scrolled down", defaultValue = "06:00:00")
 		scrollTime,
-		@PFProperty(description = "First hour to display in day view. Default is 6", defaultValue = "6", type = Integer.class)
+		@PFProperty(description = "First hour to display in day view", defaultValue = "6", type = Integer.class)
 		firstHour,
-		@PFProperty(description = "Minimum time to display in a day view. Default is 00:00:00")
+		@PFProperty(description = "Minimum time to display in a day view")
 		minTime,
-		@PFProperty(description = "Maximum time to display in a day view. Default is 24:00:00")
+		@PFProperty(description = "Maximum time to display in a day view")
 		maxTime,
 		@PFProperty(description = "Determines the time-text that will be displayed on the vertical axis of the agenda views")
 		axisFormat,
@@ -122,7 +121,7 @@ public class Schedule extends AbstractSchedule implements javax.faces.component.
 		timeZone,
 		@PFProperty(description = "Timezone to define how to interpret the dates at browser. Valid values are \"false\", \"local\", \"UTC\" and ids like \"America/Chicago\"")
 		clientTimeZone,
-		@PFProperty(description = "When parsing dates, whether UTC offsets should be ignored while processing event data. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "When parsing dates, whether UTC offsets should be ignored while processing event data", defaultValue = "true", type = Boolean.class)
 		ignoreTimezone,
 		@PFProperty(description = "Displays description of events on a tooltip, default value is false", defaultValue = "false", type = Boolean.class)
 		tooltip,
@@ -136,11 +135,11 @@ public class Schedule extends AbstractSchedule implements javax.faces.component.
 		weekNumberCalculation,
 		@PFProperty(description = "Client side function to use in custom weekNumberCalculation")
 		weekNumberCalculator,
-		@PFProperty(description = "When an event's end time spans into another day, the minimum time it must be in order for it to render as if it were on that day. Default is 09:00:00", defaultValue = "09:00:00")
+		@PFProperty(description = "When an event's end time spans into another day, the minimum time it must be in order for it to render as if it were on that day", defaultValue = "09:00:00")
 		nextDayThreshold,
 		@PFProperty(description = "If true contemporary events will be rendered one overlapping the other, else they will be rendered side by side", defaultValue = "true", type = Boolean.class)
 		slotEventOverlap,
-		@PFProperty(description = "Target for events with urls. Clicking on such events in the schedule will not trigger the selectEvent but open the url using this target instead. Default is \"_blank\"", defaultValue = "_blank")
+		@PFProperty(description = "Target for events with urls. Clicking on such events in the schedule will not trigger the selectEvent but open the url using this target instead", defaultValue = "_blank")
 		urlTarget,;
 	}
 

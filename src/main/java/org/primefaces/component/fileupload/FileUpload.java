@@ -16,6 +16,7 @@
 package org.primefaces.component.fileupload;
 
 import javax.faces.component.UIInput;
+import org.primefaces.component.fileupload.FileUploadHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -43,8 +44,8 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "fileUpload",
              description = "FileUpload goes beyond the browser input type=\"file\" functionality and features a flash-javascript solution for uploading files. \n      File filtering, multiple uploads, partial page rendering and progress tracking are the significant features compared to legacy fileUploads.",
              widget = true,
-             rtl = true,
-             parent = UIInput.class)
+             parent = UIInput.class,
+             handlerClass = FileUploadHandler.class)
 public class FileUpload extends AbstractFileUpload {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
@@ -62,21 +63,21 @@ public class FileUpload extends AbstractFileUpload {
 		fileUploadListener,
 		@PFProperty(description = "Allows choosing of multi file uploads from native file browse dialog, turned off by default", defaultValue = "false", type = Boolean.class)
 		multiple,
-		@PFProperty(description = "When set to true, selecting a file starts the upload process implicitly. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "When set to true, selecting a file starts the upload process implicitly", defaultValue = "false", type = Boolean.class)
 		auto,
-		@PFProperty(description = "Label of the browse button, default is 'Choose'", defaultValue = "Choose")
+		@PFProperty(description = "Label of the browse button,", defaultValue = "Choose")
 		label,
 		@PFProperty(description = "Regular expression for accepted file types, e.g. /(\\.|\\/)(gif|jpe?g|png)$/")
 		allowTypes,
 		@PFProperty(description = "Maximum number of files to be uploaded", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
 		fileLimit,
-		@PFProperty(description = "Individual file size limit in bytes. Default is unlimited", defaultValue = "java.lang.Long.MAX_VALUE", type = Long.class)
+		@PFProperty(description = "Individual file size limit in bytes", defaultValue = "java.lang.Long.MAX_VALUE", type = Long.class)
 		sizeLimit,
 		@PFProperty(description = "Mode of the uploader, valid values are \"simple\" and \"advanced\"", defaultValue = "advanced")
 		mode,
-		@PFProperty(description = "Label of the upload button, default is 'Upload'", defaultValue = "Upload")
+		@PFProperty(description = "Label of the upload button,", defaultValue = "Upload")
 		uploadLabel,
-		@PFProperty(description = "Label of the cancel button, default is 'Cancel'", defaultValue = "Cancel")
+		@PFProperty(description = "Label of the cancel button,", defaultValue = "Cancel")
 		cancelLabel,
 		@PFProperty(description = "Message to display when file size validation fails")
 		invalidSizeMessage,
@@ -84,7 +85,7 @@ public class FileUpload extends AbstractFileUpload {
 		invalidFileMessage,
 		@PFProperty(description = "Message to display when file count validation fails")
 		fileLimitMessage,
-		@PFProperty(description = "Specifies dragdrop based file selection from filesystem, default is true and works only on supported browsers", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies dragdrop based file selection from filesystem,", defaultValue = "true", type = Boolean.class)
 		dragDropSupport,
 		@PFProperty(description = "Callback to execute at the beginning of fileupload")
 		onstart,
@@ -94,11 +95,11 @@ public class FileUpload extends AbstractFileUpload {
 		onerror,
 		@PFProperty(description = "Disables fileupload user interface interaction", defaultValue = "false", type = Boolean.class)
 		disabled,
-		@PFProperty(description = "Message template to use when displaying file validation errors. Default is \"{name} {size}\"")
+		@PFProperty(description = "Message template to use when displaying file validation errors")
 		messageTemplate,
 		@PFProperty(description = "Width for image previews in pixels. Default value is 80", defaultValue = "80", type = Integer.class)
 		previewWidth,
-		@PFProperty(description = "Applies theming to simple uploader, default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Applies theming to simple uploader,", defaultValue = "false", type = Boolean.class)
 		skinSimple,
 		@PFProperty(description = "To filter files in native file browser dialog")
 		accept,

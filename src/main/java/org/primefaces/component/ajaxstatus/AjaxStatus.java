@@ -39,7 +39,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "ajaxStatus",
              description = "AjaxStatus is a global notifier for ajax requests made by PrimeFaces components.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class AjaxStatus extends AbstractAjaxStatus {
 

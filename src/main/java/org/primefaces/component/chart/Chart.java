@@ -51,7 +51,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "chart",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Chart extends AbstractChart implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

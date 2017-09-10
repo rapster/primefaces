@@ -56,7 +56,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "dashboard",
              description = "Dashboard provides a portal like layout with drag-drop based reorder capabilities.",
              widget = true,
-             rtl = true,
              parent = UIPanel.class)
 public class Dashboard extends AbstractDashboard implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

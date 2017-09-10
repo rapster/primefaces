@@ -55,7 +55,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "fieldset",
              description = "Fieldset is a grouping component with a title and content.",
              widget = true,
-             rtl = true,
              parent = UIPanel.class)
 public class Fieldset extends AbstractFieldset implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -68,11 +67,11 @@ public class Fieldset extends AbstractFieldset implements javax.faces.component.
 		style,
 		@PFProperty(description = "Style class of the fieldset")
 		styleClass,
-		@PFProperty(description = "Makes content toggleable with animation. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Makes content toggleable with animation", defaultValue = "false", type = Boolean.class)
 		toggleable,
-		@PFProperty(description = "Sets toogle animation speed in milliseconds. Default is 500", defaultValue = "500", type = Integer.class)
+		@PFProperty(description = "Sets toogle animation speed in milliseconds", defaultValue = "500", type = Integer.class)
 		toggleSpeed,
-		@PFProperty(description = "Defines initial visibility state of content. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines initial visibility state of content", defaultValue = "false", type = Boolean.class)
 		collapsed,
 		@PFProperty(description = "Position of the element in the tabbing order", defaultValue = "0")
 		tabindex,

@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "menuButton",
              description = "MenuButton displays different commands in a popup menu.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class MenuButton extends AbstractMenuButton {
 

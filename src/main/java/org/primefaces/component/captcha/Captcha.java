@@ -54,16 +54,15 @@ import org.primefaces.json.JSONObject;
 @PFComponent(tagName = "captcha",
              description = "Captcha is a form validation component based on Recaptcha API.",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class Captcha extends AbstractCaptcha {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Theme of the captcha. Default is light", defaultValue = "light")
+		@PFProperty(description = "Theme of the captcha", defaultValue = "light")
 		theme,
-		@PFProperty(description = "Key of the supported languages. Default is \"en\"", defaultValue = "en")
+		@PFProperty(description = "Key of the supported languages", defaultValue = "en")
 		language,
 		@PFProperty(description = "Position of the input element in the tabbing order", defaultValue = "0", type = Integer.class)
 		tabindex,

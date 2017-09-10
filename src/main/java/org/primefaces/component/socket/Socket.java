@@ -51,7 +51,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "socket",
              description = "Socket component is an agent that creates a channel between the server and the client.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Socket extends AbstractSocket implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

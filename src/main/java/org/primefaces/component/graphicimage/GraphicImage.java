@@ -39,7 +39,7 @@ public class GraphicImage extends AbstractGraphicImage {
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Controls browser caching mode of the resource. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Controls browser caching mode of the resource", defaultValue = "true", type = Boolean.class)
 		cache,
 		@PFProperty(description = "Name of the image")
 		name,

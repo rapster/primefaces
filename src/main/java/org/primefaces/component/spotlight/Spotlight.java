@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "spotlight",
              description = "Spotlight highlights a certain component on page.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Spotlight extends AbstractSpotlight {
 

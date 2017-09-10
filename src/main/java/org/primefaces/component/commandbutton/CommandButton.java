@@ -56,7 +56,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "commandButton",
              description = "CommandButton is an extended version of standard JSF commandButton with ajax and skinning features.",
              widget = true,
-             rtl = true,
              parent = HtmlCommandButton.class)
 public class CommandButton extends AbstractCommandButton implements org.primefaces.component.api.AjaxSource, org.primefaces.component.api.Confirmable, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -101,9 +100,9 @@ public class CommandButton extends AbstractCommandButton implements org.primefac
 		escape,
 		@PFProperty(description = "When set to true client side validation is enabled, global setting is required to be enabled as a prerequisite", defaultValue = "false", type = Boolean.class)
 		validateClient,
-		@PFProperty(description = "Selector to use when partial submit is on, default is \":input\" to select all descendant inputs of a partially processed components")
+		@PFProperty(description = "Selector to use when partial submit is on,")
 		partialSubmitFilter,
-		@PFProperty(description = "Form to serialize for an ajax request. Default is the enclosing form")
+		@PFProperty(description = "Form to serialize for an ajax request")
 		form,
 		@PFProperty(description = "When enabled, click event can be added to disabled button", defaultValue = "true", type = Boolean.class)
 		renderDisabledClick,;

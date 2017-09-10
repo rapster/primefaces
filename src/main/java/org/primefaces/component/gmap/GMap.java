@@ -63,7 +63,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "gmap",
              description = "GMap component is built on Google Maps API Version 3. Gmap is highly integrated with JSF development model and enhanced with Ajax capabilities.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class GMap extends AbstractGMap implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -80,25 +79,25 @@ public class GMap extends AbstractGMap implements javax.faces.component.behavior
 		type,
 		@PFProperty(description = "Center point of the map. Required", required = true)
 		center,
-		@PFProperty(description = "Defines the initial zoom level. Default is 8", defaultValue = "8", type = Integer.class, required = true)
+		@PFProperty(description = "Defines the initial zoom level", defaultValue = "8", type = Integer.class, required = true)
 		zoom,
-		@PFProperty(description = "Controls street view support. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Controls street view support", defaultValue = "false", type = Boolean.class)
 		streetView,
-		@PFProperty(description = "Disables default UI controls. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Disables default UI controls", defaultValue = "false", type = Boolean.class)
 		disableDefaultUI,
-		@PFProperty(description = "Defines visibility of navigation control. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines visibility of navigation control", defaultValue = "true", type = Boolean.class)
 		navigationControl,
-		@PFProperty(description = "Defines visibility of map type control. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines visibility of map type control", defaultValue = "true", type = Boolean.class)
 		mapTypeControl,
-		@PFProperty(description = "Defines draggability of map. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines draggability of map", defaultValue = "true", type = Boolean.class)
 		draggable,
-		@PFProperty(description = "Disables zooming on mouse double click. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Disables zooming on mouse double click", defaultValue = "false", type = Boolean.class)
 		disableDoubleClickZoom,
 		@PFProperty(description = "Javascript callback to execute when a point on map is clicked")
 		onPointClick,
 		@PFProperty(description = "Defines setting center and zoom values auto by included overlays on startup. Default value is false", defaultValue = "false", type = Boolean.class)
 		fitBounds,
-		@PFProperty(description = "Controls scrollwheel zooming on the map. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Controls scrollwheel zooming on the map", defaultValue = "true", type = Boolean.class)
 		scrollWheel,;
 	}
 

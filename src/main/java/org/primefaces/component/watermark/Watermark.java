@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "watermark",
              description = "Watermark displays a hint on an input field.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Watermark extends AbstractWatermark {
 

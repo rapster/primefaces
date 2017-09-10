@@ -42,7 +42,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "keyboard",
              description = "Keyboard is an input component that uses a virtual keyboard to provide the input. Notable features are the customizable layouts and skinning capabilities.",
              widget = true,
-             rtl = true,
              parent = HtmlInputText.class)
 public class Keyboard extends AbstractKeyboard {
 
@@ -51,23 +50,23 @@ public class Keyboard extends AbstractKeyboard {
 
 		@PFProperty(description = "The placeholder attribute specifies a short hint that describes the expected value of an input field")
 		placeholder,
-		@PFProperty(description = "Makes the input a password field. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Makes the input a password field", defaultValue = "false", type = Boolean.class)
 		password,
 		@PFProperty(description = "Specifies the showMode, 'focus', 'button', 'both'", defaultValue = "focus")
 		showMode,
 		@PFProperty(description = "Image for the button")
 		buttonImage,
-		@PFProperty(description = "When set to true only image of the button would be displayed. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "When set to true only image of the button would be displayed", defaultValue = "false", type = Boolean.class)
 		buttonImageOnly,
-		@PFProperty(description = "Effect of the display animation. Default is fadeIn", defaultValue = "fadeIn")
+		@PFProperty(description = "Effect of the display animation", defaultValue = "fadeIn")
 		effect,
 		@PFProperty(description = "Length of the display animation")
 		effectDuration,
-		@PFProperty(description = "Built-in layout of the keyboard. Default is qwerty", defaultValue = "qwerty")
+		@PFProperty(description = "Built-in layout of the keyboard", defaultValue = "qwerty")
 		layout,
 		@PFProperty(description = "Template of the custom layout")
 		layoutTemplate,
-		@PFProperty(description = "Specifies displaying a keypad instead of a keyboard. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Specifies displaying a keypad instead of a keyboard", defaultValue = "false", type = Boolean.class)
 		keypadOnly,
 		@PFProperty(description = "Label of the prompt text")
 		promptLabel,

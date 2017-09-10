@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "ring",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIData.class)
 public class Ring extends AbstractRing {
 
@@ -54,11 +53,11 @@ public class Ring extends AbstractRing {
 		styleClass,
 		@PFProperty(description = "")
 		easing,
-		@PFProperty(description = "When true, Ring will automatically advance the moving elements to the next child at a regular interval.Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "When true, Ring will automatically advance the moving elements to the next child at a regular interval", defaultValue = "false", type = Boolean.class)
 		autoplay,
 		@PFProperty(description = "Time in milliseconds between animation triggers when a Ring's autoplay is playing", defaultValue = "1000", type = Integer.class)
 		autoplayDuration,
-		@PFProperty(description = "When true, Ring will pause autoPlay when the user mouseover the Ring container. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "When true, Ring will pause autoPlay when the user mouseover the Ring container", defaultValue = "false", type = Boolean.class)
 		autoplayPauseOnHover,
 		@PFProperty(description = "Time in milliseconds to delay the start of Ring's configured autoplay option", defaultValue = "0", type = Integer.class)
 		autoplayInitialDelay,;

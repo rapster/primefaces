@@ -71,13 +71,13 @@ public class TabView extends AbstractTabView implements javax.faces.component.be
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIComponentPropertyKeys.class})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Index of the active tab. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Index of the active tab", defaultValue = "0", type = Integer.class)
 		activeIndex,
 		@PFProperty(description = "Name of the transition effect")
 		effect,
-		@PFProperty(description = "Duration of the transition effect. Default is normal", defaultValue = "normal")
+		@PFProperty(description = "Duration of the transition effect", defaultValue = "normal")
 		effectDuration,
-		@PFProperty(description = "When tab contents are lazy loaded by ajax toggleMode, \n caching only retrieves the tab contents once and subsequent toggles of a cached tab does not communicate with server.\n If caching is turned off, tab contents are reloaded from server each time tab is clicked. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "When tab contents are lazy loaded by ajax toggleMode, \n caching only retrieves the tab contents once and subsequent toggles of a cached tab does not communicate with server.\n If caching is turned off, tab contents are reloaded from server each time tab is clicked", defaultValue = "true", type = Boolean.class)
 		cache,
 		@PFProperty(description = "Client side callback to execute when a tab is clicked")
 		onTabChange,
@@ -91,7 +91,7 @@ public class TabView extends AbstractTabView implements javax.faces.component.be
 		orientation,
 		@PFProperty(description = "Client side callback to execute before a tab is closed. Return false to prevent closing")
 		onTabClose,
-		@PFProperty(description = "When enabled, tab headers can be scrolled horizontally instead of wrapping. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "When enabled, tab headers can be scrolled horizontally instead of wrapping", defaultValue = "false", type = Boolean.class)
 		scrollable,
 		@PFProperty(description = "Position of the element in the tabbing order")
 		tabindex,;

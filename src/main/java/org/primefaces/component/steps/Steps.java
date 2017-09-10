@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "steps",
              description = "Steps is a menu component that displays steps of a workflow.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class Steps extends AbstractSteps {
 
@@ -53,9 +52,9 @@ public class Steps extends AbstractSteps {
 		style,
 		@PFProperty(description = "Style class of main container")
 		styleClass,
-		@PFProperty(description = "Index of the active tab. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Index of the active tab", defaultValue = "0", type = Integer.class)
 		activeIndex,
-		@PFProperty(description = "Defines whether items would be clickable or not. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines whether items would be clickable or not", defaultValue = "true", type = Boolean.class)
 		readonly,;
 	}
 

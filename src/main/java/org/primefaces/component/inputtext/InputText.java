@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "inputText",
              description = "InputText is an extension to standard inputText with skinning capabilities.",
              widget = true,
-             rtl = true,
              parent = HtmlInputText.class)
 public class InputText extends AbstractInputText {
 
@@ -49,7 +48,7 @@ public class InputText extends AbstractInputText {
 
 		@PFProperty(description = "The placeholder attribute specifies a short hint that describes the expected value of an input field")
 		placeholder,
-		@PFProperty(description = "Input field type. Default is text", defaultValue = "text")
+		@PFProperty(description = "Input field type", defaultValue = "text")
 		type,;
 	}
 

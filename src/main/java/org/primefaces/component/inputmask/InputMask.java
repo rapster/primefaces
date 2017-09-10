@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "inputMask",
              description = "InputMask forces an input to fit in a defined mask template.",
              widget = true,
-             rtl = true,
              parent = HtmlInputText.class)
 public class InputMask extends AbstractInputMask {
 
@@ -56,7 +55,7 @@ public class InputMask extends AbstractInputMask {
 		slotChar,
 		@PFProperty(description = "Clears the field on blur when incomplete input is entered", defaultValue = "true", type = Boolean.class)
 		autoClear,
-		@PFProperty(description = "Input field type. Default is text", defaultValue = "text")
+		@PFProperty(description = "Input field type", defaultValue = "text")
 		type,;
 	}
 

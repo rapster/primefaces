@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "imageCompare",
              description = "ImageCompare provides a rich user interface to compare two images.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class ImageCompare extends AbstractImageCompare {
 

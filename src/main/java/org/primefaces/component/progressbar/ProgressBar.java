@@ -52,20 +52,19 @@ import javax.faces.event.PhaseId;
 @PFComponent(tagName = "progressBar",
              description = "ProgressBar is a process status indicator that can either work purely on client side or interact with server side using ajax.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class ProgressBar extends AbstractProgressBar implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Value of the progress bar. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Value of the progress bar", defaultValue = "0", type = Integer.class)
 		value,
 		@PFProperty(description = "Disables or enables the progressbar", defaultValue = "false", type = Boolean.class)
 		disabled,
-		@PFProperty(description = "Specifies the mode of progressBar, in ajax mode progress value is retrieved from a backing bean. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Specifies the mode of progressBar, in ajax mode progress value is retrieved from a backing bean", defaultValue = "false", type = Boolean.class)
 		ajax,
-		@PFProperty(description = "Interval in seconds to do periodic requests in ajax mode. Default is 300", defaultValue = "3000", type = Integer.class)
+		@PFProperty(description = "Interval in seconds to do periodic requests in ajax mode", defaultValue = "3000", type = Integer.class)
 		interval,
 		@PFProperty(description = "Inline style of the main container element")
 		style,

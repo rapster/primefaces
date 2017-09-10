@@ -52,7 +52,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "tagCloud",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIOutput.class)
 public class TagCloud extends AbstractTagCloud implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

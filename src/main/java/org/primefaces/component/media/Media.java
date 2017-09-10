@@ -51,7 +51,7 @@ public class Media extends AbstractMedia {
 		style,
 		@PFProperty(description = "Style class of the player")
 		styleClass,
-		@PFProperty(description = "Controls browser caching mode of the resource. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Controls browser caching mode of the resource", defaultValue = "true", type = Boolean.class)
 		cache,;
 	}
 

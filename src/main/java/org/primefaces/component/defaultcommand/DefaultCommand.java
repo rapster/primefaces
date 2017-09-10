@@ -39,7 +39,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "defaultCommand",
              description = "DefaultCommand defines the default command component to invoke when enter key is pressed in a form.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class DefaultCommand extends AbstractDefaultCommand {
 

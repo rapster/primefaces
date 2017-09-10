@@ -59,7 +59,6 @@ import org.primefaces.util.Constants;
 @PFComponent(tagName = "organigram",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Organigram extends AbstractOrganigram implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

@@ -16,6 +16,7 @@
 package org.primefaces.component.terminal;
 
 import javax.faces.component.UIPanel;
+import org.primefaces.component.terminal.TerminalHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -43,8 +44,8 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "terminal",
              description = "Terminal is an ajax powered component bringing desktop command-line tools to the web.",
              widget = true,
-             rtl = true,
-             parent = UIPanel.class)
+             parent = UIPanel.class,
+             handlerClass = TerminalHandler.class)
 public class Terminal extends AbstractTerminal {
 
 	@PFPropertyKeys(base = {})

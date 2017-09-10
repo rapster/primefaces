@@ -16,6 +16,7 @@
 package org.primefaces.component.column;
 
 import javax.faces.component.UIColumn;
+import org.primefaces.component.column.ColumnHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -40,7 +41,8 @@ import org.primefaces.model.menu.MenuModel;
 
 @PFComponent(tagName = "column",
              description = "Column is an extended version of the standard column used by various PrimeFaces components like datatable, treetable and more.",
-             parent = UIColumn.class)
+             parent = UIColumn.class,
+             handlerClass = ColumnHandler.class)
 public class Column extends AbstractColumn implements org.primefaces.component.api.UIColumn, org.primefaces.model.menu.MenuColumn {
 
 	@PFPropertyKeys(base = {})
@@ -98,9 +100,9 @@ public class Column extends AbstractColumn implements org.primefaces.component.a
 		sortable,
 		@PFProperty(description = "Boolean value to mark column as filterable", defaultValue = "true", type = Boolean.class)
 		filterable,
-		@PFProperty(description = "Controls the visibilty of the column, default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Controls the visibilty of the column,", defaultValue = "true", type = Boolean.class)
 		visible,
-		@PFProperty(description = "Whether clicking the column selects the row when datatable has row selection enabled, default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Whether clicking the column selects the row when datatable has row selection enabled,", defaultValue = "true", type = Boolean.class)
 		selectRow,
 		@PFProperty(description = "Label to read by screen readers, when not specified headerText is used")
 		ariaHeaderText,

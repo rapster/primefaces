@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "dataScroller",
              description = "DataScroller displays a collection of data featuring on demand loading using scroll.",
              widget = true,
-             rtl = true,
              parent = UIData.class)
 public class DataScroller extends AbstractDataScroller {
 
@@ -57,7 +56,7 @@ public class DataScroller extends AbstractDataScroller {
 		mode,
 		@PFProperty(description = "Defines pixel height of the viewport in inline mode")
 		scrollHeight,
-		@PFProperty(description = "Percentage height of the buffer between the bottom of the page and the scroll position to initiate\n the load for the new chunk. Value is defined in integer and default is 10 meaning load would happen after 90% of the viewport is scrolled down", defaultValue = "10", type = Integer.class)
+		@PFProperty(description = "Percentage height of the buffer between the bottom of the page and the scroll position to initiate\n the load for the new chunk. Value is defined in integer and", defaultValue = "10", type = Integer.class)
 		buffer,;
 	}
 

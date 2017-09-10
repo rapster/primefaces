@@ -99,7 +99,7 @@ public class UIMenuItem extends AbstractUIMenuItem implements org.primefaces.com
 		title,
 		@PFProperty(description = "Used to resolve a navigation case")
 		outcome,
-		@PFProperty(description = "Whether to include page parameters in target URI. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Whether to include page parameters in target URI", defaultValue = "false", type = Boolean.class)
 		includeViewParams,
 		@PFProperty(description = "Identifier of the target page which should be scrolled to")
 		fragment,
@@ -109,9 +109,9 @@ public class UIMenuItem extends AbstractUIMenuItem implements org.primefaces.com
 		containerStyle,
 		@PFProperty(description = "StyleClass of the menuitem container")
 		containerStyleClass,
-		@PFProperty(description = "Selector to use when partial submit is on, default is \":input\" to select all descendant inputs of a partially processed components")
+		@PFProperty(description = "Selector to use when partial submit is on,")
 		partialSubmitFilter,
-		@PFProperty(description = "Form to serialize for an ajax request. Default is the enclosing form")
+		@PFProperty(description = "Form to serialize for an ajax request")
 		form,
 		@PFProperty(description = "Defines whether value would be escaped or not, defaults to true", defaultValue = "true", type = Boolean.class)
 		escape,

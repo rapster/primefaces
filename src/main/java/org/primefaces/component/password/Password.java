@@ -47,7 +47,6 @@ import org.primefaces.util.ComponentUtils;
 @PFComponent(tagName = "password",
              description = "Password component is an extended version of standard inputSecret component with theme integration and strength indicator.",
              widget = true,
-             rtl = true,
              parent = HtmlInputText.class)
 public class Password extends AbstractPassword {
 
@@ -56,19 +55,19 @@ public class Password extends AbstractPassword {
 
 		@PFProperty(description = "The placeholder attribute specifies a short hint that describes the expected value of an input field")
 		placeholder,
-		@PFProperty(description = "Enables strength indicator. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Enables strength indicator", defaultValue = "false", type = Boolean.class)
 		feedback,
-		@PFProperty(description = "Displays feedback inline rather than using a popup. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Displays feedback inline rather than using a popup", defaultValue = "false", type = Boolean.class)
 		inline,
-		@PFProperty(description = "Label of prompt. Default is \"Please enter a password\"", defaultValue = "Please enter a password")
+		@PFProperty(description = "Label of prompt", defaultValue = "Please enter a password")
 		promptLabel,
-		@PFProperty(description = "Label of weak password. Default is \"Weak\"", defaultValue = "Weak")
+		@PFProperty(description = "Label of weak password", defaultValue = "Weak")
 		weakLabel,
-		@PFProperty(description = "Label of good password. Default is \"Good\"", defaultValue = "Good")
+		@PFProperty(description = "Label of good password", defaultValue = "Good")
 		goodLabel,
-		@PFProperty(description = "Label of strong password. Default is \"Strong\"", defaultValue = "Strong")
+		@PFProperty(description = "Label of strong password", defaultValue = "Strong")
 		strongLabel,
-		@PFProperty(description = "Boolean flag indicating whether or not a previously entered password should be rendered in form. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Boolean flag indicating whether or not a previously entered password should be rendered in form", defaultValue = "false", type = Boolean.class)
 		redisplay,
 		@PFProperty(description = "Identifier of another password component to match value against")
 		match,;

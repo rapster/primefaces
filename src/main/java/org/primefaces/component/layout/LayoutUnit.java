@@ -46,11 +46,11 @@ public class LayoutUnit extends AbstractLayoutUnit {
 		position,
 		@PFProperty(description = "", defaultValue = "auto")
 		size,
-		@PFProperty(description = "Makes the unit resizable. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Makes the unit resizable", defaultValue = "false", type = Boolean.class)
 		resizable,
-		@PFProperty(description = "Makes the unit closable. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Makes the unit closable", defaultValue = "false", type = Boolean.class)
 		closable,
-		@PFProperty(description = "Makes the unit collapsible. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Makes the unit collapsible", defaultValue = "false", type = Boolean.class)
 		collapsible,
 		@PFProperty(description = "Text of header")
 		header,
@@ -60,13 +60,13 @@ public class LayoutUnit extends AbstractLayoutUnit {
 		minSize,
 		@PFProperty(description = "", defaultValue = "0", type = Integer.class)
 		maxSize,
-		@PFProperty(description = "Gutter size of layout unit. Default is 6", defaultValue = "6", type = Integer.class)
+		@PFProperty(description = "Gutter size of layout unit", defaultValue = "6", type = Integer.class)
 		gutter,
-		@PFProperty(description = "Specifies default visibility. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies default visibility", defaultValue = "true", type = Boolean.class)
 		visible,
-		@PFProperty(description = "Specifies toggle status of unit. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Specifies toggle status of unit", defaultValue = "false", type = Boolean.class)
 		collapsed,
-		@PFProperty(description = "Size of the unit when collapsed. Default is 25", defaultValue = "25", type = Integer.class)
+		@PFProperty(description = "Size of the unit when collapsed", defaultValue = "25", type = Integer.class)
 		collapseSize,
 		@PFProperty(description = "Style to apply to container element")
 		style,

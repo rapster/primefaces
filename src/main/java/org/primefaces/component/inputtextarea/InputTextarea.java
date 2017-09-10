@@ -16,6 +16,7 @@
 package org.primefaces.component.inputtextarea;
 
 import javax.faces.component.html.HtmlInputTextarea;
+import org.primefaces.component.inputtextarea.InputTextareaHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -61,8 +62,8 @@ import org.primefaces.util.Constants;
 @PFComponent(tagName = "inputTextarea",
              description = "InputTextarea is an extension to standard inputTextara with skinning capabilities and auto growing.",
              widget = true,
-             rtl = true,
-             parent = HtmlInputTextarea.class)
+             parent = HtmlInputTextarea.class,
+             handlerClass = InputTextareaHandler.class)
 public class InputTextarea extends AbstractInputTextarea implements org.primefaces.component.api.MixedClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputTextPropertyKeys.class})
@@ -72,7 +73,7 @@ public class InputTextarea extends AbstractInputTextarea implements org.primefac
 		placeholder,
 		@PFProperty(description = "Allows to expand height automatically when text input overflows", defaultValue = "true", type = Boolean.class)
 		autoResize,
-		@PFProperty(description = "Sets maximum character number of text area container. Default is 0, means no limit", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
+		@PFProperty(description = "Sets maximum character number of text area container", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
 		maxlength,
 		@PFProperty(description = "Id of the label component to display remaining characters")
 		counter,
@@ -80,9 +81,9 @@ public class InputTextarea extends AbstractInputTextarea implements org.primefac
 		counterTemplate,
 		@PFProperty(description = "Method providing suggestions", type = javax.el.MethodExpression.class)
 		completeMethod,
-		@PFProperty(description = "Number of characters of a word to be typed before starting to query. Default is 3", defaultValue = "3", type = Integer.class)
+		@PFProperty(description = "Number of characters of a word to be typed before starting to query", defaultValue = "3", type = Integer.class)
 		minQueryLength,
-		@PFProperty(description = "Delay to wait in milliseconds before sending each query to the server. Default is 700", defaultValue = "700", type = Integer.class)
+		@PFProperty(description = "Delay to wait in milliseconds before sending each query to the server", defaultValue = "700", type = Integer.class)
 		queryDelay,
 		@PFProperty(description = "Defines the height of the viewport for autocomplete suggestions", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
 		scrollHeight,

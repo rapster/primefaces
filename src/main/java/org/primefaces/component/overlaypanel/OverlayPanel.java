@@ -42,7 +42,6 @@ import org.primefaces.util.Constants;
 @PFComponent(tagName = "overlayPanel",
              description = "OverlayPanel is a generic container component that is displayed as a popup.",
              widget = true,
-             rtl = true,
              parent = UIPanel.class)
 public class OverlayPanel extends AbstractOverlayPanel {
 
@@ -55,9 +54,9 @@ public class OverlayPanel extends AbstractOverlayPanel {
 		styleClass,
 		@PFProperty(description = "Identifier of the target component to show the panel")
 		forValue("for"),
-		@PFProperty(description = "Event to show the overlay panel, default is \"click\"")
+		@PFProperty(description = "Event to show the overlay panel,")
 		showEvent,
-		@PFProperty(description = "Event to hide the overlay panel, default is \"click\"")
+		@PFProperty(description = "Event to hide the overlay panel,")
 		hideEvent,
 		@PFProperty(description = "Effect to display when showing the panel")
 		showEffect,
@@ -73,15 +72,15 @@ public class OverlayPanel extends AbstractOverlayPanel {
 		my,
 		@PFProperty(description = "Position of the target relative to the panel")
 		at,
-		@PFProperty(description = "Dynamic mode allows overlay panel to fetch it's contents before it's shown rather than on page load\n which is useful to reduce initial page load times. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Dynamic mode allows overlay panel to fetch it's contents before it's shown rather than on page load\n which is useful to reduce initial page load times", defaultValue = "false", type = Boolean.class)
 		dynamic,
 		@PFProperty(description = "When set true, clicking outside of the panel hides the overlay", defaultValue = "true", type = Boolean.class)
 		dismissable,
-		@PFProperty(description = "Displays a close icon to hide the overlay, default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Displays a close icon to hide the overlay,", defaultValue = "false", type = Boolean.class)
 		showCloseIcon,
-		@PFProperty(description = "Boolean value that specifies whether the document should be shielded with a partially transparent mask to require the user to close the Panel before being able to activate any elements in the document. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Boolean value that specifies whether the document should be shielded with a partially transparent mask to require the user to close the Panel before being able to activate any elements in the document", defaultValue = "false", type = Boolean.class)
 		modal,
-		@PFProperty(description = "Delay time to show overlay panel in milliseconds. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Delay time to show overlay panel in milliseconds", defaultValue = "0", type = Integer.class)
 		showDelay,;
 
 		String toString;

@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "megaMenu",
              description = "MegaMenu is a navigation component that displays submenus together.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class MegaMenu extends AbstractMegaMenu {
 

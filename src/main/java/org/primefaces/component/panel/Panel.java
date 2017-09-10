@@ -61,7 +61,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "panel",
              description = "Panel is a grouping component for other components, notable features are toggling, closing, built-in popup menu and ajax event listeners.",
              widget = true,
-             rtl = true,
              parent = UIPanel.class)
 public class Panel extends AbstractPanel implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -72,21 +71,21 @@ public class Panel extends AbstractPanel implements javax.faces.component.behavi
 		header,
 		@PFProperty(description = "Footer text")
 		footer,
-		@PFProperty(description = "Makes panel toggleable. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Makes panel toggleable", defaultValue = "false", type = Boolean.class)
 		toggleable,
-		@PFProperty(description = "Speed of toggling in milliseconds. Default is 500", defaultValue = "500", type = Integer.class)
+		@PFProperty(description = "Speed of toggling in milliseconds", defaultValue = "500", type = Integer.class)
 		toggleSpeed,
 		@PFProperty(description = "Style of the panel")
 		style,
 		@PFProperty(description = "Style class of the panel")
 		styleClass,
-		@PFProperty(description = "Renders a toggleable panel as collapsed. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Renders a toggleable panel as collapsed", defaultValue = "false", type = Boolean.class)
 		collapsed,
-		@PFProperty(description = "Make panel closable. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Make panel closable", defaultValue = "false", type = Boolean.class)
 		closable,
-		@PFProperty(description = "Speed of closing effect in milliseconds. Default is 500", defaultValue = "500", type = Integer.class)
+		@PFProperty(description = "Speed of closing effect in milliseconds", defaultValue = "500", type = Integer.class)
 		closeSpeed,
-		@PFProperty(description = "Renders panel as hidden. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Renders panel as hidden", defaultValue = "true", type = Boolean.class)
 		visible,
 		@PFProperty(description = "Title label for closer element of closable panel")
 		closeTitle,

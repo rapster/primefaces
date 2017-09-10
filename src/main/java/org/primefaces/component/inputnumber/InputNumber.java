@@ -44,7 +44,6 @@ import java.util.Locale;
 @PFComponent(tagName = "inputNumber",
              description = "InputNumber is an extension to the inputText with optimized handling for numbers.",
              widget = true,
-             rtl = true,
              parent = HtmlInputText.class)
 public class InputNumber extends AbstractInputNumber implements org.primefaces.component.api.InputHolder {
 
@@ -55,19 +54,19 @@ public class InputNumber extends AbstractInputNumber implements org.primefaces.c
 		placeholder,
 		@PFProperty(description = "Input field type. Valid values are \"text\"(default), \"tel\" and \"hidden\"", defaultValue = "text")
 		type,
-		@PFProperty(description = "Desired symbol or unit. Default is none")
+		@PFProperty(description = "Desired symbol or unit")
 		symbol,
-		@PFProperty(description = "Symbol suffix. Default is prefix")
+		@PFProperty(description = "Symbol suffix")
 		symbolPosition,
-		@PFProperty(description = "Minimum values. Default is 0.00")
+		@PFProperty(description = "Minimum values")
 		minValue,
-		@PFProperty(description = "Maximum values. Default is 999999999.99")
+		@PFProperty(description = "Maximum values")
 		maxValue,
-		@PFProperty(description = "Controls the rounding method. Default is Round-Half-Up Symmetric")
+		@PFProperty(description = "Controls the rounding method")
 		roundMethod,
 		@PFProperty(description = "Number of decimal places. Default are taken from minValue and MaxValue")
 		decimalPlaces,
-		@PFProperty(description = "Controls empty input display behavior, options are empty, zero, sign. Default is empty", defaultValue = "empty")
+		@PFProperty(description = "Controls empty input display behavior, options are empty, zero, sign", defaultValue = "empty")
 		emptyValue,
 		@PFProperty(description = "Inline style of the input element")
 		inputStyle,

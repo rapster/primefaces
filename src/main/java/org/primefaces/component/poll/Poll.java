@@ -16,6 +16,7 @@
 package org.primefaces.component.poll;
 
 import javax.faces.component.UIComponentBase;
+import org.primefaces.component.poll.PollHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -41,14 +42,14 @@ import org.primefaces.context.RequestContext;
 @PFComponent(tagName = "poll",
              description = "Poll is an ajax component that has the ability to send periodical ajax requests and execute listeners on JSF backing beans.",
              widget = true,
-             rtl = true,
-             parent = UIComponentBase.class)
+             parent = UIComponentBase.class,
+             handlerClass = PollHandler.class)
 public class Poll extends AbstractPoll implements org.primefaces.component.api.AjaxSource {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Interval in seconds to do periodic ajax requests. Default is 2", defaultValue = "2", type = Integer.class)
+		@PFProperty(description = "Interval in seconds to do periodic ajax requests", defaultValue = "2", type = Integer.class)
 		interval,
 		@PFProperty(description = "Component(s) to be updated with ajax")
 		update,
@@ -66,15 +67,15 @@ public class Poll extends AbstractPoll implements org.primefaces.component.api.A
 		onerror,
 		@PFProperty(description = "Javascript handler to execute when ajax request succeeds")
 		onsuccess,
-		@PFProperty(description = "Global ajax requests are listened by ajaxStatus component, setting global to false will not trigger ajaxStatus. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Global ajax requests are listened by ajaxStatus component, setting global to false will not trigger ajaxStatus", defaultValue = "true", type = Boolean.class)
 		global,
 		@PFProperty(description = "If less than delay milliseconds elapses between calls to request() only the most recent one is sent and all other requests are discarded. The default value of this option is null. If the value of delay is the literal string 'none' without the quotes or the default, no delay is used")
 		delay,
 		@PFProperty(description = "Defines the timeout for the ajax request", defaultValue = "0", type = Integer.class)
 		timeout,
-		@PFProperty(description = "When set to true, ajax requests are not queued. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "When set to true, ajax requests are not queued", defaultValue = "false", type = Boolean.class)
 		async,
-		@PFProperty(description = "In autoStart mode, polling starts automatically on page load, to start polling on demand set to false. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "In autoStart mode, polling starts automatically on page load, to start polling on demand set to false", defaultValue = "true", type = Boolean.class)
 		autoStart,
 		@PFProperty(description = "Stops polling when true", defaultValue = "false", type = Boolean.class)
 		stop,
@@ -84,9 +85,9 @@ public class Poll extends AbstractPoll implements org.primefaces.component.api.A
 		resetValues,
 		@PFProperty(description = "If true, components which autoUpdate=\"true\" will not be updated for this request. If not specified, or the value is false, no such indication is made", defaultValue = "false", type = Boolean.class)
 		ignoreAutoUpdate,
-		@PFProperty(description = "Selector to use when partial submit is on, default is \":input\" to select all descendant inputs of a partially processed components")
+		@PFProperty(description = "Selector to use when partial submit is on,")
 		partialSubmitFilter,
-		@PFProperty(description = "Form to serialize for an ajax request. Default is the enclosing form")
+		@PFProperty(description = "Form to serialize for an ajax request")
 		form,;
 	}
 

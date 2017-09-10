@@ -43,7 +43,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "scrollPanel",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIPanel.class)
 public class ScrollPanel extends AbstractScrollPanel {
 

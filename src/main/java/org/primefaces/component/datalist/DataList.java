@@ -65,14 +65,13 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "dataList",
              description = "DataList presents a collection of data in list layout with several display types.\n      Ajax Pagination is a built-in feature and paginator UI is fully customizable via various options like paginatorTemplate, rowsPerPageOptions, pageLinks and more.",
              widget = true,
-             rtl = true,
              parent = UIData.class)
 public class DataList extends AbstractDataList implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder, org.primefaces.component.api.Pageable {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIDataPropertyKeys.class})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Type of the list, valid values are \"unordered\", \"ordered\" and \"definition\". Default is unordered", defaultValue = "unordered")
+		@PFProperty(description = "Type of the list, valid values are \"unordered\", \"ordered\" and \"definition\"", defaultValue = "unordered")
 		type,
 		@PFProperty(description = "Specifies the list item type")
 		itemType,
@@ -82,7 +81,7 @@ public class DataList extends AbstractDataList implements javax.faces.component.
 		styleClass,
 		@PFProperty(description = "Name of the exported request scoped variable for the status of the iteration")
 		varStatus,
-		@PFProperty(description = "Text to display when there is no data to display. Default is \"No records found.\"", defaultValue = "No records found.")
+		@PFProperty(description = "Text to display when there is no data to display", defaultValue = "No records found.")
 		emptyMessage,
 		@PFProperty(description = "Style class of an item in list. This option is useful to assign specific styles to certain items using an EL expression")
 		itemStyleClass,;

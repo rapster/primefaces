@@ -54,7 +54,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "mindmap",
              description = "MindMap is an interactive mindmapping component.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Mindmap extends AbstractMindmap implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "panelMenu",
              description = "PanelMenu is a hybrid of accordion-tree components used for navigations and actions.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class PanelMenu extends AbstractPanelMenu {
 
@@ -54,7 +53,7 @@ public class PanelMenu extends AbstractPanelMenu {
 		style,
 		@PFProperty(description = "Style class of the container element")
 		styleClass,
-		@PFProperty(description = "When enabled, menu state is saved in a cookie for the session. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "When enabled, menu state is saved in a cookie for the session", defaultValue = "true", type = Boolean.class)
 		stateful,;
 	}
 

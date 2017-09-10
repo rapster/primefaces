@@ -16,6 +16,7 @@
 package org.primefaces.component.treetable;
 
 import org.primefaces.component.api.UITree;
+import org.primefaces.component.treetable.TreeTableHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -91,8 +92,8 @@ import org.primefaces.model.filter.StartsWithFilterConstraint;
 @PFComponent(tagName = "treeTable",
              description = "Treetable is is used for displaying hierarchical data in tabular format.",
              widget = true,
-             rtl = true,
-             parent = UITree.class)
+             parent = UITree.class,
+             handlerClass = TreeTableHandler.class)
 public class TreeTable extends AbstractTreeTable implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder, org.primefaces.component.api.Pageable {
 
 	@PFPropertyKeys(base = {})
@@ -102,7 +103,7 @@ public class TreeTable extends AbstractTreeTable implements javax.faces.componen
 		style,
 		@PFProperty(description = "Style class of the container element")
 		styleClass,
-		@PFProperty(description = "Makes data scrollable with fixed header. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Makes data scrollable with fixed header", defaultValue = "false", type = Boolean.class)
 		scrollable,
 		@PFProperty(description = "Height for scrollable data")
 		scrollHeight,
@@ -112,7 +113,7 @@ public class TreeTable extends AbstractTreeTable implements javax.faces.componen
 		tableStyle,
 		@PFProperty(description = "Style class of the table element")
 		tableStyleClass,
-		@PFProperty(description = "Text to display when there is no data to display. Default is \"No records found.\"", defaultValue = "No records found.")
+		@PFProperty(description = "Text to display when there is no data to display", defaultValue = "No records found.")
 		emptyMessage,
 		@PFProperty(description = "Defines if columns can be resized or not", defaultValue = "false", type = Boolean.class)
 		resizableColumns,
@@ -122,7 +123,7 @@ public class TreeTable extends AbstractTreeTable implements javax.faces.componen
 		liveResize,
 		@PFProperty(description = "Expression for default sorting", type = Object.class)
 		sortBy,
-		@PFProperty(description = "Defines default sorting order. Default is \"ascending\"", defaultValue = "ascending")
+		@PFProperty(description = "Defines default sorting order", defaultValue = "ascending")
 		sortOrder,
 		@PFProperty(description = "Custom pluggable sortFunction for default sorting", type = javax.el.MethodExpression.class)
 		sortFunction,
@@ -140,13 +141,13 @@ public class TreeTable extends AbstractTreeTable implements javax.faces.componen
 		editable,
 		@PFProperty(description = "Defines edit mode, valid values are \"row\" (default) and \"cell\"", defaultValue = "row")
 		editMode,
-		@PFProperty(description = "Defines if cell editors of row should be displayed as editable or not. Default is false meaning display mode", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines if cell editors of row should be displayed as editable or not", defaultValue = "false", type = Boolean.class)
 		editingRow,
 		@PFProperty(description = "Separator text to use in output mode of editable cells with multiple components")
 		cellSeparator,
-		@PFProperty(description = "Disables text selection on row click. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Disables text selection on row click", defaultValue = "true", type = Boolean.class)
 		disabledTextSelection,
-		@PFProperty(description = "Enables pagination. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Enables pagination", defaultValue = "false", type = Boolean.class)
 		paginator,
 		@PFProperty(description = "Template of the paginator", defaultValue = "{FirstPageLink} {PreviousPageLink} {PageLinks} {NextPageLink} {LastPageLink} {RowsPerPageDropdown}")
 		paginatorTemplate,
@@ -156,11 +157,11 @@ public class TreeTable extends AbstractTreeTable implements javax.faces.componen
 		rowsPerPageLabel,
 		@PFProperty(description = "Template of the currentPageReport UI")
 		currentPageReportTemplate,
-		@PFProperty(description = "Maximum number of page links to display. Default is 10", defaultValue = "10", type = Integer.class)
+		@PFProperty(description = "Maximum number of page links to display", defaultValue = "10", type = Integer.class)
 		pageLinks,
-		@PFProperty(description = "Position of the paginator. Default is both", defaultValue = "both")
+		@PFProperty(description = "Position of the paginator", defaultValue = "both")
 		paginatorPosition,
-		@PFProperty(description = "Defines if paginator should be hidden if total data count is less than number of rows per page. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines if paginator should be hidden if total data count is less than number of rows per page", defaultValue = "true", type = Boolean.class)
 		paginatorAlwaysVisible,
 		@PFProperty(description = "Number of rows to display per page. Default value is 0 meaning to display all data available", defaultValue = "0", type = Integer.class)
 		rows,
@@ -168,9 +169,9 @@ public class TreeTable extends AbstractTreeTable implements javax.faces.componen
 		first,
 		@PFProperty(description = "Node to keep the filtered nodes if filtering is enabled", type = Object.class)
 		filteredNode,
-		@PFProperty(description = "Client side event to invoke treetable filtering for input fields. Default is keyup")
+		@PFProperty(description = "Client side event to invoke treetable filtering for input fields")
 		filterEvent,
-		@PFProperty(description = "Delay to wait in milliseconds before sending each filter query. Default is 300", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
+		@PFProperty(description = "Delay to wait in milliseconds before sending each filter query", defaultValue = "java.lang.Integer.MAX_VALUE", type = Integer.class)
 		filterDelay,;
 	}
 

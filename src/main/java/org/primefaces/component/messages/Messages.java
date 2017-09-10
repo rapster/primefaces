@@ -54,7 +54,7 @@ public class Messages extends AbstractMessages implements org.primefaces.compone
 		style,
 		@PFProperty(description = "Style class of the component")
 		styleClass,
-		@PFProperty(description = "Defines if severity icons would be displayed. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Defines if severity icons would be displayed", defaultValue = "true", type = Boolean.class)
 		showIcon,
 		@PFProperty(description = "Type of the \"for\" attribute. Valid values are \"key\" and \"expression\"")
 		forType,;

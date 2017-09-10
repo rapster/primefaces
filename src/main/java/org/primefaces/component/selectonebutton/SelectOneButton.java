@@ -46,7 +46,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "selectOneButton",
              description = "",
              widget = true,
-             rtl = true,
              parent = UISelectOne.class)
 public class SelectOneButton extends AbstractSelectOneButton implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

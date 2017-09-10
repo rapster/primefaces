@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "tabMenu",
              description = "TabMenu is a menu component that displays menuitems as tabs.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class TabMenu extends AbstractTabMenu {
 
@@ -53,7 +52,7 @@ public class TabMenu extends AbstractTabMenu {
 		style,
 		@PFProperty(description = "Style class of main container")
 		styleClass,
-		@PFProperty(description = "Index of the active tab. Default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Index of the active tab", defaultValue = "0", type = Integer.class)
 		activeIndex,;
 	}
 

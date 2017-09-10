@@ -16,6 +16,7 @@
 package org.primefaces.component.summaryrow;
 
 import javax.faces.component.UIComponentBase;
+import org.primefaces.component.summaryrow.SummaryRowHandler;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -33,7 +34,8 @@ import org.primefaces.cdk.annotations.*;
 
 @PFComponent(tagName = "summaryRow",
              description = "SummaryRow is a helper component for data grouping.",
-             parent = UIComponentBase.class)
+             parent = UIComponentBase.class,
+             handlerClass = SummaryRowHandler.class)
 public class SummaryRow extends AbstractSummaryRow {
 
 	@PFPropertyKeys(base = {})

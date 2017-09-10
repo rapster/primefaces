@@ -52,14 +52,13 @@ import javax.faces.event.PhaseId;
 @PFComponent(tagName = "rating",
              description = "Rating component features a star based rating system. Rating can be used as a plain input component or with ajax RateListeners.",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class Rating extends AbstractRating implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Number of stars to display. Default is 5", defaultValue = "5", type = Integer.class)
+		@PFProperty(description = "Number of stars to display", defaultValue = "5", type = Integer.class)
 		stars,
 		@PFProperty(description = "Disables user interaction", defaultValue = "false", type = Boolean.class)
 		disabled,

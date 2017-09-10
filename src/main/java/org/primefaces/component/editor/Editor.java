@@ -42,7 +42,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "editor",
              description = "Editor is an input component with rich text editing capabilities.",
              widget = true,
-             rtl = true,
              parent = UIInput.class)
 public class Editor extends AbstractEditor {
 
@@ -51,9 +50,9 @@ public class Editor extends AbstractEditor {
 
 		@PFProperty(description = "List of controls to customize toolbar")
 		controls,
-		@PFProperty(description = "Height of the editor. Default is min integer value", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
+		@PFProperty(description = "Height of the editor", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
 		height,
-		@PFProperty(description = "Width of the editor. Default is min integer value", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
+		@PFProperty(description = "Width of the editor", defaultValue = "java.lang.Integer.MIN_VALUE", type = Integer.class)
 		width,
 		@PFProperty(description = "Disables editor", defaultValue = "false", type = Boolean.class)
 		disabled,

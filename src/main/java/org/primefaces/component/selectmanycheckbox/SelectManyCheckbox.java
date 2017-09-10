@@ -43,7 +43,6 @@ import javax.faces.component.UINamingContainer;
 @PFComponent(tagName = "selectManyCheckbox",
              description = "",
              widget = true,
-             rtl = true,
              parent = HtmlSelectManyCheckbox.class)
 public class SelectManyCheckbox extends AbstractSelectManyCheckbox {
 

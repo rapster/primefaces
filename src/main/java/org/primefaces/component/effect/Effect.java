@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "effect",
              description = "Effect component is based on the jQuery UI effects library.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Effect extends AbstractEffect {
 
@@ -53,11 +52,11 @@ public class Effect extends AbstractEffect {
 		type,
 		@PFProperty(description = "Component that is animated")
 		forValue("for"),
-		@PFProperty(description = "Speed of the animation in ms. Default is 1000", defaultValue = "1000", type = Integer.class)
+		@PFProperty(description = "Speed of the animation in ms", defaultValue = "1000", type = Integer.class)
 		speed,
 		@PFProperty(description = "Startup delay on firing animation", defaultValue = "0", type = Integer.class)
 		delay,
-		@PFProperty(description = "Specifies if effects should be queued. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Specifies if effects should be queued", defaultValue = "true", type = Boolean.class)
 		queue,;
 
 		String toString;

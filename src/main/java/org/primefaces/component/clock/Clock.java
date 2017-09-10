@@ -43,7 +43,6 @@ import java.util.Map;
 @PFComponent(tagName = "clock",
              description = "Clock displays server or client datetime live.",
              widget = true,
-             rtl = true,
              parent = UIOutput.class)
 public class Clock extends AbstractClock {
 
@@ -56,7 +55,7 @@ public class Clock extends AbstractClock {
 		mode,
 		@PFProperty(description = "Syncs time periodically in server mode", defaultValue = "false", type = Boolean.class)
 		autoSync,
-		@PFProperty(description = "Defines the sync interval in autoSync mode, default is 60000 milliseconds", defaultValue = "60000", type = Integer.class)
+		@PFProperty(description = "Defines the sync interval in autoSync mode,", defaultValue = "60000", type = Integer.class)
 		syncInterval,
 		@PFProperty(description = "String or a java.util.TimeZone instance to specify the timezone used for date conversion, defaults to TimeZone.getDefault()", type = Object.class)
 		timeZone,

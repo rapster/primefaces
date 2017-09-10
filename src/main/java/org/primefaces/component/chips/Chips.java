@@ -52,7 +52,6 @@ import javax.faces.component.behavior.Behavior;
 @PFComponent(tagName = "chips",
              description = "Chips is used to enter multiple values on an inputfield.",
              widget = true,
-             rtl = true,
              parent = HtmlInputText.class)
 public class Chips extends AbstractChips implements org.primefaces.component.api.InputHolder, org.primefaces.component.api.MixedClientBehaviorHolder {
 

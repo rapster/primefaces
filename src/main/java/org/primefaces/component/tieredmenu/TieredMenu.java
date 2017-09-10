@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "tieredMenu",
              description = "TieredMenu displays submenus in overlays.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class TieredMenu extends AbstractTieredMenu implements org.primefaces.component.menu.OverlayMenu {
 
@@ -62,11 +61,11 @@ public class TieredMenu extends AbstractTieredMenu implements org.primefaces.com
 		my,
 		@PFProperty(description = "Corner of trigger to align with menu element")
 		at,
-		@PFProperty(description = "Defines positioning, when enabled menu is displayed with absolute positioning relative to the trigger. \n Default is false, meaning static positioning", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines positioning, when enabled menu is displayed with absolute positioning relative to the trigger. \n", defaultValue = "false", type = Boolean.class)
 		overlay,
-		@PFProperty(description = "Event name of component that will show the dynamic positioned menu. Default is click", defaultValue = "click")
+		@PFProperty(description = "Event name of component that will show the dynamic positioned menu", defaultValue = "click")
 		triggerEvent,
-		@PFProperty(description = "Event to toggle the submenus, default is hover. Valid values are \"hover\" and \"click\"")
+		@PFProperty(description = "Event to toggle the submenus,")
 		toggleEvent,;
 	}
 

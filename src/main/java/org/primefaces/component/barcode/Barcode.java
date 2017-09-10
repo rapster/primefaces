@@ -41,7 +41,7 @@ public class Barcode extends AbstractBarcode {
 
 		@PFProperty(description = "Type of the barcode")
 		type,
-		@PFProperty(description = "Controls browser caching mode of the resource. Default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Controls browser caching mode of the resource", defaultValue = "true", type = Boolean.class)
 		cache,
 		@PFProperty(description = "Format of the generated barcode, valid values are png (default) and svg", defaultValue = "svg")
 		format,

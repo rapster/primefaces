@@ -39,7 +39,7 @@ public class UIOrganigramNode extends AbstractUIOrganigramNode {
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
 
-		@PFProperty(description = "Type of the node. Default is \"default\"")
+		@PFProperty(description = "Type of the node")
 		type,
 		@PFProperty(description = "style to apply to a node type")
 		style,

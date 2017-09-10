@@ -43,7 +43,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "log",
              description = "Log component is a visual console to display logs of PrimeFaces. Using log client side API, you can also use the component.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Log extends AbstractLog {
 

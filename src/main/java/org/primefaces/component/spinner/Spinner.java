@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "spinner",
              description = "Spinner is an input component to provide a numerical input via increment and decrement buttons.",
              widget = true,
-             rtl = true,
              parent = HtmlInputText.class)
 public class Spinner extends AbstractSpinner implements org.primefaces.component.api.InputHolder {
 
@@ -50,11 +49,11 @@ public class Spinner extends AbstractSpinner implements org.primefaces.component
 
 		@PFProperty(description = "The placeholder attribute specifies a short hint that describes the expected value of an input field")
 		placeholder,
-		@PFProperty(description = "Stepping factor for each increment and decrement. Default is 1.0", defaultValue = "1.0", type = Double.class)
+		@PFProperty(description = "Stepping factor for each increment and decrement", defaultValue = "1.0", type = Double.class)
 		stepFactor,
-		@PFProperty(description = "Minimum boundary value. Default is min double value", defaultValue = "java.lang.Double.MIN_VALUE", type = Double.class)
+		@PFProperty(description = "Minimum boundary value", defaultValue = "java.lang.Double.MIN_VALUE", type = Double.class)
 		min,
-		@PFProperty(description = "Maximum boundary value. Default is max double value", defaultValue = "java.lang.Double.MAX_VALUE", type = Double.class)
+		@PFProperty(description = "Maximum boundary value", defaultValue = "java.lang.Double.MAX_VALUE", type = Double.class)
 		max,
 		@PFProperty(description = "Prefix of the input")
 		prefix,

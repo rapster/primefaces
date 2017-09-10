@@ -52,7 +52,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "resizable",
              description = "PrimeFaces features a resizable component that has the ability to make a JSF component resizable.\n      Resizable can be used on various components like resize an input fields, panels, menus, images and more.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Resizable extends AbstractResizable implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -61,31 +60,31 @@ public class Resizable extends AbstractResizable implements javax.faces.componen
 
 		@PFProperty(description = "Identifier of the target component to make resizable")
 		forValue("for"),
-		@PFProperty(description = "Defines if aspectRatio should be kept or not. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines if aspectRatio should be kept or not", defaultValue = "false", type = Boolean.class)
 		aspectRatio,
 		@PFProperty(description = "Displays proxy element instead of actual element", defaultValue = "false", type = Boolean.class)
 		proxy,
 		@PFProperty(description = "Specifies the resize handles")
 		handles,
-		@PFProperty(description = "In ghost mode, resize helper is displayed as the original element with less opacity. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "In ghost mode, resize helper is displayed as the original element with less opacity", defaultValue = "false", type = Boolean.class)
 		ghost,
-		@PFProperty(description = "Enables animation. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Enables animation", defaultValue = "false", type = Boolean.class)
 		animate,
-		@PFProperty(description = "Effect to use in animation. Default is swing", defaultValue = "swing")
+		@PFProperty(description = "Effect to use in animation", defaultValue = "swing")
 		effect,
-		@PFProperty(description = "Effect duration of animation. Default is normal", defaultValue = "normal")
+		@PFProperty(description = "Effect duration of animation", defaultValue = "normal")
 		effectDuration,
-		@PFProperty(description = "Maximum width boundary in pixels. Default is max integer value", defaultValue = "Integer.MAX_VALUE", type = Integer.class)
+		@PFProperty(description = "Maximum width boundary in pixels", defaultValue = "Integer.MAX_VALUE", type = Integer.class)
 		maxWidth,
-		@PFProperty(description = "Maximum height boundary in pixels. Default is max integer value", defaultValue = "Integer.MAX_VALUE", type = Integer.class)
+		@PFProperty(description = "Maximum height boundary in pixels", defaultValue = "Integer.MAX_VALUE", type = Integer.class)
 		maxHeight,
-		@PFProperty(description = "Minimum width boundary in pixels. Default is min integer value", defaultValue = "Integer.MIN_VALUE", type = Integer.class)
+		@PFProperty(description = "Minimum width boundary in pixels", defaultValue = "Integer.MIN_VALUE", type = Integer.class)
 		minWidth,
-		@PFProperty(description = "Maximum height boundary in pixels. Default is min integer value", defaultValue = "Integer.MIN_VALUE", type = Integer.class)
+		@PFProperty(description = "Maximum height boundary in pixels", defaultValue = "Integer.MIN_VALUE", type = Integer.class)
 		minHeight,
-		@PFProperty(description = "Sets resizable boundaries as the parents size. Default is false", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Sets resizable boundaries as the parents size", defaultValue = "false", type = Boolean.class)
 		containment,
-		@PFProperty(description = "Snaps resizing to grid structure. Default is 1", defaultValue = "1", type = Integer.class)
+		@PFProperty(description = "Snaps resizing to grid structure", defaultValue = "1", type = Integer.class)
 		grid,
 		@PFProperty(description = "Client side callback to execute when resizing begins")
 		onStart,

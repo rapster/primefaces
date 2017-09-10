@@ -43,7 +43,6 @@ import javax.faces.component.UINamingContainer;
 @PFComponent(tagName = "selectOneRadio",
              description = "",
              widget = true,
-             rtl = true,
              parent = HtmlSelectOneRadio.class)
 public class SelectOneRadio extends AbstractSelectOneRadio {
 

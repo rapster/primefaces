@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "notificationBar",
              description = "NotificationBar displayes a multipurpose fixed positioned panel for notification. Any group of JSF content can be placed inside notificationbar.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class NotificationBar extends AbstractNotificationBar {
 
@@ -51,11 +50,11 @@ public class NotificationBar extends AbstractNotificationBar {
 		style,
 		@PFProperty(description = "StyleClass of the container element")
 		styleClass,
-		@PFProperty(description = "Position of the bar, \"top\" or \"bottom\". Default is top", defaultValue = "top")
+		@PFProperty(description = "Position of the bar, \"top\" or \"bottom\"", defaultValue = "top")
 		position,
-		@PFProperty(description = "Name of the effect, \"fade\", \"slide\" or \"none\". Default is fade", defaultValue = "fade")
+		@PFProperty(description = "Name of the effect, \"fade\", \"slide\" or \"none\"", defaultValue = "fade")
 		effect,
-		@PFProperty(description = "Speed of the effect, \"slow\", \"normal\" or \"fast\". Default is normal", defaultValue = "normal")
+		@PFProperty(description = "Speed of the effect, \"slow\", \"normal\" or \"fast\"", defaultValue = "normal")
 		effectSpeed,
 		@PFProperty(description = "", defaultValue = "false", type = Boolean.class)
 		autoDisplay,;

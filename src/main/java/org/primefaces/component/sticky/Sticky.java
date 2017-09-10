@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "sticky",
              description = "Sticky component positions other components as fixed so that these components stay in window viewport during scrolling.",
              widget = true,
-             rtl = true,
              parent = UIPanel.class)
 public class Sticky extends AbstractSticky {
 
@@ -49,7 +48,7 @@ public class Sticky extends AbstractSticky {
 
 		@PFProperty(description = "Identifier of the component(s) to make sticky", required = true)
 		target,
-		@PFProperty(description = "Margin to the top of the page during fixed scrolling, default is 0", defaultValue = "0", type = Integer.class)
+		@PFProperty(description = "Margin to the top of the page during fixed scrolling,", defaultValue = "0", type = Integer.class)
 		margin,;
 	}
 

@@ -40,7 +40,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "radioButton",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class RadioButton extends AbstractRadioButton {
 

@@ -56,7 +56,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "droppable",
              description = "",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Droppable extends AbstractDroppable implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 

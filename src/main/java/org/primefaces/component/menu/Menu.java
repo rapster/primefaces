@@ -15,12 +15,21 @@
  */
 package org.primefaces.component.menu;
 
+import org.primefaces.component.menu.AbstractUIMenu;
+import javax.faces.context.FacesContext;
+import javax.faces.component.UINamingContainer;
+import javax.el.ValueExpression;
+import javax.el.MethodExpression;
+import javax.faces.render.Renderer;
+import java.io.IOException;
+import javax.faces.component.UIComponent;
+import javax.faces.event.AbortProcessingException;
 import javax.faces.application.ResourceDependencies;
 import javax.faces.application.ResourceDependency;
-
-import org.primefaces.cdk.annotations.PFComponent;
-import org.primefaces.cdk.annotations.PFProperty;
-import org.primefaces.cdk.annotations.PFPropertyKeys;
+import java.util.List;
+import java.util.ArrayList;
+import org.primefaces.util.ComponentUtils;
+import org.primefaces.cdk.annotations.*;
 
 @ResourceDependencies({
 	@ResourceDependency(library="primefaces", name="components.css"),
@@ -32,7 +41,6 @@ import org.primefaces.cdk.annotations.PFPropertyKeys;
 @PFComponent(tagName = "menu",
              description = "Menu is a navigation component with various customized modes like multi tiers, ipod style sliding and overlays.",
              widget = true,
-             rtl = true,
              parent = AbstractUIMenu.class)
 public class Menu extends AbstractMenu implements org.primefaces.component.menu.OverlayMenu {
 
@@ -47,13 +55,13 @@ public class Menu extends AbstractMenu implements org.primefaces.component.menu.
 		my,
 		@PFProperty(description = "Corner of trigger to align with menu element")
 		at,
-		@PFProperty(description = "Defines positioning, when enabled menu is displayed with absolute positioning relative to the trigger. \n Default is false, meaning static positioning", defaultValue = "false", type = Boolean.class)
+		@PFProperty(description = "Defines positioning, when enabled menu is displayed with absolute positioning relative to the trigger. \n", defaultValue = "false", type = Boolean.class)
 		overlay,
 		@PFProperty(description = "Inline style of the main container element")
 		style,
 		@PFProperty(description = "Style class of the main container element")
 		styleClass,
-		@PFProperty(description = "Event name of component that will show the dynamic positioned menu. Default is click", defaultValue = "click")
+		@PFProperty(description = "Event name of component that will show the dynamic positioned menu", defaultValue = "click")
 		triggerEvent,
 		@PFProperty(description = "Defines whether clicking the header of a submenu toggles the visibility of children menuitems", defaultValue = "false", type = Boolean.class)
 		toggleable,;

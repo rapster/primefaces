@@ -54,7 +54,6 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "inplace",
              description = "Inplace provides easy inplace editing and inline content display.\n      Inplace consists of two members, display element is the inital clickable label and inline element is the hidden content\n      that'll be displayed when display element is toggled.",
              widget = true,
-             rtl = true,
              parent = UIComponentBase.class)
 public class Inplace extends AbstractInplace implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
 
@@ -77,11 +76,11 @@ public class Inplace extends AbstractInplace implements javax.faces.component.be
 		styleClass,
 		@PFProperty(description = "Specifies the editor mode", defaultValue = "false", type = Boolean.class)
 		editor,
-		@PFProperty(description = "Tooltip text of save buttin in editor mode. Default is \"Save\"", defaultValue = "Save")
+		@PFProperty(description = "Tooltip text of save buttin in editor mode", defaultValue = "Save")
 		saveLabel,
-		@PFProperty(description = "Tooltip text of cancel buttin in editor mode. Default is \"Cancel\"", defaultValue = "Cancel")
+		@PFProperty(description = "Tooltip text of cancel buttin in editor mode", defaultValue = "Cancel")
 		cancelLabel,
-		@PFProperty(description = "Name of the client side event to display inline content. Default is click", defaultValue = "click")
+		@PFProperty(description = "Name of the client side event to display inline content", defaultValue = "click")
 		event,
 		@PFProperty(description = "", defaultValue = "true", type = Boolean.class)
 		toggleable,;

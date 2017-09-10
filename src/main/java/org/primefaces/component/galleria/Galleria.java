@@ -43,7 +43,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "galleria",
              description = "Galleria is used to display a set of images.",
              widget = true,
-             rtl = true,
              parent = UIOutput.class)
 public class Galleria extends AbstractGalleria {
 
@@ -58,9 +57,9 @@ public class Galleria extends AbstractGalleria {
 		style,
 		@PFProperty(description = "Style class of the container element")
 		styleClass,
-		@PFProperty(description = "Name of animation to use on transitions. Default is fade", defaultValue = "fade")
+		@PFProperty(description = "Name of animation to use on transitions", defaultValue = "fade")
 		effect,
-		@PFProperty(description = "Duration of animation in milliseconds. Default is 500", defaultValue = "500", type = Integer.class)
+		@PFProperty(description = "Duration of animation in milliseconds", defaultValue = "500", type = Integer.class)
 		effectSpeed,
 		@PFProperty(description = "Width of the filmstrip frames", defaultValue = "60", type = Integer.class)
 		frameWidth,
@@ -68,7 +67,7 @@ public class Galleria extends AbstractGalleria {
 		frameHeight,
 		@PFProperty(description = "Defines visibility of filmstrip", defaultValue = "true", type = Boolean.class)
 		showFilmstrip,
-		@PFProperty(description = "Images are displayed with a slideshow in autoPlay mode, default is true", defaultValue = "true", type = Boolean.class)
+		@PFProperty(description = "Images are displayed with a slideshow in autoPlay mode,", defaultValue = "true", type = Boolean.class)
 		autoPlay,
 		@PFProperty(description = "Time in milliseconds between each slide in autoPlay mode", defaultValue = "4000", type = Integer.class)
 		transitionInterval,

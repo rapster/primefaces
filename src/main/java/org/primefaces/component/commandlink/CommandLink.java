@@ -85,9 +85,9 @@ public class CommandLink extends AbstractCommandLink implements org.primefaces.c
 		ignoreAutoUpdate,
 		@PFProperty(description = "When set to true client side validation is enabled, global setting is required to be enabled as a prerequisite", defaultValue = "false", type = Boolean.class)
 		validateClient,
-		@PFProperty(description = "Selector to use when partial submit is on, default is \":input\" to select all descendant inputs of a partially processed components")
+		@PFProperty(description = "Selector to use when partial submit is on,")
 		partialSubmitFilter,
-		@PFProperty(description = "Form to serialize for an ajax request. Default is the enclosing form")
+		@PFProperty(description = "Form to serialize for an ajax request")
 		form,;
 	}
 

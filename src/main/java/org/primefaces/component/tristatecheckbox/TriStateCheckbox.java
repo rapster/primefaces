@@ -41,7 +41,6 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "triStateCheckbox",
              description = "",
              widget = true,
-             rtl = true,
              parent = HtmlInputText.class)
 public class TriStateCheckbox extends AbstractTriStateCheckbox {
 
