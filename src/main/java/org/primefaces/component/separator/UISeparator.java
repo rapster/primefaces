@@ -16,27 +16,16 @@
 package org.primefaces.component.separator;
 
 import javax.faces.component.UIComponentBase;
+
+import org.primefaces.cdk.annotations.PFComponent;
+import org.primefaces.cdk.annotations.PFProperty;
+import org.primefaces.cdk.annotations.PFPropertyKeys;
 import org.primefaces.model.menu.Separator;
-import org.primefaces.component.separator.Separator;
-import javax.faces.context.FacesContext;
-import javax.faces.component.UINamingContainer;
-import javax.el.ValueExpression;
-import javax.el.MethodExpression;
-import javax.faces.render.Renderer;
-import java.io.IOException;
-import javax.faces.component.UIComponent;
-import javax.faces.event.AbortProcessingException;
-import javax.faces.application.ResourceDependencies;
-import javax.faces.application.ResourceDependency;
-import java.util.List;
-import java.util.ArrayList;
-import org.primefaces.util.ComponentUtils;
-import org.primefaces.cdk.annotations.*;
 
 @PFComponent(tagName = "separator",
              description = "Seperator displays a horizontal line to separate content.",
              parent = UIComponentBase.class)
-public class UISeparator extends AbstractUISeparator implements Separator, Separator {
+public class UISeparator extends AbstractUISeparator implements org.primefaces.component.separator.Separator, Separator {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

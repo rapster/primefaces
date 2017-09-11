@@ -23,7 +23,7 @@ import org.primefaces.cdk.annotations.PFRTL;
 public interface RTLAware {
 
 	@PFPropertyKeys
-	public enum RTLAwarePropertyKeys {
+	public enum PropertyKeys {
 
 		@PFProperty(description = "Defines text direction, valid values are \"ltr\" (default) and \"rtl\"", defaultValue = "ltr")
 		dir;

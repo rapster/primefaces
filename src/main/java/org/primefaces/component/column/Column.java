@@ -17,7 +17,6 @@ package org.primefaces.component.column;
 
 import javax.faces.component.UIColumn;
 import org.primefaces.component.column.ColumnHandler;
-import org.primefaces.component.api.UIColumn;
 import org.primefaces.model.menu.MenuColumn;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
@@ -45,7 +44,7 @@ import org.primefaces.model.menu.MenuModel;
              description = "Column is an extended version of the standard column used by various PrimeFaces components like datatable, treetable and more.",
              parent = UIColumn.class,
              handlerClass = ColumnHandler.class)
-public class Column extends AbstractColumn implements UIColumn, MenuColumn {
+public class Column extends AbstractColumn implements org.primefaces.component.api.UIColumn, MenuColumn {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
