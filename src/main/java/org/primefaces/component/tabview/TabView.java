@@ -16,6 +16,8 @@
 package org.primefaces.component.tabview;
 
 import org.primefaces.component.api.UITabPanel;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -66,7 +68,7 @@ import javax.faces.event.BehaviorEvent;
              widget = true,
              rtl = true,
              parent = UITabPanel.class)
-public class TabView extends AbstractTabView implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class TabView extends AbstractTabView implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIComponentPropertyKeys.class})
 	public enum PropertyKeys {

@@ -16,6 +16,7 @@
 package org.primefaces.component.link;
 
 import javax.faces.component.html.HtmlOutcomeTargetLink;
+import org.primefaces.component.api.UIOutcomeTarget;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -43,7 +44,7 @@ import org.primefaces.util.ComponentUtils;
 @PFComponent(tagName = "link",
              description = "Link is an extension to the standard h:link component with skinning capabilities.",
              parent = HtmlOutcomeTargetLink.class)
-public class Link extends AbstractLink implements org.primefaces.component.api.UIOutcomeTarget {
+public class Link extends AbstractLink implements UIOutcomeTarget {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

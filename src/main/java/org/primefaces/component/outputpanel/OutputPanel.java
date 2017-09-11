@@ -16,6 +16,7 @@
 package org.primefaces.component.outputpanel;
 
 import javax.faces.component.UIPanel;
+import org.primefaces.component.api.AutoUpdatable;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -42,7 +43,7 @@ import javax.faces.context.FacesContext;
              description = "OutputPanel is used to group content on a page.",
              widget = true,
              parent = UIPanel.class)
-public class OutputPanel extends AbstractOutputPanel implements org.primefaces.component.api.AutoUpdatable {
+public class OutputPanel extends AbstractOutputPanel implements AutoUpdatable {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

@@ -16,6 +16,8 @@
 package org.primefaces.component.knob;
 
 import javax.faces.component.UIInput;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -49,7 +51,7 @@ import javax.faces.event.BehaviorEvent;
              description = "",
              widget = true,
              parent = UIInput.class)
-public class Knob extends AbstractKnob implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Knob extends AbstractKnob implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {

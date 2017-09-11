@@ -16,6 +16,7 @@
 package org.primefaces.component.selectonemenu;
 
 import javax.faces.component.html.HtmlSelectOneMenu;
+import org.primefaces.component.api.InputHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -63,7 +64,7 @@ import javax.faces.render.Renderer;
              description = "",
              widget = true,
              parent = HtmlSelectOneMenu.class)
-public class SelectOneMenu extends AbstractSelectOneMenu implements org.primefaces.component.api.InputHolder {
+public class SelectOneMenu extends AbstractSelectOneMenu implements InputHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {

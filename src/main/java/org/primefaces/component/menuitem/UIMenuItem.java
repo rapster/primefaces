@@ -16,6 +16,12 @@
 package org.primefaces.component.menuitem;
 
 import javax.faces.component.UICommand;
+import org.primefaces.component.api.AjaxSource;
+import org.primefaces.component.api.UIOutcomeTarget;
+import org.primefaces.model.menu.MenuItem;
+import org.primefaces.component.api.Confirmable;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -46,7 +52,7 @@ import java.util.Collections;
 @PFComponent(tagName = "menuitem",
              description = "Menuitem is used by various menu components of PrimeFaces.",
              parent = UICommand.class)
-public class UIMenuItem extends AbstractUIMenuItem implements org.primefaces.component.api.AjaxSource, org.primefaces.component.api.UIOutcomeTarget, org.primefaces.model.menu.MenuItem, org.primefaces.component.api.Confirmable, javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class UIMenuItem extends AbstractUIMenuItem implements AjaxSource, UIOutcomeTarget, MenuItem, Confirmable, ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UICommandPropertyKeys.class})
 	public enum PropertyKeys {

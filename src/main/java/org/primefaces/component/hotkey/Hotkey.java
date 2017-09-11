@@ -16,6 +16,7 @@
 package org.primefaces.component.hotkey;
 
 import javax.faces.component.UICommand;
+import org.primefaces.component.api.AjaxSource;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -40,7 +41,7 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "hotkey",
              description = "HotKey is a generic key binding component that can bind any formation of keys to javascript event handlers or ajax calls.",
              parent = UICommand.class)
-public class Hotkey extends AbstractHotkey implements org.primefaces.component.api.AjaxSource {
+public class Hotkey extends AbstractHotkey implements AjaxSource {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UICommandPropertyKeys.class})
 	public enum PropertyKeys {

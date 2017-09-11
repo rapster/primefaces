@@ -16,6 +16,8 @@
 package org.primefaces.component.slider;
 
 import javax.faces.component.UIComponentBase;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -54,7 +56,7 @@ import javax.faces.event.BehaviorEvent;
              description = "Slider is used to provide input with various customization options like orientation, display modes and skinning.",
              widget = true,
              parent = UIComponentBase.class)
-public class Slider extends AbstractSlider implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Slider extends AbstractSlider implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

@@ -16,6 +16,7 @@
 package org.primefaces.component.spinner;
 
 import javax.faces.component.html.HtmlInputText;
+import org.primefaces.component.api.InputHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -42,7 +43,7 @@ import org.primefaces.cdk.annotations.*;
              description = "Spinner is an input component to provide a numerical input via increment and decrement buttons.",
              widget = true,
              parent = HtmlInputText.class)
-public class Spinner extends AbstractSpinner implements org.primefaces.component.api.InputHolder {
+public class Spinner extends AbstractSpinner implements InputHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputTextPropertyKeys.class})
 	public enum PropertyKeys {

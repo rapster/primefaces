@@ -16,6 +16,7 @@
 package org.primefaces.component.message;
 
 import javax.faces.component.UIMessage;
+import org.primefaces.component.api.UINotification;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -38,7 +39,7 @@ import org.primefaces.cdk.annotations.*;
              description = "",
              widget = true,
              parent = UIMessage.class)
-public class Message extends AbstractMessage implements org.primefaces.component.api.UINotification {
+public class Message extends AbstractMessage implements UINotification {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

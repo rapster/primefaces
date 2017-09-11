@@ -16,6 +16,8 @@
 package org.primefaces.component.chart;
 
 import javax.faces.component.UIComponentBase;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -52,7 +54,7 @@ import javax.faces.event.BehaviorEvent;
              description = "",
              widget = true,
              parent = UIComponentBase.class)
-public class Chart extends AbstractChart implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Chart extends AbstractChart implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

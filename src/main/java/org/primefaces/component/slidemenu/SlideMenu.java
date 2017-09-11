@@ -16,6 +16,7 @@
 package org.primefaces.component.slidemenu;
 
 import org.primefaces.component.menu.AbstractUIMenu;
+import org.primefaces.component.menu.OverlayMenu;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -42,7 +43,7 @@ import org.primefaces.cdk.annotations.*;
              description = "SlideMenu displays submenus with a slide animation.",
              widget = true,
              parent = AbstractUIMenu.class)
-public class SlideMenu extends AbstractSlideMenu implements org.primefaces.component.menu.OverlayMenu {
+public class SlideMenu extends AbstractSlideMenu implements OverlayMenu {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

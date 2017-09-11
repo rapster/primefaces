@@ -16,6 +16,8 @@
 package org.primefaces.component.separator;
 
 import javax.faces.component.UIComponentBase;
+import org.primefaces.model.menu.Separator;
+import org.primefaces.component.separator.Separator;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -34,7 +36,7 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "separator",
              description = "Seperator displays a horizontal line to separate content.",
              parent = UIComponentBase.class)
-public class UISeparator extends AbstractUISeparator implements org.primefaces.model.menu.Separator, org.primefaces.component.separator.Separator {
+public class UISeparator extends AbstractUISeparator implements Separator, Separator {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

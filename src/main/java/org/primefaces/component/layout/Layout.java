@@ -16,6 +16,8 @@
 package org.primefaces.component.layout;
 
 import javax.faces.component.UIPanel;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -59,7 +61,7 @@ import javax.faces.event.BehaviorEvent;
              description = "Layout component features a highly customizable borderLayout model making it very easy to create complex layouts even if you're not familar with web design.",
              widget = true,
              parent = UIPanel.class)
-public class Layout extends AbstractLayout implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Layout extends AbstractLayout implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

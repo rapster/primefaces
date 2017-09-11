@@ -16,6 +16,7 @@
 package org.primefaces.component.selectbooleancheckbox;
 
 import javax.faces.component.html.HtmlSelectBooleanCheckbox;
+import org.primefaces.component.api.InputHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -41,7 +42,7 @@ import org.primefaces.cdk.annotations.*;
              description = "",
              widget = true,
              parent = HtmlSelectBooleanCheckbox.class)
-public class SelectBooleanCheckbox extends AbstractSelectBooleanCheckbox implements org.primefaces.component.api.InputHolder {
+public class SelectBooleanCheckbox extends AbstractSelectBooleanCheckbox implements InputHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {

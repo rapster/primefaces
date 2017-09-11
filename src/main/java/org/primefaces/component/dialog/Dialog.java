@@ -16,6 +16,8 @@
 package org.primefaces.component.dialog;
 
 import javax.faces.component.UIPanel;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -56,7 +58,7 @@ import javax.faces.event.BehaviorEvent;
              widget = true,
              rtl = true,
              parent = UIPanel.class)
-public class Dialog extends AbstractDialog implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Dialog extends AbstractDialog implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

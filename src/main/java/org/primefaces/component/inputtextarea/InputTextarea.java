@@ -17,6 +17,7 @@ package org.primefaces.component.inputtextarea;
 
 import javax.faces.component.html.HtmlInputTextarea;
 import org.primefaces.component.inputtextarea.InputTextareaHandler;
+import org.primefaces.component.api.MixedClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -64,7 +65,7 @@ import org.primefaces.util.Constants;
              widget = true,
              parent = HtmlInputTextarea.class,
              handlerClass = InputTextareaHandler.class)
-public class InputTextarea extends AbstractInputTextarea implements org.primefaces.component.api.MixedClientBehaviorHolder {
+public class InputTextarea extends AbstractInputTextarea implements MixedClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputTextPropertyKeys.class})
 	public enum PropertyKeys {

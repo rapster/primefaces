@@ -16,6 +16,8 @@
 package org.primefaces.component.inplace;
 
 import javax.faces.component.UIComponentBase;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -55,7 +57,7 @@ import javax.faces.event.BehaviorEvent;
              description = "Inplace provides easy inplace editing and inline content display.\n      Inplace consists of two members, display element is the inital clickable label and inline element is the hidden content\n      that'll be displayed when display element is toggled.",
              widget = true,
              parent = UIComponentBase.class)
-public class Inplace extends AbstractInplace implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Inplace extends AbstractInplace implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

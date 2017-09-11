@@ -16,6 +16,7 @@
 package org.primefaces.component.menu;
 
 import org.primefaces.component.menu.AbstractUIMenu;
+import org.primefaces.component.menu.OverlayMenu;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -42,7 +43,7 @@ import org.primefaces.cdk.annotations.*;
              description = "Menu is a navigation component with various customized modes like multi tiers, ipod style sliding and overlays.",
              widget = true,
              parent = AbstractUIMenu.class)
-public class Menu extends AbstractMenu implements org.primefaces.component.menu.OverlayMenu {
+public class Menu extends AbstractMenu implements OverlayMenu {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

@@ -17,6 +17,9 @@ package org.primefaces.component.datatable;
 
 import org.primefaces.component.api.UIData;
 import org.primefaces.component.datatable.DataTableHandler;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
+import org.primefaces.component.api.Pageable;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -116,7 +119,7 @@ import org.primefaces.component.datatable.TableState;
              rtl = true,
              parent = UIData.class,
              handlerClass = DataTableHandler.class)
-public class DataTable extends AbstractDataTable implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder, org.primefaces.component.api.Pageable {
+public class DataTable extends AbstractDataTable implements ClientBehaviorHolder, PrimeClientBehaviorHolder, Pageable {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIDataPropertyKeys.class})
 	public enum PropertyKeys {

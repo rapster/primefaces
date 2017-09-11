@@ -17,6 +17,7 @@ package org.primefaces.component.poll;
 
 import javax.faces.component.UIComponentBase;
 import org.primefaces.component.poll.PollHandler;
+import org.primefaces.component.api.AjaxSource;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -44,7 +45,7 @@ import org.primefaces.context.RequestContext;
              widget = true,
              parent = UIComponentBase.class,
              handlerClass = PollHandler.class)
-public class Poll extends AbstractPoll implements org.primefaces.component.api.AjaxSource {
+public class Poll extends AbstractPoll implements AjaxSource {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

@@ -16,6 +16,7 @@
 package org.primefaces.component.selectcheckboxmenu;
 
 import javax.faces.component.html.HtmlSelectManyCheckbox;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -52,7 +53,7 @@ import javax.faces.event.BehaviorEvent;
              description = "",
              widget = true,
              parent = HtmlSelectManyCheckbox.class)
-public class SelectCheckboxMenu extends AbstractSelectCheckboxMenu implements org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class SelectCheckboxMenu extends AbstractSelectCheckboxMenu implements PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {

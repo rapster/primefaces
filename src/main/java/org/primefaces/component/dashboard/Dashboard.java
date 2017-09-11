@@ -16,6 +16,8 @@
 package org.primefaces.component.dashboard;
 
 import javax.faces.component.UIPanel;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -57,7 +59,7 @@ import javax.faces.event.BehaviorEvent;
              description = "Dashboard provides a portal like layout with drag-drop based reorder capabilities.",
              widget = true,
              parent = UIPanel.class)
-public class Dashboard extends AbstractDashboard implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Dashboard extends AbstractDashboard implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

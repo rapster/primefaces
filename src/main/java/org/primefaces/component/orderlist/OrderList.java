@@ -16,6 +16,8 @@
 package org.primefaces.component.orderlist;
 
 import javax.faces.component.UIInput;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -57,7 +59,7 @@ import javax.faces.event.BehaviorEvent;
              description = "OrderList is used to sort a collection.",
              widget = true,
              parent = UIInput.class)
-public class OrderList extends AbstractOrderList implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class OrderList extends AbstractOrderList implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {

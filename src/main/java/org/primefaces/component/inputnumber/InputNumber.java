@@ -16,6 +16,7 @@
 package org.primefaces.component.inputnumber;
 
 import javax.faces.component.html.HtmlInputText;
+import org.primefaces.component.api.InputHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -45,7 +46,7 @@ import java.util.Locale;
              description = "InputNumber is an extension to the inputText with optimized handling for numbers.",
              widget = true,
              parent = HtmlInputText.class)
-public class InputNumber extends AbstractInputNumber implements org.primefaces.component.api.InputHolder {
+public class InputNumber extends AbstractInputNumber implements InputHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputTextPropertyKeys.class})
 	public enum PropertyKeys {

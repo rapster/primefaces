@@ -16,6 +16,8 @@
 package org.primefaces.component.picklist;
 
 import javax.faces.component.UIInput;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -64,7 +66,7 @@ import javax.faces.event.BehaviorEvent;
              description = "PickList is used for transferring data between two different collections.",
              widget = true,
              parent = UIInput.class)
-public class PickList extends AbstractPickList implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class PickList extends AbstractPickList implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {

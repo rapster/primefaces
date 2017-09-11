@@ -17,6 +17,8 @@ package org.primefaces.component.autocomplete;
 
 import javax.faces.component.html.HtmlInputText;
 import org.primefaces.component.autocomplete.AutoCompleteHandler;
+import org.primefaces.component.api.InputHolder;
+import org.primefaces.component.api.MixedClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -67,7 +69,7 @@ import javax.faces.component.behavior.Behavior;
              widget = true,
              parent = HtmlInputText.class,
              handlerClass = AutoCompleteHandler.class)
-public class AutoComplete extends AbstractAutoComplete implements org.primefaces.component.api.InputHolder, org.primefaces.component.api.MixedClientBehaviorHolder {
+public class AutoComplete extends AbstractAutoComplete implements InputHolder, MixedClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputTextPropertyKeys.class})
 	public enum PropertyKeys {

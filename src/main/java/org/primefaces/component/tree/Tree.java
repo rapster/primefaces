@@ -16,6 +16,8 @@
 package org.primefaces.component.tree;
 
 import org.primefaces.component.api.UITree;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -79,7 +81,7 @@ import org.primefaces.model.filter.StartsWithFilterConstraint;
              widget = true,
              rtl = true,
              parent = UITree.class)
-public class Tree extends AbstractTree implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Tree extends AbstractTree implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

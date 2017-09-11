@@ -16,6 +16,8 @@
 package org.primefaces.component.fieldset;
 
 import javax.faces.component.UIPanel;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -56,7 +58,7 @@ import javax.faces.event.BehaviorEvent;
              description = "Fieldset is a grouping component with a title and content.",
              widget = true,
              parent = UIPanel.class)
-public class Fieldset extends AbstractFieldset implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Fieldset extends AbstractFieldset implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

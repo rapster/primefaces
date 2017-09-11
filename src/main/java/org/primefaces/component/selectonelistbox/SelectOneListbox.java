@@ -16,6 +16,7 @@
 package org.primefaces.component.selectonelistbox;
 
 import javax.faces.component.html.HtmlSelectOneListbox;
+import org.primefaces.component.api.InputHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -42,7 +43,7 @@ import javax.faces.component.UINamingContainer;
              description = "",
              widget = true,
              parent = HtmlSelectOneListbox.class)
-public class SelectOneListbox extends AbstractSelectOneListbox implements org.primefaces.component.api.InputHolder {
+public class SelectOneListbox extends AbstractSelectOneListbox implements InputHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {

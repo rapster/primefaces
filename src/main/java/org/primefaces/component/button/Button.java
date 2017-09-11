@@ -16,6 +16,7 @@
 package org.primefaces.component.button;
 
 import javax.faces.component.html.HtmlOutcomeTargetButton;
+import org.primefaces.component.api.UIOutcomeTarget;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -46,7 +47,7 @@ import org.primefaces.util.ComponentUtils;
              description = "Button is an extension to the standard h:button component with skinning capabilities.",
              widget = true,
              parent = HtmlOutcomeTargetButton.class)
-public class Button extends AbstractButton implements org.primefaces.component.api.UIOutcomeTarget {
+public class Button extends AbstractButton implements UIOutcomeTarget {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

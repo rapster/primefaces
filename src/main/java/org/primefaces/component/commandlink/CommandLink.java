@@ -16,6 +16,9 @@
 package org.primefaces.component.commandlink;
 
 import javax.faces.component.html.HtmlCommandLink;
+import org.primefaces.component.api.AjaxSource;
+import org.primefaces.component.api.Confirmable;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -50,7 +53,7 @@ import javax.faces.event.BehaviorEvent;
 @PFComponent(tagName = "commandLink",
              description = "CommandLink extends standard JSF commandLink with Ajax capabilities.",
              parent = HtmlCommandLink.class)
-public class CommandLink extends AbstractCommandLink implements org.primefaces.component.api.AjaxSource, org.primefaces.component.api.Confirmable, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class CommandLink extends AbstractCommandLink implements AjaxSource, Confirmable, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UICommandPropertyKeys.class})
 	public enum PropertyKeys {

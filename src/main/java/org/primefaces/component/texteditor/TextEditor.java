@@ -16,6 +16,7 @@
 package org.primefaces.component.texteditor;
 
 import javax.faces.component.UIInput;
+import javax.faces.component.behavior.ClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -48,7 +49,7 @@ import javax.faces.event.AjaxBehaviorEvent;
              description = "Editor is an input component with rich text editing capabilities.",
              widget = true,
              parent = UIInput.class)
-public class TextEditor extends AbstractTextEditor implements javax.faces.component.behavior.ClientBehaviorHolder {
+public class TextEditor extends AbstractTextEditor implements ClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {

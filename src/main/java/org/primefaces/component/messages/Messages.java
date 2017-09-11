@@ -16,6 +16,8 @@
 package org.primefaces.component.messages;
 
 import javax.faces.component.UIMessages;
+import org.primefaces.component.api.AutoUpdatable;
+import org.primefaces.component.api.UINotification;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -37,7 +39,7 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "messages",
              description = "Message is a pre-skinned extended version of the standard JSF message component with extensions.",
              parent = UIMessages.class)
-public class Messages extends AbstractMessages implements org.primefaces.component.api.AutoUpdatable, org.primefaces.component.api.UINotification {
+public class Messages extends AbstractMessages implements AutoUpdatable, UINotification {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

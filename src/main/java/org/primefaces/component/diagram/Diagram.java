@@ -16,6 +16,8 @@
 package org.primefaces.component.diagram;
 
 import javax.faces.component.UIOutput;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -58,7 +60,7 @@ import javax.faces.event.BehaviorEvent;
              description = "",
              widget = true,
              parent = UIOutput.class)
-public class Diagram extends AbstractDiagram implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Diagram extends AbstractDiagram implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

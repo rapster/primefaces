@@ -16,6 +16,8 @@
 package org.primefaces.component.growl;
 
 import javax.faces.component.UIMessages;
+import org.primefaces.component.api.AutoUpdatable;
+import org.primefaces.component.api.UINotification;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -42,7 +44,7 @@ import org.primefaces.cdk.annotations.*;
              description = "Growl is based on the Mac's growl notification widget and used to display FacesMessages similar to h:messages.",
              widget = true,
              parent = UIMessages.class)
-public class Growl extends AbstractGrowl implements org.primefaces.component.api.AutoUpdatable, org.primefaces.component.api.UINotification {
+public class Growl extends AbstractGrowl implements AutoUpdatable, UINotification {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

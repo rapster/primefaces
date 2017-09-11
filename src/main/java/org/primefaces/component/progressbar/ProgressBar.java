@@ -16,6 +16,8 @@
 package org.primefaces.component.progressbar;
 
 import javax.faces.component.UIComponentBase;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -53,7 +55,7 @@ import javax.faces.event.PhaseId;
              description = "ProgressBar is a process status indicator that can either work purely on client side or interact with server side using ajax.",
              widget = true,
              parent = UIComponentBase.class)
-public class ProgressBar extends AbstractProgressBar implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class ProgressBar extends AbstractProgressBar implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

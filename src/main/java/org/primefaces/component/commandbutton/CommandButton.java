@@ -16,6 +16,9 @@
 package org.primefaces.component.commandbutton;
 
 import javax.faces.component.html.HtmlCommandButton;
+import org.primefaces.component.api.AjaxSource;
+import org.primefaces.component.api.Confirmable;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -57,7 +60,7 @@ import javax.faces.event.BehaviorEvent;
              description = "CommandButton is an extended version of standard JSF commandButton with ajax and skinning features.",
              widget = true,
              parent = HtmlCommandButton.class)
-public class CommandButton extends AbstractCommandButton implements org.primefaces.component.api.AjaxSource, org.primefaces.component.api.Confirmable, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class CommandButton extends AbstractCommandButton implements AjaxSource, Confirmable, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UICommandPropertyKeys.class})
 	public enum PropertyKeys {

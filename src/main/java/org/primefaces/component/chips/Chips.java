@@ -16,6 +16,8 @@
 package org.primefaces.component.chips;
 
 import javax.faces.component.html.HtmlInputText;
+import org.primefaces.component.api.InputHolder;
+import org.primefaces.component.api.MixedClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -53,7 +55,7 @@ import javax.faces.component.behavior.Behavior;
              description = "Chips is used to enter multiple values on an inputfield.",
              widget = true,
              parent = HtmlInputText.class)
-public class Chips extends AbstractChips implements org.primefaces.component.api.InputHolder, org.primefaces.component.api.MixedClientBehaviorHolder {
+public class Chips extends AbstractChips implements InputHolder, MixedClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputTextPropertyKeys.class})
 	public enum PropertyKeys {

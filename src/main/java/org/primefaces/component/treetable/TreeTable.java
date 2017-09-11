@@ -17,6 +17,9 @@ package org.primefaces.component.treetable;
 
 import org.primefaces.component.api.UITree;
 import org.primefaces.component.treetable.TreeTableHandler;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
+import org.primefaces.component.api.Pageable;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -94,7 +97,7 @@ import org.primefaces.model.filter.StartsWithFilterConstraint;
              widget = true,
              parent = UITree.class,
              handlerClass = TreeTableHandler.class)
-public class TreeTable extends AbstractTreeTable implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder, org.primefaces.component.api.Pageable {
+public class TreeTable extends AbstractTreeTable implements ClientBehaviorHolder, PrimeClientBehaviorHolder, Pageable {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

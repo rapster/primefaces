@@ -16,6 +16,8 @@
 package org.primefaces.component.panel;
 
 import javax.faces.component.UIPanel;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -62,7 +64,7 @@ import javax.faces.event.BehaviorEvent;
              description = "Panel is a grouping component for other components, notable features are toggling, closing, built-in popup menu and ajax event listeners.",
              widget = true,
              parent = UIPanel.class)
-public class Panel extends AbstractPanel implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Panel extends AbstractPanel implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

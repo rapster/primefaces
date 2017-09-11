@@ -16,6 +16,8 @@
 package org.primefaces.component.schedule;
 
 import javax.faces.component.UIComponentBase;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -64,7 +66,7 @@ import javax.faces.event.BehaviorEvent;
              description = "Schedule provides an Outlook Calendar, iCal like JSF component to manage events.\n      Schedule is highly customizable featuring various views (month, day, week), built-in I18N, drag-drop, resize, customizable event dialog and skinning.",
              widget = true,
              parent = UIComponentBase.class)
-public class Schedule extends AbstractSchedule implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Schedule extends AbstractSchedule implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

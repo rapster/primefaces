@@ -17,6 +17,7 @@ package org.primefaces.component.columns;
 
 import org.primefaces.component.api.UIData;
 import org.primefaces.component.columns.ColumnsHandler;
+import org.primefaces.component.api.UIColumn;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -44,7 +45,7 @@ import org.primefaces.component.celleditor.CellEditor;
              description = "",
              parent = UIData.class,
              handlerClass = ColumnsHandler.class)
-public class Columns extends AbstractColumns implements org.primefaces.component.api.UIColumn {
+public class Columns extends AbstractColumns implements UIColumn {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIDataPropertyKeys.class})
 	public enum PropertyKeys {

@@ -16,6 +16,7 @@
 package org.primefaces.component.remotecommand;
 
 import javax.faces.component.UICommand;
+import org.primefaces.component.api.AjaxSource;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -39,7 +40,7 @@ import org.primefaces.cdk.annotations.*;
 @PFComponent(tagName = "remoteCommand",
              description = "RemoteCommand provides a way to execute JSF backing bean methods directly from javascript.",
              parent = UICommand.class)
-public class RemoteCommand extends AbstractRemoteCommand implements org.primefaces.component.api.AjaxSource {
+public class RemoteCommand extends AbstractRemoteCommand implements AjaxSource {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UICommandPropertyKeys.class})
 	public enum PropertyKeys {

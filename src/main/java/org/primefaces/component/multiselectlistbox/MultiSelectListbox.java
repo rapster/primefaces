@@ -16,6 +16,7 @@
 package org.primefaces.component.multiselectlistbox;
 
 import javax.faces.component.UISelectOne;
+import javax.faces.component.behavior.ClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -42,7 +43,7 @@ import org.primefaces.cdk.annotations.*;
              description = "MultiSelectListbox is used to select an item from a collection of listboxes that are in parent-child relationship.",
              widget = true,
              parent = UISelectOne.class)
-public class MultiSelectListbox extends AbstractMultiSelectListbox implements javax.faces.component.behavior.ClientBehaviorHolder {
+public class MultiSelectListbox extends AbstractMultiSelectListbox implements ClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputPropertyKeys.class})
 	public enum PropertyKeys {

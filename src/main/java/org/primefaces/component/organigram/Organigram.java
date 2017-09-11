@@ -16,6 +16,8 @@
 package org.primefaces.component.organigram;
 
 import javax.faces.component.UIComponentBase;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -60,7 +62,7 @@ import org.primefaces.util.Constants;
              description = "",
              widget = true,
              parent = UIComponentBase.class)
-public class Organigram extends AbstractOrganigram implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Organigram extends AbstractOrganigram implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

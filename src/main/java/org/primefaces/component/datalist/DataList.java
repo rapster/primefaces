@@ -16,6 +16,9 @@
 package org.primefaces.component.datalist;
 
 import org.primefaces.component.api.UIData;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
+import org.primefaces.component.api.Pageable;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -66,7 +69,7 @@ import javax.faces.event.BehaviorEvent;
              description = "DataList presents a collection of data in list layout with several display types.\n      Ajax Pagination is a built-in feature and paginator UI is fully customizable via various options like paginatorTemplate, rowsPerPageOptions, pageLinks and more.",
              widget = true,
              parent = UIData.class)
-public class DataList extends AbstractDataList implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder, org.primefaces.component.api.Pageable {
+public class DataList extends AbstractDataList implements ClientBehaviorHolder, PrimeClientBehaviorHolder, Pageable {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIDataPropertyKeys.class})
 	public enum PropertyKeys {

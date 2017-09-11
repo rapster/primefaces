@@ -16,6 +16,8 @@
 package org.primefaces.component.resizable;
 
 import javax.faces.component.UIComponentBase;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -53,7 +55,7 @@ import javax.faces.event.BehaviorEvent;
              description = "PrimeFaces features a resizable component that has the ability to make a JSF component resizable.\n      Resizable can be used on various components like resize an input fields, panels, menus, images and more.",
              widget = true,
              parent = UIComponentBase.class)
-public class Resizable extends AbstractResizable implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder {
+public class Resizable extends AbstractResizable implements ClientBehaviorHolder, PrimeClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

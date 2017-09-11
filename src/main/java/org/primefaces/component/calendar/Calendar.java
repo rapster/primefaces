@@ -16,6 +16,8 @@
 package org.primefaces.component.calendar;
 
 import javax.faces.component.html.HtmlInputText;
+import org.primefaces.component.api.InputHolder;
+import org.primefaces.component.api.MixedClientBehaviorHolder;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -66,7 +68,7 @@ import org.primefaces.convert.DateTimeConverter;
              description = "Calendar is an input component used to provide a date. Other than basic features calendar supports paging, localization, ajax selection and more.",
              widget = true,
              parent = HtmlInputText.class)
-public class Calendar extends AbstractCalendar implements org.primefaces.component.api.InputHolder, org.primefaces.component.api.MixedClientBehaviorHolder {
+public class Calendar extends AbstractCalendar implements InputHolder, MixedClientBehaviorHolder {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIInputTextPropertyKeys.class})
 	public enum PropertyKeys {

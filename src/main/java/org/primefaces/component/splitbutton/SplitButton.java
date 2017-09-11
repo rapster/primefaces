@@ -16,6 +16,7 @@
 package org.primefaces.component.splitbutton;
 
 import javax.faces.component.html.HtmlCommandButton;
+import org.primefaces.component.api.AjaxSource;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -43,7 +44,7 @@ import org.primefaces.util.HTML;
              description = "SplitButton displays a default command and additional ones in an overlay.",
              widget = true,
              parent = HtmlCommandButton.class)
-public class SplitButton extends AbstractSplitButton implements org.primefaces.component.api.AjaxSource {
+public class SplitButton extends AbstractSplitButton implements AjaxSource {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UICommandPropertyKeys.class})
 	public enum PropertyKeys {

@@ -16,6 +16,9 @@
 package org.primefaces.component.datagrid;
 
 import org.primefaces.component.api.UIData;
+import javax.faces.component.behavior.ClientBehaviorHolder;
+import org.primefaces.component.api.PrimeClientBehaviorHolder;
+import org.primefaces.component.api.Pageable;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -59,7 +62,7 @@ import javax.faces.event.BehaviorEvent;
              description = "DataGrid displays a collection of data in grid layout. Ajax Pagination is a built-in feature and paginator UI is fully customizable via various options like paginatorTemplate, rowPerPageOptions, pageLinks and more.",
              widget = true,
              parent = UIData.class)
-public class DataGrid extends AbstractDataGrid implements javax.faces.component.behavior.ClientBehaviorHolder, org.primefaces.component.api.PrimeClientBehaviorHolder, org.primefaces.component.api.Pageable {
+public class DataGrid extends AbstractDataGrid implements ClientBehaviorHolder, PrimeClientBehaviorHolder, Pageable {
 
 	@PFPropertyKeys(base = {org.primefaces.component.api.propertykeys.UIDataPropertyKeys.class})
 	public enum PropertyKeys {

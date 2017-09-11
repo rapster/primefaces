@@ -16,6 +16,7 @@
 package org.primefaces.component.submenu;
 
 import javax.faces.component.UIComponentBase;
+import org.primefaces.model.menu.Submenu;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -36,7 +37,7 @@ import org.primefaces.model.menu.MenuElement;
 @PFComponent(tagName = "submenu",
              description = "Submenu is nested in menu components and represents a sub menu items.",
              parent = UIComponentBase.class)
-public class UISubmenu extends AbstractUISubmenu implements org.primefaces.model.menu.Submenu {
+public class UISubmenu extends AbstractUISubmenu implements Submenu {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

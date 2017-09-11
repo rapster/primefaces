@@ -16,6 +16,7 @@
 package org.primefaces.mobile.component.page;
 
 import javax.faces.component.UIPanel;
+import javax.faces.component.NamingContainer;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -35,7 +36,7 @@ import javax.faces.context.FacesContext;
 @PFComponent(tagName = "page",
              description = "",
              parent = UIPanel.class)
-public class Page extends AbstractPage implements javax.faces.component.NamingContainer {
+public class Page extends AbstractPage implements NamingContainer {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {

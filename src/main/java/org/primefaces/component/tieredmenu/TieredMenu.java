@@ -16,6 +16,7 @@
 package org.primefaces.component.tieredmenu;
 
 import org.primefaces.component.menu.AbstractUIMenu;
+import org.primefaces.component.menu.OverlayMenu;
 import javax.faces.context.FacesContext;
 import javax.faces.component.UINamingContainer;
 import javax.el.ValueExpression;
@@ -42,7 +43,7 @@ import org.primefaces.cdk.annotations.*;
              description = "TieredMenu displays submenus in overlays.",
              widget = true,
              parent = AbstractUIMenu.class)
-public class TieredMenu extends AbstractTieredMenu implements org.primefaces.component.menu.OverlayMenu {
+public class TieredMenu extends AbstractTieredMenu implements OverlayMenu {
 
 	@PFPropertyKeys(base = {})
 	public enum PropertyKeys {
